@@ -64,7 +64,15 @@ Create a new project as follows:
 
 **File** -> **New Project** -> **New Directory**
 
-![./assets/](project_screen1.png)
+![](./assets/project_screen1.png)
+
+In the **Project Type** screen, click on **Empty Project**.
+
+![](./assets/project_screen2.png)
+
+In the **Create New Project** screen, give your project a name and ensure that **create a git repository** is checked. Click on **Create Project**.
+
+![](./assets/project_screen3.png)
 
 Download this data to your project folder:
  * [Example data](https://raw.githubusercontent.com/mikecroucher/Code_cafe/master/First_steps_with_R/example_data.csv)
