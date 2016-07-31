@@ -32,6 +32,15 @@ Git is one of the most popular version control systems in the world. It is free 
 * Debian/Ubuntu: `sudo apt-get install git-core`
 * Fedora/RedHat: `sudo yum install git-core`
 
+**Configure git**
+
+After installing git, you need to tell it who you are. Open a terminal window (**cmd.exe on windows**) and type the following
+
+```
+git config --global user.email "you@youremail.com"
+git config --global user.name "Your Name"
+```
+
 # Create account on github
 
 Although git can be used on its own, most people choose to use it in conjunction with an online repository service. The most popular of these, by far, is github.
@@ -47,13 +56,19 @@ Github users can create an unlimited number of free, **public** repositories. If
 
 * If you are an academic, request free private repositories - https://education.github.com/discount_requests/new
 
-# Create a project
+# Create an RStudio project
 
-A project is
+A project is a folder that contains everything concerning your analysis and may include code, data and documentation. It is a complete research object that can be used to describe and reproduce your research.
 
-**File** -> **New Project**
+Create a new project as follows:
 
-Free private repos for academics
+**File** -> **New Project** -> **New Directory**
+
+![./assets/](project_screen1.png)
+
+Download this data to your project folder:
+ * [Example data](https://raw.githubusercontent.com/mikecroucher/Code_cafe/master/First_steps_with_R/example_data.csv)
+
 
  - Workflow in R studio
      git init
