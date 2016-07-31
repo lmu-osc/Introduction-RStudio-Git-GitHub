@@ -145,4 +145,32 @@ lines(new$xdata,predict(fit,newdata=new))
 
 ```
 
+For this version, we are also going to change the command that plots our data. Change the lines
+
+```
+plot(mydata$xdata,mydata$ydata)
+```
+
+to
+
+```
+plot(mydata$xdata,mydata$ydata,col='red')
+```
+
+Make sure the code runs before proceeding further.
+
+# Committing our change
+
+Make sure you've saved the script. Now, click on the **git** tab in RStudio. You'll notice that there's only one file listed -- our script.
+
+![](./assets/git_changed.png)
+
+Click on the staged box to stage our change. Now click on  **Diff** to give a summary of what's changed. Lines that have been added are green. Lines that have been removed are red.
+
+![](./assets/git_diff.png)
+
+Add a commit message and click on commit
+
+![](./assets/git_commit_message2.png)
+
 # Publish your code and get a DOI - Zenodo
