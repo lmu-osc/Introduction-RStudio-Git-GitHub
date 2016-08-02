@@ -2,7 +2,7 @@
 
 A project is a folder that contains everything concerning your analysis and may include code, data and documentation. It is a complete research object that can be used to describe and reproduce your research.
 
-Create a new project as follows:
+Create a new project in RStudio as follows:
 
 **File** -> **New Project** -> **New Directory**
 
