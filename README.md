@@ -1,6 +1,6 @@
 # ISBE Symposium - Introduction to Reproducible Research in R and R Studio.
 
-This tutorial was developed by [Mike Croucher](www.walkingrandomly.com) and Anna Krystalli
+This tutorial was developed by [Mike Croucher](www.walkingrandomly.com) and [Anna Krystalli](http://annakrystalli.github.io/)
 
 In this session, we are going to get you started with using version control from within RStudio. 
 
