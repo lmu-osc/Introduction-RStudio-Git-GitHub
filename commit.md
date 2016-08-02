@@ -6,6 +6,8 @@ Make sure you've saved the script. Now, click on the **git** tab in RStudio. You
 
 Click on the staged box to stage our change. Now click on  **Diff** to give a summary of what's changed. Lines that have been added are green. Lines that have been removed are red.
 
+From git's point of view, a modification to a line is actually two operations - The removal of the original line followed by the creation of the new line.
+
 ![](./assets/git_diff.png)
 
 Add a commit message and click on commit
