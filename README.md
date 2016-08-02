@@ -2,7 +2,9 @@
 
 Mike Croucher and Anna Krystalli
 
-In this session, we are going to get you started with using version control from within RStudio.
+In this session, we are going to get you started with using version control from within RStudio. 
+
+The material is self-paced and includes a worked-example. It is suggested that you work through the sections in order.
 
 ## Version control with git and github
 
