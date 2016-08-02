@@ -1,6 +1,8 @@
 # Starting our analysis project
 
-To get used to the version control workflow, we are going to download and plot some data. Later we'll fit a curve to it.
+The purpose of this tutorial is to teach you version control. In order to do this, however, we'll need to make up a simple project that needs controlling!
+
+Our initial project will be extremely simple -- a very small data file and a script that loads and plots it. Later, we'll add code to fit a nonlinear curve to it. (Based on the tutorial at http://www.walkingrandomly.com/?p=5254)
 
 Download this data to your project folder: [Example data](https://raw.githubusercontent.com/mikecroucher/Code_cafe/master/First_steps_with_R/example_data.csv) (right click and use your Web browser's save as functionality).
 
