@@ -4,7 +4,7 @@ We now have the first version of our analysis so let's get it under version cont
 
 ![](./assets/git_pane.png)
 
-If you hover the mouse pointer over the yellow ? marks, you'll see a tooltip telling us that the file is **untracked**. This means that git is not tracking versions of this file.
+If you hover the mouse pointer over the yellow ? marks in github, you'll see a tooltip telling us that the file is **untracked**. This means that git is not tracking versions of this file.
 
 Tick **staged** for each file.
 
