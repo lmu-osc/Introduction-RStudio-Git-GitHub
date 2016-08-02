@@ -23,3 +23,5 @@ Once you've typed a commit message, click on **Commit** and you're done.
 The following messages from git will shown.
 
 ![](./assets/git_commit_message.png)
+
+Click on **Close** and you are done.
