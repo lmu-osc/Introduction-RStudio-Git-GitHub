@@ -14,7 +14,7 @@ All of our files are now **staged**, ready for the first **commit**. Click on th
 
 ![](./assets/commit.png)
 
-Details of the commit will appear in the next pane. You need to specifiy a **commit message** -- something descriptive about the changes you've made. Since this is our first commit, we can simply say that.
+Details of the commit will appear in the next pane. You need to specifiy a **commit message** -- something descriptive about the changes you've made. Since this is our first commit, we'll follow tradition and call it **First Commit** 
 
 Once you've typed a commit message, click on **Commit** and you're done.
 
