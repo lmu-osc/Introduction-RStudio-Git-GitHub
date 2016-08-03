@@ -36,3 +36,5 @@ After installing git, you need to tell it who you are. Open a terminal window (*
 git config --global user.email "you@youremail.com"
 git config --global user.name "Your Name"
 ```
+
+On succesful completion, you should see no output from these commands.
