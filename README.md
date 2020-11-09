@@ -1,15 +1,16 @@
-# Citing this work
+# Introduction to version Control in R with RStudio, Git, and Github
 
-You are free to use this work in your own projects. However, we would appreciate a citation: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.61435.svg)](https://doi.org/10.5281/zenodo.61435)
+## About this work
 
+This work was originally created by [Mike Croucher](https://github.com/mikecroucher) from [RSE-Sheffield](https://github.com/RSE-Sheffield) under a [Creative Commons Attribution Share Alike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/legalcode). It's [original version](https://github.com/mikecroucher/ISBE_Symposium) can be cited using this DOI:[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.61435.svg)](https://doi.org/10.5281/zenodo.61435). You are free to use this work in your own projects. 
 
-# Introduction to Reproducible Research in R and R Studio.
+## Overview of the exercice
 
 In this session, we are going to get you started with using version control from within RStudio. 
 
 The material is self-paced and includes a worked-example. It is suggested that you work through the sections in order.
 
-## Version control with git and github
+## Step-by-step tutorial
 
 * [Installing the software](./installing_software.md) - Get what you need on your own machine
 * [Getting an account on github](./github.md) - Sign up for github
