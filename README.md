@@ -2,7 +2,8 @@
 
 ## About this work
 
-This work was originally created by [Mike Croucher](https://github.com/mikecroucher) from [RSE-Sheffield](https://github.com/RSE-Sheffield) under a [Creative Commons Attribution Share Alike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/legalcode). It's [original version](https://github.com/mikecroucher/ISBE_Symposium) can be cited using this DOI:[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.61435.svg)](https://doi.org/10.5281/zenodo.61435). You are free to use this work in your own projects. 
+This work was originally created by [Mike Croucher](https://github.com/mikecroucher) from [RSE-Sheffield](https://github.com/RSE-Sheffield) under a [Creative Commons Attribution Share Alike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/legalcode). It's [original version](https://github.com/mikecroucher/ISBE_Symposium) can be cited with [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.61435.svg)](https://doi.org/10.5281/zenodo.61435)  
+You are free to use this work in your own projects. 
 
 ## Overview of the exercice
 
