@@ -35,4 +35,4 @@ Paste the git commands into the Shell and press Enter to execute them.
 
 Confirm that the project has been uploaded to your git profile.  
 
-[Previous](./github_sync.md) | [Next](./updates.md)
+[Previous](./commit.md) | [Next](./updates.md)
