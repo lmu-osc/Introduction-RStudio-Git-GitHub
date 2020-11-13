@@ -24,4 +24,6 @@ The following messages from git will shown.
 
 ![](./assets/git_commit_message.png)
 
-Click on **Close** and you are done.
+Click on **Close** and you are done.  
+
+[Previous](./version_control.md) | [Next](./making_change.md)
