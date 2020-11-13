@@ -21,4 +21,6 @@ Your directory should now contain 4 files:
 
 ![](./assets/file_list.png)  
 
+***
+
 [Previous](./rstudio_project.md) | [Next](./version_control.md)
