@@ -26,4 +26,4 @@ The following messages from git will shown.
 
 Click on **Close** and you are done.  
 
-[Previous](./version_control.md) | [Next](./making_change.md)
+[Previous](./analysis_start.md) | [Next](./making_change.md)
