@@ -37,4 +37,6 @@ git config --global user.email "you@youremail.com"
 git config --global user.name "Your Name"
 ```
 
-On succesful completion, you should see no output from these commands.
+On succesful completion, you should see no output from these commands.  
+
+[Previous](./README.md) | [Next](./github.md)
