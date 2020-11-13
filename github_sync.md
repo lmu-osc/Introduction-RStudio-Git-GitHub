@@ -1,4 +1,4 @@
-#Connecting our local repository to github
+# Connecting our local repository to github
 
 Our project is fully version controlled so we have access to a detailed history of every change we've ever made to it. This is a great first step but all of this only exists on our own computers at the moment.
 
