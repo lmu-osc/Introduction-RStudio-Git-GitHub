@@ -31,4 +31,6 @@ You can see that the standard workflow loop is very quick and simple
 * Commit
 * Push to github  
 
+***
+
 [Previous](./github_sync.md) | [Next](./created_earlier.md)
