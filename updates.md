@@ -29,4 +29,6 @@ You can see that the standard workflow loop is very quick and simple
 * Make your change
 * Stage your change
 * Commit
-* Push to github
+* Push to github  
+
+[Previous](./updates.md) | [Next](./created_earlier.md)
