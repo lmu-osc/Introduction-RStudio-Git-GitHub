@@ -34,4 +34,6 @@ We do this so we can illustrate how git handles modifications of existing lines 
 
 Make sure the code runs before proceeding further.  
 
+***
+
 [Previous](./version_control.md) | [Next](./commit.md)
