@@ -25,4 +25,6 @@ Two files are created in the otherwise empty project:-
 * **.gitignore** - Specifies files that should be ignored by the version control ystem.
 * **data_analysis.Rproj** - Configuration information for the RStudio project
 
-There is no need to worry about the contents of either of these for the purposes of this tutorial.
+There is no need to worry about the contents of either of these for the purposes of this tutorial.  
+
+[Previous](./github.md) | [Next](./analysis_start.md)
