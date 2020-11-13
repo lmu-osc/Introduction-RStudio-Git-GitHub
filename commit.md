@@ -20,4 +20,6 @@ In the **git** tab of RStudio, click on **diff** and then **History**. You'll se
 
 It's not possible to revert back to a previous commit using the RStudio interface. For that, you need to learn some command-line git which is beyond the scope of this session.  
 
+***
+
 [Previous](./making_change.md) | [Next](./github_sync.md)
