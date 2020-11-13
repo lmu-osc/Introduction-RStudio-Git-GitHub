@@ -32,4 +32,6 @@ plot(mydata$xdata,mydata$ydata,col='red')
 
 We do this so we can illustrate how git handles modifications of existing lines as well as simply adding extra lines of code.
 
-Make sure the code runs before proceeding further.
+Make sure the code runs before proceeding further.  
+
+[Previous](./making_change.md) | [Next](./commit.md)
