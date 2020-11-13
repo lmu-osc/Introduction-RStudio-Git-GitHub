@@ -19,4 +19,6 @@ Save the R Script as `myscript.R`. When you run it, it should load and plot the 
 
 Your directory should now contain 4 files:
 
-![](./assets/file_list.png)
+![](./assets/file_list.png)  
+
+[Previous](./analysis_start.md) | [Next](./version_control.md)
