@@ -35,4 +35,6 @@ Paste the git commands into the Shell and press Enter to execute them.
 
 Confirm that the project has been uploaded to your git profile.  
 
+***
+
 [Previous](./commit.md) | [Next](./updates.md)
