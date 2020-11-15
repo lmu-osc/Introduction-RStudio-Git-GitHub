@@ -1,19 +1,19 @@
-# Connecting our local repository to github
+# Connecting our local repository to GitHub
 
 Our project is fully version controlled so we have access to a detailed history of every change we've ever made to it. This is a great first step but all of this only exists on our own computers at the moment.
 
-It's time to upload our project to github!
+It's time to upload our project to GitHub!
 
-Putting your code on github confers a number of benefits:
+Putting your code on GitHub confers a number of benefits:
 
 * Everything is backed up for you.
 * Your project is made available to others. This is a vital part of modern scientific dissemination.
-* Github has a range of project management and collaboration tools that work on a per-project basis.
-* Your github profile can be used as part of your online-identity.
+* GitHub has a range of project management and collaboration tools that work on a per-project basis.
+* Your GitHub profile can be used as part of your online-identity.
 
-**Creating a new repository on github**
+**Creating a new repository on GitHub**
 
-* Log into github and go to your profile page. On the **repositories** tab, click **New**
+* Log into GitHub and go to your profile page. On the **repositories** tab, click **New**
 
 ![](./assets/new_repo.png)
 
@@ -33,7 +33,7 @@ Paste the git commands into the Shell and press Enter to execute them.
 
 ![](./assets/git_origin.png)
 
-Confirm that the project has been uploaded to your git profile.  
+Confirm that the project has been uploaded to your GitHub profile.  
 
 ***
 
