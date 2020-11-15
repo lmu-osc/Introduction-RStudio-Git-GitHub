@@ -6,7 +6,7 @@ We now have the first version of our analysis so let's get it under version cont
 
 If you hover the mouse pointer over the yellow ? marks in github, you'll see a tooltip telling us that the file is **untracked**. This means that git is not tracking versions of this file.
 
-Tick **staged** for each file.
+Tick **staged** for each file. In some future cases, you may want to stage only one or a few file to create a coherent commit (unit of change).
 
 ![](./assets/git_pane_added.png)
 
