@@ -20,7 +20,7 @@ By employing testing, you can ensure that your code behaves the way you expect.
 
 Your code works on your machine but not on someone else's because they are using a different version of R and have different versions of packages installed. How might we fix this?
 
-* https://rstudio.github.io/packrat/ - Packrat enhances your project directory by storing your package dependencies inside it.
+* https://rstudio.github.io/renv/index.html - renv enhances your project directory by storing your package dependencies inside it.
 * https://mran.microsoft.com/ - MRAN, The 'Managed CRAN' has snapshots of every package going back to 2014  
 
 ***
