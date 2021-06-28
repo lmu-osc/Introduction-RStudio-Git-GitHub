@@ -21,7 +21,7 @@ At the **Create a new repository** screen, give your repo a name and click **Cre
 
 ![](./assets/ISBE_example.png)
 
-The **Quick Setup** screen gives sets of git commands that can be used in various circumstances. We are interested in **…or push an existing repository from the command line**. Copy these commands to the clipboard
+The **Quick Setup** screen gives sets of git commands that can be used in various circumstances. We are interested in **…or push an existing repository from the command line**. Copy these commands to the clipboard using the copy button on GitHub. Note that 'master' (in the screenshots) is the historical name of the default branch (the default branch is currently the only branch in this repository). The default branch is now called ‘main’ as part of the company’s effort to remove unnecessary references to slavery. 
 
 ![](./assets/github_git_commands.png)
 
