@@ -82,3 +82,9 @@ In the "Title" field, add a descriptive label for the new key. For example, if y
 
 That's it !  
 Going forward, you can use the SSH clone URL when copying a repo to your local machine (we will cover this in the second tutorial).
+
+
+***
+
+[Previous](./github.md) | [Next](./rstudio_project.md)
+

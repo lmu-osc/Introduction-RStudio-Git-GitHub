@@ -17,4 +17,4 @@ It may take a while to receive the verification email for this step. Don't worry
 
 ***
 
-[Previous](./installing_software.md) | [Next](./rstudio_project.md)
+[Previous](./installing_software.md) | [Next](./SSH.md)
