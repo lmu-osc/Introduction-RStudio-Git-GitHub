@@ -26,6 +26,7 @@ The material is self-paced and includes a worked-example. It is suggested that y
 
 * [Installing the software](./installing_software.md) - Get what you need on your own machine
 * [Getting an account on github](./github.md) - Sign up for github
+* [Securing your connection to GitHub](.SSH.md) - Create a secure SSH key to identify yourself on GitHub
 * [Creating an RStudio project](./rstudio_project.md) - Creating an example, version controlled project
 * [Starting our analysis project](./analysis_start.md) - A simple script to get us started
 * [Getting our project under version control](./version_control.md) - First step into a larger world
