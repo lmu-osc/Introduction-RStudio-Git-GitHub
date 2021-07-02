@@ -25,5 +25,5 @@ Your code works on your machine but not on someone else's because they are using
 
 ***
 
-[Previous](./created_earlier.md) | [Home](./README.md)
+[Previous](./created_earlier.md) | <a href="https://malikaihle.github.io/Introduction-RStudio-Git-GitHub" target ="_blank">Home page</a> | <a href="https://malikaihle.github.io/Collaborative-RStudio-GitHub/" target ="_blank">Go to second tutorial</a>
  
