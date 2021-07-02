@@ -76,7 +76,7 @@ Login to github.com and bring up your account settings by clicking on your profi
 
 ![](./assets/ssh-key.png)
 
-In the "Title" field, add a descriptive label for the new key. For example, if you're using a personal laptop, you might call this key "Personal MacBook Air". Finally, paste the contents of your clipboard into the Key text box and hit Add key button to save. Enter your github password if prompted.
+In the "Title" field, add a descriptive label for the new key. For example, if you're using a personal laptop, you might call this key "Personal MacBook Air". Finally, paste the contents of your clipboard into the Key text box and hit the green 'Add key' button to save. Enter your github password if prompted.
 
 ![](./assets/add-ssh-key.png)
 
