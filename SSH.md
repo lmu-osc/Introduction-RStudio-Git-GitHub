@@ -72,6 +72,8 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFEKiimOpcayfHhlbjmnIBAUX74FY/o20k9yFA16XOLm
 
 Copy the contents of the output to your clipboard.
 
+**Be careful**: do not copy the content of your *private* key, but your *public* key. Your public key ends with `.pub`.
+
 Login to github.com and bring up your account settings by clicking on your profile photo (top right) and selecting **Settings**. Click on **SSH and GPG keys** (left sidebar), and then click on the green button 'New SSH key' or '**Add SSH key**'.
 
 ![](./assets/ssh-key.png)
