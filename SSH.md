@@ -43,7 +43,7 @@ Generating public/private ed25519 key pair.
 Enter file in which to save the key (/Users/username/.ssh/id_ed25519):  
 ```
 
-You will then be asked to provide an optional passphrase. This can be used to make your key even more secure, but for this lesson you can skip it by hitting enter twice.
+You will then be asked to provide an passphrase. Protecting your keys with a passphrase is optional but highly recommended.  Don't hesitate to use a long passphrase, you'll only have to type it once to unlock a key.
 
 ```
 Enter passphrase (empty for no passphrase):  
