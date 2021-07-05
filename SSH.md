@@ -54,7 +54,7 @@ When the key generation is complete, you should see the following confirmation:
 
 ```
 Your identification has been saved in /Users/username/.ssh/id_ed25519.
-Your public key has been saved in /Users/username/id_ed25519.pub.
+Your public key has been saved in /Users/username/.ssh/id_ed25519.pub.
 The key fingerprint is:
 SHA256:6nr/zo0g7Bz7WMRwy34maBhQy1UZyX47gT+egRdlIhs your_email@email.com
 The key's randomart image is:
