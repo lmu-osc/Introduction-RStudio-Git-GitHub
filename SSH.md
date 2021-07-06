@@ -52,8 +52,24 @@ Enter same passphrase again:
 
 When the key generation is complete, you should see the following confirmation:
 
-
-**FIXME**
+```
+Your identification has been saved in /Users/username/.ssh/id_ed25519.
+Your public key has been saved in /Users/username/.ssh/id_ed25519.pub.
+The key fingerprint is:
+SHA256:6nr/zo0g7Bz7WMRwy34maBhQy1UZyX47gT+egRdlIhs your_email@email.com
+The key's randomart image is:
++--[ED25519 256]--+
+|    .o++         |
+|   o oF . o      |
+|  . o+ =.+.      |
+|   .  + += .     |
+|    .  +S++      |
+|   . ..oB=       |
+|    . ++*=.      |
+|     o.==* o     |
+|    .o.o+** .    |
++----[SHA256]-----+
+```
 
 
 ## Adding a new SSH key to your GitHub account
