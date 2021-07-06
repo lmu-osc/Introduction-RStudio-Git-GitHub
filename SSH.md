@@ -23,7 +23,7 @@ Check the directory listing to see if you already have a public SSH key. By defa
 *id_ecdsa.pub*  
 *id_ed25519.pub*  
 
-If you do you can skip the section that generate a SSH key pair, and go to the section 'Adding a new SSH key to your GitHub account'.  
+If you do you, can skip the section that generate a SSH key pair, and go to the section 'Adding a new SSH key to your GitHub account'.  
 If you don't have an existing public and private key pair, or if you receive an error that ~/.ssh doesn't exist, go head and generate a new SSH key pair!
 
 ## Generating an SSH key pair
@@ -34,7 +34,7 @@ In the command line, type the following by replacing your_email@email.com with y
 $ ssh-keygen -t ed25519 -C "your_email@email.com"
 ```
 
-This creates a new ssh key, using the provided email as a label.
+This creates a new SSH key pair, using the provided email as a label.
 
 When you're prompted to "Enter a file in which to save the key," press Enter. This accepts the default file location.
 
@@ -43,7 +43,7 @@ Generating public/private ed25519 key pair.
 Enter file in which to save the key (/Users/username/.ssh/id_ed25519):  
 ```
 
-You will then be asked to provide an passphrase. Protecting your keys with a passphrase is optional but highly recommended.  Don't hesitate to use a long passphrase, you'll only have to type it once to unlock a key.
+You will then be asked to provide a passphrase. Protecting your keys with a passphrase is optional but highly recommended. Don't hesitate to use a long passphrase, you'll only have to type it once per day to unlock a key.
 
 ```
 Enter passphrase (empty for no passphrase):  
@@ -74,7 +74,8 @@ The key's randomart image is:
 
 ## Adding a new SSH key to your GitHub account
 
-We now need to tell GitHub about your public key. Display the contents of your new public key file with cat:
+We now need to tell GitHub about your public key. Display the contents of your new public key file with `cat`.  
+**Be careful**: do not copy the content of your *private* key, but your *public* key. Your public key ends with `.pub`.
 
 ```
 $ cat ~/.ssh/id_ed25519.pub
@@ -87,8 +88,6 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFEKiimOpcayfHhlbjmnIBAUX74FY/o20k9yFA16XOLm
 ```
 
 Copy the contents of the output to your clipboard.
-
-**Be careful**: do not copy the content of your *private* key, but your *public* key. Your public key ends with `.pub`.
 
 Login to github.com and bring up your account settings by clicking on your profile photo (top right) and selecting **Settings**. Click on **SSH and GPG keys** (left sidebar), and then click on the green button 'New SSH key' or '**Add SSH key**'.
 
