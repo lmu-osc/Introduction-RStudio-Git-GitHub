@@ -130,7 +130,7 @@ Agent pid 59566
 Then, add your key to the ssh-agent with
 
 ```
-ssh-add ~/.ssh/id_ed25519
+$ ssh-add ~/.ssh/id_ed25519
 ```
 
 That's it.
