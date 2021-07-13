@@ -100,6 +100,40 @@ In the "Title" field, add a descriptive label for the new key. For example, if y
 That's it !  
 Going forward, you can use the SSH clone URL when copying a repo to your local machine (we will cover this in the second tutorial).
 
+## Adding your key to the ssh-agent (optional)
+
+Read the following to type your passphrase only once.
+
+If you protected your key with a passphrase, you will be prompted
+for it every time time you use your key. To save you some typing, it
+is possible to use a piece of software called `ssh-agent` to ask your
+system to "remember" your key. In practice, this means you only have
+to type your passphrase once.
+
+Depending on your system, the following might not be necessary. On
+most GNU/Linux distributions, your key will be automatically added to
+the `ssh-agent` after the first time you enter it. If you keep getting
+asked for your key each time you want to clone or push to a GitHub
+repository, you can follow the following instructions.
+
+Start the ssh-agent with
+
+```
+$ eval "$(ssh-agent -s)"
+```
+
+which should output something like
+```
+Agent pid 59566
+```
+
+Then, add your key to the ssh-agent with
+
+```
+ssh-add ~/.ssh/id_ed25519
+```
+
+That's it.
 
 ***
 
