@@ -116,7 +116,7 @@ the `ssh-agent` after the first time you enter it. If you keep getting
 asked for your key each time you want to clone or push to a GitHub
 repository, you can follow the following instructions.
 
-Start the ssh-agent with
+In the command line, start the ssh-agent with (after the $):
 
 ```
 $ eval "$(ssh-agent -s)"
