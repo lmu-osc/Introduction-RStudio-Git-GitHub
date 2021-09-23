@@ -10,7 +10,7 @@ The procedure below only need to be executed once per GitHub account and for eac
 
 ## Checking for existing SSH key pair
 The first step in using SSH authorization with GitHub is to generate your own key pair. 
-However, you might already have an SSH key pair on your machine. You can check to see if one exists by moving to your `.ssh` directory and listing the contents. To do this, open Git Bash (on windows) or the terminal (in Mac or Linux) and type the following (after the dollar prompt)
+However, you might already have an SSH key pair on your machine. You can check to see if one exists by moving to your `.ssh` directory and listing the contents. To do this, open Git Bash (on windows) or the terminal (in Mac or Linux) and type the following (after the dollar prompt). (Use `dir` instead of `ls` in Windows).
 
 ```
 $ cd ~/.ssh
@@ -74,7 +74,7 @@ The key's randomart image is:
 
 ## Adding a new SSH key to your GitHub account
 
-We now need to tell GitHub about your public key. Display the contents of your new public key file with `cat`.  
+We now need to tell GitHub about your public key. Display the contents of your new public key file with `cat` (or `type` in Windows).  
 **Be careful**: do not copy the content of your *private* key, but your *public* key. Your public key ends with `.pub`.
 
 ```
