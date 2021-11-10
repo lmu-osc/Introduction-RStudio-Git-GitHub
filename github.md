@@ -7,7 +7,7 @@ It has become so standard that some organisations will ask to see your GitHub pr
 * Create a free account on GitHub. **If you have an academic email account you should use it here.**
     * <a href="https://github.com/join" target ="_blank">https://github.com/join</a>
 
-Github users can create an unlimited number of free, **public** repositories. If you want to create **private** repositories, most people need to purchase a subscription.
+GitHub users can create an unlimited number of free, **public** repositories. If you want to create **private** repositories, most people need to purchase a subscription.
 
 **Academic users can get access to an unlimited number of free private repositories.**  The key to these riches is your academic email address which has to be associated with your GitHub account.
 

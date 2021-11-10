@@ -3,7 +3,7 @@
 Many users of R use it from within another free piece of software called **RStudio.**
 RStudio is a powerful and productive user interface for R. It’s free and open source, and works great on Windows, Mac, and Linux.
 
-Rstudio's version control functionality is provided by yet another software called **git**
+RStudio version control functionality is provided by yet another software called **git**
 
 Our first task, therefore, is to install R, RStudio and git.
 
@@ -37,7 +37,7 @@ git config --global user.email "you@youremail.com"
 git config --global user.name "Your Name"
 ```
 
-On succesful completion, you should see no output from these commands.  
+On successful completion, you should see no output from these commands.  
 
 ***
 

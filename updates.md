@@ -20,7 +20,7 @@ Supply a commit message and click commit.
 
 ![](./assets/readme_commit.png)
 
-Finally, click **push** to upload to github.
+Finally, click **push** to upload to GitHub.
 
 ![](./assets/git_push.png)
 
