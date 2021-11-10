@@ -1,6 +1,6 @@
 # Secure the connection between your computer and GitHub
 
-When working with a GitHub repository, you'll often need to identify yourself to GitHub using your username and password. There are several ways to secure this connection further. *Establishing a secure connection will be made mandatory by August 13 2021.* 
+When working with a GitHub repository, you'll often need to identify yourself to GitHub using your username and password. There are several ways to secure this connection further. Establishing a secure connection is mandatory since August 2021. 
 
 Today we will use **SSH Keys** to secure your identification to GitHub as this is a common way to secure connections, which you may encounter again in other contexts in the future. An SSH key is also an alternate way to identify yourself that doesn't require you to enter you username and password every time.
 
