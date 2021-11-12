@@ -25,7 +25,7 @@ Once this workflow is set up, you can easily work with several computers or with
 The material is self-paced and includes a worked-example. It is suggested that you work through the sections in order.  
 
 * [Installing the software](./installing_software.md) - Get what you need on your own machine
-* [Getting an account on github](./github.md) - Sign up for github
+* [Getting an account on GitHub](./github.md) - Sign up for GitHub
 * [Securing your connection to GitHub](./SSH.md) - Create a secure SSH key to identify yourself on GitHub
 * [Creating an RStudio project](./rstudio_project.md) - Creating an example, version controlled project
 * [Starting our analysis project](./analysis_start.md) - A simple script to get us started
