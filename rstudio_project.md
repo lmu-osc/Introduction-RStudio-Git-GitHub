@@ -6,15 +6,15 @@ Create a new project in RStudio as follows:
 
 **File** -> **New Project** -> **New Directory**
 
-![](./assets/project_screen1.png)
+<img src="assets/project_screen1.png" width="500"> 
 
 In the **Project Type** screen, click on **Empty Project**.
 
-![](./assets/project_screen2.png)
+<img src="assets/project_screen2.png" width="500"> 
 
 In the **Create New Project** screen, give your project a name and ensure that **create a git repository** is checked. Click on **Create Project**.
 
-![](./assets/project_screen3.png)
+<img src="assets/project_screen3.png" width="500"> 
 
 RStudio will create a new folder containing an empty project and set R's working directory to within it.
 
