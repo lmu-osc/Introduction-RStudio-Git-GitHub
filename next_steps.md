@@ -14,7 +14,7 @@ Git and GitHub are extremely powerful systems and there is a lot more you can le
 By employing testing, you can ensure that your code behaves the way you expect.
 
 * Unit testing in R, the bare minimum - <a href="http://www.johnmyleswhite.com/notebook/2010/08/17/unit-testing-in-r-the-bare-minimum/" target ="_blank">http://www.johnmyleswhite.com/notebook/2010/08/17/unit-testing-in-r-the-bare-minimum/</a>
-* Continuous Integration. Every time you push a change to github, your tests are automatically run. - <a href="https://docs.travis-ci.com/user/languages/r" target ="_blank">https://docs.travis-ci.com/user/languages/r</a>
+* Continuous Integration. Every time you push a change to GitHub, your tests are automatically run. - <a href="https://docs.travis-ci.com/user/languages/r" target ="_blank">https://docs.travis-ci.com/user/languages/r</a>
 
 **Dealing with dependencies**
 
