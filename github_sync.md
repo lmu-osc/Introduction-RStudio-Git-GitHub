@@ -15,7 +15,7 @@ Putting your code on GitHub confers a number of benefits:
 
 * Log into GitHub and go to your profile page. On the **repositories** tab, click **New**
 
-![](./assets/new_repo.png)
+<img src="assets/new_repo.png" width="600"> 
 
 At the **Create a new repository** screen, give your repo a name and click **Create Repository**.
 
