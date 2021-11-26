@@ -12,6 +12,11 @@ The procedure below only need to be executed once per GitHub account and for eac
 The first step in using SSH authorization with GitHub is to generate your own key pair. 
 However, you might already have an SSH key pair on your machine. You can check to see if one exists by moving to your `.ssh` directory and listing the contents.
 
+On windows, open **Git Bash** (start menu -> Git Bash). On MacOS, open
+the **Terminal** app. On Linux, open your distribution's (or any
+other) terminal emulator. Enter the following commands one after the
+other (hitting ENTER after each command).
+
 To do this on Windows:  
 open Git Bash and type the following  
 ```

@@ -30,12 +30,25 @@ Git is one of the most popular version control systems in the world. It is free 
 
 **Configure git**
 
-After installing git, you need to tell it who you are. Open a terminal window (**cmd.exe on windows**) and type the following
+After installing git, you need to tell it who you are.
+
+By default, git is used through a _command line interface_. We'll use
+git in this way now in order to perform its initial and minimal
+configuration. In the remaining of this tutorial, you'll learn how to
+use git through Rstudio instead of a command line interface.
+
+On windows, open **Git Bash** (start menu -> Git Bash). On MacOS, open
+the **Terminal** app. On Linux, open your distribution's (or any
+other) terminal emulator. Enter the following commands one after the
+other (hitting ENTER after each command).
 
 ```
 git config --global user.email "you@youremail.com"
 git config --global user.name "Your Name"
 ```
+
+Be sur to replace `you@youremail.com` and `Your Name` by your email
+address and your name.
 
 On successful completion, you should see no output from these commands.  
 
