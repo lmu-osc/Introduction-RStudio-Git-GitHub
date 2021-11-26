@@ -10,23 +10,13 @@ The procedure below only need to be executed once per GitHub account and for eac
 
 ## Checking for existing SSH key pair
 The first step in using SSH authorization with GitHub is to generate your own key pair. 
-However, you might already have an SSH key pair on your machine. You can check to see if one exists by moving to your `.ssh` directory and listing the contents.
+However, you might already have an SSH key pair on your machine. You can check to see if one exists by moving to your `.ssh` directory and listing the contents. To do this, open Git Bash (on windows) or the terminal (in Mac or Linux) and type the following (after the dollar prompt)
 
-To do this on Windows:  
-open Git Bash and type the following  
 ```
-cd ~/.ssh
-dir
-```
-  
-To do this on Mac or Linux:  
-open the terminal, and type the following after the dollar prompt:  
-```
-cd ~/.ssh
-ls
+$ ls ~/.ssh
 ```
 
-Check the directory listing to see if you already have a public SSH key. By default, the filenames of the public keys are one of the following:
+The `ls` command lists the content of a directory, here `~/.ssh`. Check the directory listing to see if you already have a public SSH key. By default, the filenames of the public keys are one of the following:
 
 *id_rsa.pub*  
 *id_ecdsa.pub*  
@@ -40,7 +30,7 @@ If you don't have an existing public and private key pair, or if you receive an 
 In the command line, type the following by replacing your_email@email.com with your own email address.
 
 ```
-ssh-keygen -t ed25519 -C "your_email@email.com"
+$ ssh-keygen -t ed25519 -C "your_email@email.com"
 ```
 
 This creates a new SSH key pair, using the provided email as a label.
@@ -83,17 +73,11 @@ The key's randomart image is:
 
 ## Adding a new SSH key to your GitHub account
 
-We now need to tell GitHub about your public key.  
+We now need to tell GitHub about your public key. Display the contents of your new public key file with `cat`.  
 **Be careful**: do not copy the content of your *private* key, but your *public* key. Your public key ends with `.pub`.
 
-On Windows, to display the content of your new public key file, type:
 ```
-type ~/.ssh/id_ed25519.pub
-```
-
-On Mac or Linux, use: 
-```
-cat ~/.ssh/id_ed25519.pub
+$ cat ~/.ssh/id_ed25519.pub
 ```
 
 The output should look something like this:
@@ -131,10 +115,10 @@ the `ssh-agent` after the first time you enter it. If you keep getting
 asked for your key each time you want to clone or push to a GitHub
 repository, you can follow the following instructions.
 
-In the command line, start the ssh-agent with:
+In the command line, start the ssh-agent with (after the $):
 
 ```
-eval "$(ssh-agent -s)"
+$ eval "$(ssh-agent -s)"
 ```
 
 which should output something like
@@ -145,7 +129,7 @@ Agent pid 59566
 Then, add your key to the ssh-agent with
 
 ```
-ssh-add ~/.ssh/id_ed25519
+$ ssh-add ~/.ssh/id_ed25519
 ```
 
 That's it.
