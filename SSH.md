@@ -13,7 +13,7 @@ The first step in using SSH authorization with GitHub is to generate your own ke
 However, you might already have an SSH key pair on your machine. You can check to see if one exists by moving to your `.ssh` directory and listing the contents. To do this, open Git Bash (on windows) or the terminal (in Mac or Linux) and type the following (after the dollar prompt)
 
 ```
-$ ls ~/.ssh
+ls ~/.ssh
 ```
 
 The `ls` command lists the content of a directory, here `~/.ssh`. Check the directory listing to see if you already have a public SSH key. By default, the filenames of the public keys are one of the following:
@@ -30,7 +30,7 @@ If you don't have an existing public and private key pair, or if you receive an 
 In the command line, type the following by replacing your_email@email.com with your own email address.
 
 ```
-$ ssh-keygen -t ed25519 -C "your_email@email.com"
+ssh-keygen -t ed25519 -C "your_email@email.com"
 ```
 
 This creates a new SSH key pair, using the provided email as a label.
@@ -77,7 +77,7 @@ We now need to tell GitHub about your public key. Display the contents of your n
 **Be careful**: do not copy the content of your *private* key, but your *public* key. Your public key ends with `.pub`.
 
 ```
-$ cat ~/.ssh/id_ed25519.pub
+cat ~/.ssh/id_ed25519.pub
 ```
 
 The output should look something like this:
@@ -118,7 +118,7 @@ repository, you can follow the following instructions.
 In the command line, start the ssh-agent with (after the $):
 
 ```
-$ eval "$(ssh-agent -s)"
+eval "$(ssh-agent -s)"
 ```
 
 which should output something like
@@ -129,7 +129,7 @@ Agent pid 59566
 Then, add your key to the ssh-agent with
 
 ```
-$ ssh-add ~/.ssh/id_ed25519
+ssh-add ~/.ssh/id_ed25519
 ```
 
 That's it.
