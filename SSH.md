@@ -47,7 +47,7 @@ Generating public/private ed25519 key pair.
 Enter file in which to save the key (/Users/username/.ssh/id_ed25519):  
 ```
 
-You will then be asked to provide a passphrase. Protecting your keys with a passphrase is optional but highly recommended. Don't hesitate to use a long passphrase, you'll only have to type it once per day to unlock a key.
+You will then be asked to provide a passphrase. Protecting your keys with a passphrase is optional but highly recommended. Don't hesitate to use a long passphrase, you'll only have to type it once per day to unlock a key. Note: when you type passwords in the command line, nothing is displayed, not even \***.
 
 ```
 Enter passphrase (empty for no passphrase):  
