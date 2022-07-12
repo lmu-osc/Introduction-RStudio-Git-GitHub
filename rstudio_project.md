@@ -8,7 +8,7 @@ Create a new project in RStudio as follows:
 
 <img src="assets/project_screen1.png" width="500"> 
 
-In the **Project Type** screen, click on **Empty Project**.
+In the **Project Type** screen, click on **Empty Project** or **New project**
 
 <img src="assets/project_screen2.png" width="500"> 
 
