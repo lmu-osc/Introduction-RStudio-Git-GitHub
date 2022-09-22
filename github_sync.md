@@ -33,7 +33,8 @@ Paste the git commands into the Shell and press Enter to execute them.
 
 ![](./assets/git_origin.png)
 
-You may be asked again to authenticate your identity. Confirm that the project has been uploaded to your GitHub profile.  
+You may be asked again to authenticate your identity, and validate it by answering 'yes' to a question basically asking if you are sure you want to continue. 
+Finally, confirm that the project has been uploaded to your GitHub profile.  
 
 ***
 
