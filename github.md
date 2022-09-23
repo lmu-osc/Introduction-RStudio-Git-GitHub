@@ -7,6 +7,8 @@ It has become so standard that some organisations will ask to see your GitHub pr
 * Create a free account on GitHub.
     * <a href="https://github.com/join" target ="_blank">https://github.com/join</a>
 
+You do not need to select any additional products proposed upon creation of the account.
+
 ***
 
 [Previous](./installing_software.md) | [Next](./SSH.md)
