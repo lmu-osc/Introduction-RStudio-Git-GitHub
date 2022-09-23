@@ -28,7 +28,7 @@ The `ls` command lists the content of a directory, here `~/.ssh`. Check the dire
 *id_ed25519.pub*  
 
 If you do you, can skip the section that generate a SSH key pair, and go to the section 'Adding a new SSH key to your GitHub account'.  
-If you don't have an existing public and private key pair, or if you receive an error that ~/.ssh doesn't exist, that this file location doesn't exist, or that you can't access this folder, go head and generate a new SSH key pair!
+**If you don't have an existing public and private key pair, or if you receive an error that ~/.ssh doesn't exist, that this file location doesn't exist, or that you can't access this folder, go ahead and generate a new SSH key pair!**
 
 ## Generating an SSH key pair
 
@@ -40,14 +40,16 @@ ssh-keygen -t ed25519 -C "your_email@email.com"
 
 This creates a new SSH key pair, using the provided email as a label.
 
-When you're prompted to "Enter a file in which to save the key," press ENTER. This accepts the default file location. This is the promt that will appear:
+When you're prompted to "Enter a file in which to save the key," press ENTER. This accepts the default file location.  
+This is the promt that will appear:
 
 ```
 Generating public/private ed25519 key pair.  
 Enter file in which to save the key (/Users/username/.ssh/id_ed25519):  
 ```
 
-You will then be asked to provide a passphrase. Protecting your keys with a passphrase is optional but highly recommended. Don't hesitate to use a long passphrase, you'll only have to type it once per day to unlock a key. Note: when you type passwords in the command line, nothing is displayed, not even \***. This is the promt that will appear:
+You will then be asked to provide a passphrase. Protecting your keys with a password is optional but highly recommended. Note: when you type passwords in the command line, nothing is displayed, not even \***.  
+This is the promt that will appear:
 
 ```
 Enter passphrase (empty for no passphrase):  
@@ -79,7 +81,7 @@ The key's randomart image is:
 ## Adding a new SSH key to your GitHub account
 
 We now need to tell GitHub about your public key. Display the contents of your new public key file with `cat`.  
-**Be careful**: do not copy the content of your *private* key, but your *public* key. Your public key ends with `.pub`.
+**Be careful**: do not copy the content of your *private* key, but your *public* key. Your public key ends with `.pub`.  
 Please type the command below exactly as it is, in its entirety:
 
 ```
@@ -127,7 +129,7 @@ In the command line, start the ssh-agent with this command:
 eval "$(ssh-agent -s)"
 ```
 
-which should output something like
+which should display an output similar to something like this:
 ```
 Agent pid 59566
 ```
