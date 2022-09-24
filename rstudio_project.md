@@ -20,7 +20,7 @@ RStudio will create a new folder containing an empty project and set R's working
 
 ![](./assets/project_files.png)
 
-Two files are created in the otherwise empty project:-
+Two files are created in the otherwise empty project:
 
 * **.gitignore** - Specifies files that should be ignored by the version control system.
 * **data_analysis.Rproj** - Configuration information for the RStudio project
