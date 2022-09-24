@@ -33,8 +33,19 @@ Paste the git commands into the Shell and press Enter to execute them.
 
 ![](./assets/git_origin.png)
 
-You may be asked again to authenticate your identity, and validate it by answering 'yes' to a question basically asking if you are sure you want to continue. 
-Finally, confirm that the project has been uploaded to your GitHub profile.  
+Given this is your first push, you may be asked again to authenticate your identity.  
+You will be prompted with such sentence in the terminal:
+
+```
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+```
+to which you should answer:
+
+```
+yes  
+```
+
+Finally, confirm that the project has been uploaded to your GitHub profile (you may need to refresh your GitHub page)
 
 ***
 
