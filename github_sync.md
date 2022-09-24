@@ -22,8 +22,8 @@ At the **Create a new repository** screen, give your repo a name and click **Cre
 ![](./assets/ISBE_example.png)
 
 The **Quick Setup** screen gives sets of git commands that can be used in various circumstances.  
-First, make sure you select the SSH tab (the url shown in the blue box should start with git@github.com).
-We are interested in **…or push an existing repository from the command line**. Copy these commands to the clipboard using the copy button on GitHub. 
+First, make sure you select the SSH tab (the url shown in the blue box should start with git@github.com).  
+We are then interested in **…or push an existing repository from the command line**. Copy these commands to the clipboard using the copy button on GitHub. 
 
 ![](./assets/github_git_commands.png)
 
