@@ -32,7 +32,7 @@ If you do you, can skip the section that generate a SSH key pair, and go to the 
 
 ## Generating an SSH key pair
 
-In the command line, type the following by replacing your_email@email.com with your own email address.
+In the command line, type the following by replacing your_email@email.com with your own email address. Pay attention to spaces and capital letter!
 
 ```
 ssh-keygen -t ed25519 -C "your_email@email.com"
