@@ -27,8 +27,9 @@ The `ls` command lists the content of a directory, here `~/.ssh`. Check the dire
 *id_ecdsa.pub*  
 *id_ed25519.pub*  
 
-If you do you, can skip the section that generate a SSH key pair, and go to the section 'Adding a new SSH key to your GitHub account'.  
-**If you don't have an existing public and private key pair, or if you receive an error that ~/.ssh doesn't exist, that this file location doesn't exist, or that you can't access this folder, go ahead and generate a new SSH key pair!**
+If you do you, can skip the section that generate a SSH key pair, and go to the section 'Adding a new SSH key to your GitHub account'. 
+
+**If you don't have an existing public and private key pair (which is to be expected!), or if you receive an error that ~/.ssh doesn't exist, that this file location doesn't exist, or that you can't access this folder, go ahead and generate a new SSH key pair!**
 
 ## Generating an SSH key pair
 
