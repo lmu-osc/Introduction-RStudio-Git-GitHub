@@ -19,7 +19,7 @@ Putting your code on GitHub confers a number of benefits:
 
 At the **Create a new repository** screen, give your repo a name and click **Create Repository**.
 
-![](./assets/ISBE_example.png)
+![](./assets/new_repo_name.png)
 
 The **Quick Setup** screen gives sets of git commands that can be used in various circumstances.  
 First, make sure you select the SSH tab (the url shown in the blue box should start with git@github.com).  
@@ -35,19 +35,16 @@ Paste the git commands into the Shell and press Enter to execute them.
 
 ![](./assets/git_origin.png)
 
-Given this is your first push, you may be asked again to authenticate your identity.  
-You will be prompted with such sentence in the terminal:
+Given this is your first push, you may be asked again to authenticate your identity. 
+You could be asked for the password of your SSH key and/or prompted with such sentence in the terminal:
 
 ```
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
-to which you should answer:
+to which you should answer `yes`
 
-```
-yes  
-```
 
-Finally, confirm that the project has been uploaded to your GitHub profile (you may need to refresh your GitHub page)
+Finally, confirm that the project has been uploaded to your GitHub profile (you may need to refresh your GitHub page).
 
 ***
 
