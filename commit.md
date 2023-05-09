@@ -12,7 +12,7 @@ Add a commit message and click on commit
 
 ![](./assets/git_commit_message2.png)
 
-Close this window and now stage the second script, and commit it with a new message.
+Now stage the second script, and commit it with a new message.
 
 ![](./assets/git_commit_message3.png)
 
