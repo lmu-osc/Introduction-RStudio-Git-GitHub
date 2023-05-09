@@ -2,7 +2,7 @@
 
 When working with a GitHub repository, you'll often need to identify yourself to GitHub using your username and password. There are several ways to secure this connection further. Establishing a secure connection is mandatory since August 2021. 
 
-Today we will use **SSH Keys** to secure your identification to GitHub as this is a common way to secure connections, which you may encounter again in other contexts in the future. An SSH key is also an alternate way to identify yourself that doesn't require you to enter you username and password every time.
+Today we will use **SSH Keys** to secure your identification to GitHub as this is a common way to secure connections, which you may encounter again in other contexts in the future. 
 
 SSH keys come in pairs, a public key that gets shared with services like GitHub, and a private key that is stored only on your computer. If the keys match, you're granted access.
 
@@ -101,22 +101,15 @@ Login to github.com and bring up your account settings by clicking on your profi
 
 ![](./assets/ssh-key.png)
 
-In the "Title" field, add a descriptive label for the new key. For example, if you're using a personal laptop, you might call this key "Personal MacBook Air". Finally, paste the contents of your clipboard into the Key text box and hit the green 'Add key' button to save. Enter your GitHub password if prompted.
+In the "Title" field, add a descriptive label for the new key, e.g. something that would identify the device you just connected. For example, if you're using a personal laptop, you might call this key "Personal MacBook Air". Finally, paste the contents of your clipboard into the Key text box and hit the green 'Add key' button to save. Enter your GitHub password if prompted.
 
 ![](./assets/add-ssh-key.png)
 
-That's it !  
-Going forward, you can use the SSH clone URL when copying a repo to your local machine (we will cover this in the second tutorial).
 
-## Adding your key to the ssh-agent (optional)
 
-Read the following to type your passphrase only once.
+## Adding your key to the ssh-agent
 
-If you protected your key with a passphrase, you will be prompted
-for it every time time you use your key. To save you some typing, it
-is possible to use a piece of software called `ssh-agent` to ask your
-system to "remember" your key. In practice, this means you only have
-to type your passphrase once.
+To manage your keys, it is best to use a piece of software called `ssh-agent`.
 
 Depending on your system, the following might not be necessary. On
 most GNU/Linux distributions, your key will be automatically added to
@@ -141,7 +134,8 @@ Then, add your key to the ssh-agent by typing the entirety of this command:
 ssh-add ~/.ssh/id_ed25519
 ```
 
-That's it! You are completely done with the setting up part, which you will need to repeat only if you change computer.
+That's it !  
+Going forward, you can use the SSH clone URL when copying a repo to your local machine (we will cover this in the second tutorial). You are completely done with the setting up part, which you will need to repeat only if you change computer.  
 Let the fun begin!
 
 ***
