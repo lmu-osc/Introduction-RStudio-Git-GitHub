@@ -33,7 +33,7 @@ The material is self-paced and includes a worked-example. It is necessary that y
 * [Getting our project under version control](./version_control.md) - First step into a larger world
 * [Making some changes](./making_change.md) - Making our script more useful
 * [Committing our change](./commit.md) - How to commit a change
-* [Viewing history](.viewing_history.md) - How to view the history of your project or of a single file
+* [Viewing history](./viewing_history.md) - How to view the history of your project or of a single file
 * [Connecting our local repository to GitHub](./github_sync.md) - Backup! Making our code available to the world.
 * [Subsequent updates](./updates.md) - Now we are set up, the workflow is easy.
 * [Things we haven't told you](./next_steps.md) - Steps to further learning
