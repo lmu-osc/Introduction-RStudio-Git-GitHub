@@ -31,7 +31,7 @@ The material is self-paced and includes a worked-example. It is necessary that y
 * [Creating an RStudio project](./rstudio_project.md) - Creating an example, version controlled project
 * [Starting our analysis project](./analysis_start.md) - A simple script to get us started
 * [Getting our project under version control](./version_control.md) - First step into a larger world
-* [Making a change](./making_change.md) - Making our script more useful
+* [Making some changes](./making_change.md) - Making our script more useful
 * [Committing our change](./commit.md) - How to commit a change
 * [Viewing history](.viewing_history.md) - How to view the history of your project or of a single file
 * [Connecting our local repository to GitHub](./github_sync.md) - Backup! Making our code available to the world.
