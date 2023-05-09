@@ -2,9 +2,9 @@
 
 The purpose of this tutorial is to teach you version control. In order to do this, however, we'll need to make up a simple project that needs controlling!
 
-Our initial project will be extremely simple -- a very small data file and a script that loads and plots it. Later, we'll add code to fit a nonlinear curve to it. (Based on the tutorial at [this blog post](http://www.walkingrandomly.com/?p=5254))
+Our initial project will be extremely simple -- a very small data file and a script that loads and plots it. Later, we'll add code to fit a nonlinear curve to it.
 
-Download this data to your project folder: [Example data](https://raw.githubusercontent.com/RSE-Sheffield/Code_cafe/master/example_data.csv) (right click to open in a new window and use your Web browser's save as functionality. You may need to manually add the file extension ".csv").
+Download this data to your project folder: [Example data](https://raw.githubusercontent.com/RSE-Sheffield/Code_cafe/master/example_data.csv) (right click to open in a new window and use your Web browser's save as functionality (likely another right click on the page)). You may need to manually add the file extension ".csv").
 
 Create a new R script in RStudio. **File** -> **New File** -> **R script**
 
