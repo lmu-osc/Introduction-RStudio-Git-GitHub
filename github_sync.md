@@ -35,8 +35,12 @@ Paste the git commands into the Shell and press Enter to execute them.
 
 ![](./assets/git_origin.png)
 
-Given this is your first push, you may be asked again to authenticate your identity. 
-You could be asked for the password of your SSH key and/or prompted with such sentence in the terminal:
+Given this is your first push, you may be asked again to authenticate your identity by entering the password of your SSH key
+
+![](./assets/first_push_confirm_identity.png)
+
+
+and/or prompted with such sentence in the terminal:
 
 ```
 Are you sure you want to continue connecting (yes/no/[fingerprint])?

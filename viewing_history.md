@@ -1,11 +1,6 @@
 # Viewing history
 
-In the **git** tab of RStudio, click on **Diff**  under the **Git** tab. 
-
-![](./assets/git_diff_commit.png)
-
-
-A window pane should pop up; press the **History** button.
+In this **Diff** pop up window, which you found in the **git** tab of RStudio, you can also press the **History** button to review the history of your project or files.
 
 
 ![](./assets/git_history_tab.png)
