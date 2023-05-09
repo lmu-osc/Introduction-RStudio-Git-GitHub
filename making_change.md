@@ -1,6 +1,8 @@
 # Making some changes
 
-The next version of our code will do a little more. Add the following code to the end of your R script.
+The next version of our project will do 3 changes. 
+
+1. Add the following code to the end of your R script.
 
 ```
 # some guesses for the parameters.
@@ -16,7 +18,7 @@ lines(new$xdata,predict(fit,newdata=new))
 
 ```
 
-For this version, we are also going to change the command that plots our data. Change the lines
+2.  change the command that plots our data in this file. Change the lines
 
 ```
 plot(mydata$xdata,mydata$ydata)
@@ -32,7 +34,7 @@ We do this so we can illustrate how git handles modifications of existing lines 
 
 Make sure the code runs before proceeding further and save the script. 
 
-Finally, we will **create another R file** (File -> New File -> R script).
+3. Finally, we will **create another R file** (File -> New File -> R script).
 
 Enter the command:
 
