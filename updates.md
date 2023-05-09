@@ -33,4 +33,4 @@ You can see that the standard workflow loop is very quick and simple
 
 ***
 
-[Previous](./github_sync.md) | [Next](./created_earlier.md)
+[Previous](./github_sync.md) | [Next](./next_steps.md)
