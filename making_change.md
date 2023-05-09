@@ -1,8 +1,6 @@
-# Making a change
+# Making some changes
 
-The next version of our code will do a little more. From domain knowledge of the data, we know that a good model for it is the equation **p1\*cos(p2\*xdata) + p2\*sin(p1*xdata)**.
-
-We just need to find the values for the parameters **p1** and **p2**. Add the following code to the end of your R script.
+The next version of our code will do a little more. Add the following code to the end of your R script.
 
 ```
 # some guesses for the parameters.
@@ -32,7 +30,18 @@ plot(mydata$xdata,mydata$ydata,col='red')
 
 We do this so we can illustrate how git handles modifications of existing lines as well as simply adding extra lines of code.
 
-Make sure the code runs before proceeding further.  
+Make sure the code runs before proceeding further and save the script. 
+
+Finally, we will create another R file (File -> New File -> R script).
+
+Enter the command:
+
+```
+#Simulate some data
+plot(rnorm(100,0,1))
+```
+And save the file as `myscript_too`
+
 
 ***
 
