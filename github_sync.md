@@ -32,9 +32,6 @@ In RStudio, navigate to the **git** tab and click on **More -> Shell**
 ![](./assets/git_more_shell.png)
 
 Paste the git commands into the Shell and press Enter to execute them.
-
-![](./assets/git_origin.png)
-
 Given this is your first push, you may be asked again to authenticate your identity by entering the password of your SSH key
 
 ![](./assets/first_push_confirm_identity.png)
