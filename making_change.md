@@ -32,7 +32,7 @@ We do this so we can illustrate how git handles modifications of existing lines 
 
 Make sure the code runs before proceeding further and save the script. 
 
-Finally, we will create another R file (File -> New File -> R script).
+Finally, we will **create another R file** (File -> New File -> R script).
 
 Enter the command:
 
