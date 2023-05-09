@@ -22,9 +22,10 @@ Once this workflow is set up, you can easily work with several computers or with
 <br/>
 
 ## Step-by-step tutorial
-The material is self-paced and includes a worked-example. It is suggested that you work through the sections in order.  
+The material is self-paced and includes a worked-example. It is necessary that you work through the sections in order.  
 
-* [Installing the software](./installing_software.md) - Get what you need on your own machine
+* [Installing R and RStudio](./installing_software.md)
+* [Installing and configuring Git](./installing_git.md) - Set up your own machine
 * [Getting an account on GitHub](./github.md) - Sign up for GitHub
 * [Securing your connection to GitHub](./SSH.md) - Create a secure SSH key to identify yourself on GitHub
 * [Creating an RStudio project](./rstudio_project.md) - Creating an example, version controlled project
@@ -32,7 +33,7 @@ The material is self-paced and includes a worked-example. It is suggested that y
 * [Getting our project under version control](./version_control.md) - First step into a larger world
 * [Making a change](./making_change.md) - Making our script more useful
 * [Committing our change](./commit.md) - How to commit a change
+* [Viewing history](.viewing_history.md) - How to view the history of your project or of a single file
 * [Connecting our local repository to GitHub](./github_sync.md) - Backup! Making our code available to the world.
 * [Subsequent updates](./updates.md) - Now we are set up, the workflow is easy.
-* [The example repo](./created_earlier.md) - My version of the repo we've created today
 * [Things we haven't told you](./next_steps.md) - Steps to further learning

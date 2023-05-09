@@ -14,12 +14,7 @@ Add a commit message and click on commit
 
 ![](./assets/git_commit_message2.png)
 
-# Viewing history
-
-In the **git** tab of RStudio, click on **diff** and then **History**. You'll see that you can look through every commit you've ever made. This can be extremely useful for finding bugs or looking back to how your model looked a few months ago.
-
-It's not possible to revert back to a previous commit using the RStudio interface. For that, you need to learn some command-line git which is beyond the scope of this session.  
 
 ***
 
-[Previous](./making_change.md) | [Next](./github_sync.md)
+[Previous](./making_change.md) | [Next](./viewing_history.md)
