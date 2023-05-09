@@ -4,7 +4,7 @@ We now have the first version of our analysis so let's get it under version cont
 
 ![](./assets/git_pane.png)
 
-If you hover the mouse pointer over the yellow ? marks in GitHub, you'll see a tooltip telling us that the file is **untracked**. This means that git is not tracking versions of this file.
+If you hover the mouse pointer over the yellow ? marks in GitHub, you'll see a tooltip telling us that the file is **untracked**. This means that git is not tracking versions of this file. (The gitignore file specifies intentionally untracked files that Git should ignore, e.g. sensible data files that should not be made public, or documentation that you don't need version controlled).
 
 Tick **staged** for each file. In some future cases, you may want to stage only one or a few file to create a coherent commit (unit of change).
 
