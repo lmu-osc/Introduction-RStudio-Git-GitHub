@@ -31,6 +31,8 @@ In RStudio, navigate to the **git** tab and click on **More -> Shell**
 
 ![](./assets/git_more_shell.png)
 
+<br/>
+
 Paste the git commands into the Shell and press Enter to execute them.
 Given this is your first push, you may be asked again to authenticate your identity by entering the password of your SSH key
 
@@ -42,16 +44,14 @@ and/or prompted with such sentence in the terminal:
 ```
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
-to which you should answer `yes`
+to which you should answer `yes`  
 
+<br/>
 
-> :warning: **Warning for Windows OS with RStudio > 2022.12.0**
-> If you get an error saying you do not have a SSH key in the appropriate location, this is due to a <a href="https://community.rstudio.com/t/git-bash-uses-different-home-directory-in-rstudio-2022-12-0-on-windows/155508">known bug in the RStudio / Git bash interaction</a> which we expect to be eventually resolved with updates. A temporary solution is to open the Windows Power Shell instead of Git Bash as terminal within RStudio: for this, go to RStudio -> Tools -> Global Options -> Terminal -> New terminals open with -> choose Windows Power Shell -> Click Apply -> close the panel -> Complete the steps above (i.e. paste or type the commands presented by your new GitHub repo) -> change back the default terminal within RStduio to Git Bash.
+> **Warning for Windows OS with RStudio > 2022.12.0**
+> If you get an error saying you do not have a SSH key in the appropriate location, this is due to a <a href="https://community.rstudio.com/t/git-bash-uses-different-home-directory-in-rstudio-2022-12-0-on-windows/155508">known bug in the RStudio / Git bash interaction</a> which we expect to be eventually resolved with updates. A temporary solution is to open the Windows Power Shell instead of Git Bash as terminal within RStudio: for this, go to RStudio -> Tools -> Global Options -> Terminal -> New terminals open with -> choose Windows Power Shell -> Click Apply -> close the panel -> Complete the steps above (i.e. paste or type the commands presented by your new GitHub repo) -> change back the default terminal within RStudio to Git Bash.
 
-</div>
-</div>
-
-
+<br/>
 
 Finally, confirm that the project has been uploaded to your GitHub profile (you may need to refresh your GitHub page).
 
