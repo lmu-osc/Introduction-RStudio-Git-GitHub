@@ -45,12 +45,8 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 to which you should answer `yes`
 
 
-<div class="panel panel-warning">
-**Warning**
-{: .panel-heading}
-<div class="panel-body">
-
-On Windows with RStudio > 2022.12.0: If you get an error saying you do not have a ssh key in the appropriate location, this is due to a [known bug in the RStudio / Git bash interaction](https://community.rstudio.com/t/git-bash-uses-different-home-directory-in-rstudio-2022-12-0-on-windows/155508) which we expect to be eventually resolved with updates. A temporary solution is to open the Windows power Shell instead of Git Bash as terminal within RStudio: for this, go to RStudio -> Tools -> Global Options -> Terminal -> New terminals open with -> choose Windows Power Shell -> Click Apply -> close the panel -> Complete the steps above (i.e. paste or type the commands presented by your new GitHub repo) -> change back the default terminal within RStduio to Git Bash.
+> :warning: **Warning for Windows OS with RStudio > 2022.12.0**
+> If you get an error saying you do not have a SSH key in the appropriate location, this is due to a <a href="https://community.rstudio.com/t/git-bash-uses-different-home-directory-in-rstudio-2022-12-0-on-windows/155508">known bug in the RStudio / Git bash interaction</a> which we expect to be eventually resolved with updates. A temporary solution is to open the Windows Power Shell instead of Git Bash as terminal within RStudio: for this, go to RStudio -> Tools -> Global Options -> Terminal -> New terminals open with -> choose Windows Power Shell -> Click Apply -> close the panel -> Complete the steps above (i.e. paste or type the commands presented by your new GitHub repo) -> change back the default terminal within RStduio to Git Bash.
 
 </div>
 </div>
