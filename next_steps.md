@@ -21,7 +21,7 @@ By employing testing, you can ensure that your code behaves the way you expect.
 Your code works on your machine but not on someone else's because they are using a different version of R and have different versions of packages installed. How might we fix this?
 
 * <a href="https://rstudio.github.io/renv/index.html" target ="_blank">https://rstudio.github.io/renv/index.html</a> - renv enhances your project directory by storing your package dependencies inside it.
-* <a href="https://mran.microsoft.com/" target ="_blank">https://mran.microsoft.com/</a> - MRAN, The 'Managed CRAN' has snapshots of every package going back to 2014  
+* <a href="https://packagemanager.posit.co/client/#/" target ="_blank">https://packagemanager.posit.co/client/#//</a> - Posit Package Manager provides regular snapshots of CRAN, Bioconductor, and pypi back to 2017  
 
 ***
 
