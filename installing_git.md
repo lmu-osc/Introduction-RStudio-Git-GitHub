@@ -38,4 +38,4 @@ git config --global user.name "Your Name"
 
 ***
 
-[Previous](./installing_git.md) | [Next](./github.md)
+[Previous](./installing_software.md) | [Next](./github.md)
