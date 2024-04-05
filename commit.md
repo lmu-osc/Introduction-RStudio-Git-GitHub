@@ -1,5 +1,7 @@
 # Committing our change
 
+**All files need to be saved before being 'committable'**. 
+
 Now, click on the **git** tab in RStudio. You'll notice that there are two files listed -- our script, which has been modified, and our script too, which was added. Click on the staged box to stage the change to the first script.
 
 ![](./assets/git_changed.png)
