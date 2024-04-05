@@ -27,7 +27,7 @@ We are then interested in **…or push an existing repository from the command l
 
 ![](./assets/github_git_commands.png)
 
-In RStudio, navigate to the **git** tab and click on **More -> Shell**
+In RStudio, navigate to the **git** tab and click on **More -> New terminal**
 
 ![](./assets/git_more_shell.png)
 
