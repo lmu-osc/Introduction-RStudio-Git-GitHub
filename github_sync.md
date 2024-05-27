@@ -18,7 +18,7 @@ Putting your code on GitHub confers a number of benefits:
 <img src="assets/new_repo.png" width="600"> 
 
 At the **Create a new repository** screen, give your repo a name and click **Create Repository**.
-In this case only, when you didn't start by creating a repo on GitHub but want to push from an exisiting local reposiotry for the first time like we are doing now and like you would to upgrade your old projects, do NOT select 'create a README file' but directly 'Create repository
+In this case only, when you didn't start by creating a repo on GitHub but want to push from an exisiting local repository for the first time like we are doing now and like you would to upgrade your old projects, do NOT select 'create a README file' but directly 'Create repository'.
 
 ![](./assets/new_repo_name.png)
 
