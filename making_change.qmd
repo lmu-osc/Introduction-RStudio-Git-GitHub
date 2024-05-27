@@ -7,7 +7,7 @@ The next version of our project will do 3 changes.
 
 1. Add the following code to the end of your R script.
 
-```
+```r
 # some guesses for the parameters.
 p1 = 1
 p2 = 0.2
@@ -23,13 +23,13 @@ lines(new$xdata,predict(fit,newdata=new))
 
 2.  change the command that plots our data in this file. Change the lines
 
-```
+```r
 plot(mydata$xdata,mydata$ydata)
 ```
 
 to
 
-```
+```r
 plot(mydata$xdata,mydata$ydata,col='red')
 ```
 
@@ -41,7 +41,7 @@ Make sure the code runs before proceeding further and save the script.
 
 Enter the command:
 
-```
+```r
 #Simulate some data
 plot(rnorm(100,0,1))
 ```

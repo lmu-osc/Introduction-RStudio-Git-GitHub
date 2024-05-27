@@ -33,7 +33,7 @@ other (hitting ENTER after each command). On successful completion, you should s
 Make sure to replace `you@youremail.com` and `Your Name` by your email
 address and your name.
 
-```
+```bash
 git config --global user.email "you@youremail.com"
 git config --global user.name "Your Name"
 ```

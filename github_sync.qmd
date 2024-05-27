@@ -48,7 +48,7 @@ Given this is your first push, you may be asked again to authenticate your ident
 
 and/or prompted with such sentence in the terminal:
 
-```
+```bash
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
 to which you should answer `yes`  

@@ -10,7 +10,7 @@ On GitHub, the README.md file is special since it is rendered by GitHub and is u
 
 In RStudio, click on **File->New File->Text File**.  Add the following text to the file and save it as **Readme.md**.
 
-```
+```bash
 # My Example Repo
 
 This repo is used to demonstrate GitHub to users of R and R Studio.
