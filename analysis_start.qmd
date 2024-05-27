@@ -1,4 +1,8 @@
-# Starting our analysis project
+---
+title: "Starting our analysis project"
+format: html
+---
+
 
 The purpose of this tutorial is to teach you version control. In order to do this, however, we'll need to make up a simple project that needs controlling!
 

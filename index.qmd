@@ -1,4 +1,7 @@
-# Introduction to version Control in R with RStudio, Git, and Github
+---
+title: "Introduction to version Control in R with RStudio, Git, and Github"
+format: html
+---
 
 ## About this work
 

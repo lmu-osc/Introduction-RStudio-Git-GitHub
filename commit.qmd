@@ -1,4 +1,8 @@
-# Committing our change
+---
+title: "Committing our change"
+format: html
+---
+
 
 **All files need to be saved before being 'committable'**. 
 

@@ -1,4 +1,7 @@
-# Making some changes
+---
+title: "Making some changes"
+format: html
+---
 
 The next version of our project will do 3 changes. 
 

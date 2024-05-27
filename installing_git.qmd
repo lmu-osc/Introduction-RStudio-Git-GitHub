@@ -1,4 +1,7 @@
-## Installing and configuring Git
+---
+title: "Installing and configuring Git"
+format: html
+---
 
 RStudio version control functionality is provided by another software called **git**
 

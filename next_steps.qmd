@@ -1,4 +1,8 @@
-# Things we haven't told you
+---
+title: "Things we haven't told you"
+format: html
+---
+
 
 You've come a long way! You've installed and configured all the software you need and have learned the basics required to put your code under version control and make it openly available to the world.
 

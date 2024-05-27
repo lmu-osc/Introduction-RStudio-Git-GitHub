@@ -1,4 +1,8 @@
-## Installing R and RStudio
+---
+title: "Installing R and RStudio"
+format: html
+---
+
 
 Many users of R use it from within another free piece of software called **RStudio.**
 RStudio is a powerful and productive user interface for R. It’s free and open source, and works great on Windows, Mac, and Linux.

@@ -1,4 +1,8 @@
-# Subsequent updates
+---
+title: "Subsequent updates"
+format: html
+---
+
 
 Once a local repository has been associated with GitHub, it's not necessary to use the command line for subsequent uploads. We'll demonstrate this now by adding a **README.md** file to our project.
 
