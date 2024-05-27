@@ -18,11 +18,15 @@ Putting your code on GitHub confers a number of benefits:
 <img src="assets/new_repo.png" width="600"> 
 
 At the **Create a new repository** screen, give your repo a name and click **Create Repository**.
+In this case only, when you didn't start by creating a repo on GitHub but want to push from an exisiting local reposiotry for the first time like we are doing now and like you would to upgrade your old projects, do NOT select 'create a README file' but directly 'Create repository
 
 ![](./assets/new_repo_name.png)
 
 The **Quick Setup** screen gives sets of git commands that can be used in various circumstances.  
 First, make sure you select the SSH tab (the url shown in the blue box should start with git@github.com).  
+
+
+
 We are then interested in **…or push an existing repository from the command line**. Copy these commands to the clipboard using the copy button on GitHub. 
 
 ![](./assets/github_git_commands.png)
