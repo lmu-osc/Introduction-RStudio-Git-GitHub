@@ -1,12 +1,47 @@
 project:
   type: website
 
+
 website:
   title: ""
+  sidebar:
+    style: docked
+    contents:
+      - section: "Tutorial"
+        contents:
+          - href: installing_software.qmd
+            text: "Installing R and RStudio"
+          - href: installing_git.qmd
+            text: "Installing and configuring Git"
+          - href: github.qmd
+            text: "Getting an account on GitHub"
+          - href: SSH.qmd
+            text: "Securing your connection to GitHub"
+          - href: rstudio_project.qmd
+            text: "Creating an RStudio project"
+          - href: analysis_start.qmd
+            text: "Starting our analysis project"
+          - href: version_control.qmd
+            text: "Getting our project under version control"
+          - href: making_change.qmd
+            text: "Making some changes"
+          - href: commit.qmd
+            text: "Committing our change"
+          - href: viewing_history.qmd
+            text: "Viewing history"
+          - href: github_sync.qmd
+            text: "Connecting our local repository to GitHub"
+          - href: updates.qmd
+            text: "Subsequent updates"
+          - href: next_steps.qmd
+            text: "Things we haven’t told you"
+
+
   navbar:
     left:
       - href: index.qmd
         text: Home
+
 
 format:
   html:
