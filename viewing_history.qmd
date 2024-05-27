@@ -32,4 +32,3 @@ It's not possible to revert back to a previous commit using the RStudio interfac
 
 ***
 
-[Previous](./commit.md) | [Next](./github_sync.md)

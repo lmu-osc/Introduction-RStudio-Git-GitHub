@@ -64,4 +64,3 @@ Finally, confirm that the project has been uploaded to your GitHub profile (you 
 
 ***
 
-[Previous](./viewing_history.md) | [Next](./updates.md)

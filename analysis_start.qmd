@@ -27,4 +27,3 @@ Your directory should now contain 4 files:
 
 ***
 
-[Previous](./rstudio_project.md) | [Next](./version_control.md)

@@ -15,4 +15,3 @@ You do not need to select any additional products proposed upon creation of the 
 
 ***
 
-[Previous](./installing_software.md) | [Next](./SSH.md)

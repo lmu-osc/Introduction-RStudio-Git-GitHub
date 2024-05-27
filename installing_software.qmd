@@ -25,4 +25,3 @@ Next, install RStudio.
 
 ***
 
-[Previous](./README.md) | [Next](./installing_git.md)

@@ -4,6 +4,18 @@ project:
 
 website:
   title: ""
+  page-footer:
+    center: "Copyright, 2024 Open Science Center at LMU Munich"
+    border: false
+  search:
+    location: sidebar
+  page-navigation: true
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+
+
   sidebar:
     style: docked
     contents:
@@ -35,12 +47,6 @@ website:
             text: "Subsequent updates"
           - href: next_steps.qmd
             text: "Things we haven’t told you"
-
-
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
 
 
 format:

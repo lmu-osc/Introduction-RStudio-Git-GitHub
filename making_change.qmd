@@ -50,4 +50,3 @@ And save the file as `myscript_too`
 
 ***
 
-[Previous](./version_control.md) | [Next](./commit.md)

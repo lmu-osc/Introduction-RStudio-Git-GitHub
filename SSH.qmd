@@ -145,5 +145,3 @@ Let the fun begin!
 
 ***
 
-[Previous](./github.md) | [Next](./rstudio_project.md)
-

@@ -25,4 +25,3 @@ Now stage the second script, and commit it with a new message.
 
 ***
 
-[Previous](./making_change.md) | [Next](./viewing_history.md)
