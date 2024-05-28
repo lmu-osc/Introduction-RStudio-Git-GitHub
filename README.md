@@ -24,16 +24,16 @@ Once this workflow is set up, you can easily work with several computers or with
 ## Step-by-step tutorial
 The material is self-paced and includes a worked-example. It is necessary that you work through the sections in order.  
 
-* [Installing R and RStudio](./installing_software.md)
-* [Installing and configuring Git](./installing_git.md) - Set up your own machine
-* [Getting an account on GitHub](./github.md) - Sign up for GitHub
-* [Securing your connection to GitHub](./SSH.md) - Create a secure SSH key to identify yourself on GitHub
-* [Creating an RStudio project](./rstudio_project.md) - Creating an example, version controlled project
-* [Starting our analysis project](./analysis_start.md) - A simple script to get us started
-* [Getting our project under version control](./version_control.md) - First step into a larger world
-* [Making some changes](./making_change.md) - Making our script more useful
-* [Committing our change](./commit.md) - How to commit a change
-* [Viewing history](./viewing_history.md) - How to view the history of your project or of a single file
-* [Connecting our local repository to GitHub](./github_sync.md) - Backup! Making our code available to the world.
-* [Subsequent updates](./updates.md) - Now we are set up, the workflow is easy.
-* [Things we haven't told you](./next_steps.md) - Steps to further learning
+* [Installing R and RStudio](./installing_software.qmd)
+* [Installing and configuring Git](./installing_git.qmd) - Set up your own machine
+* [Getting an account on GitHub](./github.qmd) - Sign up for GitHub
+* [Securing your connection to GitHub](./SSH.qmd) - Create a secure SSH key to identify yourself on GitHub
+* [Creating an RStudio project](./rstudio_project.qmd) - Creating an example, version controlled project
+* [Starting our analysis project](./analysis_start.qmd) - A simple script to get us started
+* [Getting our project under version control](./version_control.qmd) - First step into a larger world
+* [Making some changes](./making_change.qmd) - Making our script more useful
+* [Committing our change](./commit.qmd) - How to commit a change
+* [Viewing history](./viewing_history.qmd) - How to view the history of your project or of a single file
+* [Connecting our local repository to GitHub](./github_sync.qmd) - Backup! Making our code available to the world.
+* [Subsequent updates](./updates.qmd) - Now we are set up, the workflow is easy.
+* [Things we haven't told you](./next_steps.qmd) - Steps to further learning
