@@ -1,0 +1,1 @@
+Sitemap: https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/sitemap.xml
