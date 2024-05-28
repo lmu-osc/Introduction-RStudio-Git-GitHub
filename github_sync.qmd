@@ -1,4 +1,7 @@
-# Connecting our local repository to GitHub
+---
+title: " Connecting our local repository to GitHub"
+format: html
+---
 
 Our project is fully version controlled so we have access to a detailed history of every change we've ever made to it. This is a great first step but all of this only exists on our own computers at the moment.
 
@@ -45,7 +48,7 @@ Given this is your first push, you may be asked again to authenticate your ident
 
 and/or prompted with such sentence in the terminal:
 
-```
+```bash
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
 to which you should answer `yes`  
@@ -61,4 +64,3 @@ Finally, confirm that the project has been uploaded to your GitHub profile (you 
 
 ***
 
-[Previous](./viewing_history.md) | [Next](./updates.md)

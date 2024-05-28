@@ -1,4 +1,8 @@
-# Committing our change
+---
+title: "Committing our change"
+format: html
+---
+
 
 **All files need to be saved before being 'committable'**. 
 
@@ -21,4 +25,3 @@ Now stage the second script, and commit it with a new message.
 
 ***
 
-[Previous](./making_change.md) | [Next](./viewing_history.md)

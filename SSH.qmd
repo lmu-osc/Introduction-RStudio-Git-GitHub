@@ -1,4 +1,7 @@
-# Secure the connection between your computer and GitHub
+---
+title: "Secure the connection between your computer and GitHub"
+format: html
+---
 
 When working with a GitHub repository, you'll often need to identify yourself to GitHub using your username and password. There are several ways to secure this connection further. Establishing a secure connection is mandatory since August 2021. 
 
@@ -17,15 +20,17 @@ the **Terminal** app. On Linux, open your distribution's (or any
 other) terminal emulator. Enter the following commands one after the
 other (hitting ENTER after each command).
 
-```
+```bash
 ls ~/.ssh
 ```
 
 The `ls` command lists the content of a directory, here `~/.ssh`. Check the directory listing to see if you already have a public SSH key. By default, the filenames of the public keys are one of the following:
 
-*id_rsa.pub*  
-*id_ecdsa.pub*  
-*id_ed25519.pub*  
+```bash
+id_rsa.pub
+id_ecdsa.pub
+id_ed25519.pub
+```
 
 If you do you, can skip the section that generate a SSH key pair, and go to the section 'Adding a new SSH key to your GitHub account'. 
 
@@ -35,7 +40,7 @@ If you do you, can skip the section that generate a SSH key pair, and go to the 
 
 In the command line, type the following by replacing your_email@email.com with your own email address. Pay attention to spaces and capital letter!
 
-```
+```bash
 ssh-keygen -t ed25519 -C "your_email@email.com"
 ```
 
@@ -44,7 +49,7 @@ This creates a new SSH key pair, using the provided email as a label.
 When you're prompted to "Enter a file in which to save the key," press ENTER. This accepts the default file location.  
 This is the promt that will appear:
 
-```
+```bash
 Generating public/private ed25519 key pair.  
 Enter file in which to save the key (/Users/username/.ssh/id_ed25519):  
 ```
@@ -52,14 +57,14 @@ Enter file in which to save the key (/Users/username/.ssh/id_ed25519):
 You will then be asked to provide a passphrase. Protecting your keys with a password is optional but highly recommended. Note: when you type passwords in the command line, nothing is displayed, not even \***.  
 This is the promt that will appear:
 
-```
+```bash
 Enter passphrase (empty for no passphrase):  
 Enter same passphrase again:
 ```
 
 When the key generation is complete, you should see the following confirmation:
 
-```
+```bash
 Your identification has been saved in /Users/username/.ssh/id_ed25519.
 Your public key has been saved in /Users/username/.ssh/id_ed25519.pub.
 The key fingerprint is:
@@ -85,13 +90,13 @@ We now need to tell GitHub about your public key. Display the contents of your n
 **Be careful**: do not copy the content of your *private* key, but your *public* key. Your public key ends with `.pub`.  
 Please type the command below exactly as it is, in its entirety:
 
-```
+```bash
 cat ~/.ssh/id_ed25519.pub
 ```
 
 The output should look something like this:
 
-```
+```bash
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFEKiimOpcayfHhlbjmnIBAUX74FY/o20k9yFA16XOLm your_email@email.com
 ```
 
@@ -119,18 +124,18 @@ repository, you can follow the following instructions.
 
 In the command line, start the ssh-agent with this command:
 
-```
+```bash
 eval "$(ssh-agent -s)"
 ```
 
 which should display an output similar to something like this:
-```
+```bash
 Agent pid 59566
 ```
 
 Then, add your key to the ssh-agent by typing the entirety of this command:
 
-```
+```bash
 ssh-add ~/.ssh/id_ed25519
 ```
 
@@ -139,6 +144,4 @@ Going forward, you can use the SSH clone URL when copying a repo to your local m
 Let the fun begin!
 
 ***
-
-[Previous](./github.md) | [Next](./rstudio_project.md)
 

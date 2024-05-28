@@ -1,4 +1,7 @@
-# Introduction to version Control in R with RStudio, Git, and Github
+---
+title: "Introduction to version Control in R with RStudio, Git, and Github"
+format: html
+---
 
 ## About this work
 
@@ -8,7 +11,8 @@ This work was originally created by [Mike Croucher](https://github.com/mikecrouc
 Please watch this 10 min introductory [videorecording](https://osf.io/dcqt9/).
 
 ## Overview of the exercice  
-In this session, you are going to start using the version control system Git from within RStudio to keep your local workflow tidy while having access to all previous versions of your files. You will then backup your workflow online on a remote GitHub server, which will allow you to access your work from any computer, and sharing it with your collaborators or publically. Specifically, you will  
+In this session, you are going to start using the version control system Git from within RStudio to keep your local workflow tidy while having access to all previous versions of your files. You will then backup your workflow online on a remote GitHub server, which will allow you to access your work from any computer, and sharing it with your collaborators or publically. Specifically, you will
+
 * install and configure Git (as well as R and RStudio if needed), and create a GitHub account  
 * create a local RStudio project under version control  
 * make changes and **commit** them to your local repository (i.e. save your changes locally in your version control system)  

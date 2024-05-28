@@ -1,4 +1,8 @@
-# Starting our analysis project
+---
+title: "Starting our analysis project"
+format: html
+---
+
 
 The purpose of this tutorial is to teach you version control. In order to do this, however, we'll need to make up a simple project that needs controlling!
 
@@ -10,7 +14,7 @@ Create a new R script in RStudio. **File** -> **New File** -> **R script**
 
 Enter the following commands into your new R script
 
-```
+```r
 mydata = read.csv("example_data.csv")
 plot(mydata$xdata,mydata$ydata)
 ```
@@ -23,4 +27,3 @@ Your directory should now contain 4 files:
 
 ***
 
-[Previous](./rstudio_project.md) | [Next](./version_control.md)

@@ -1,4 +1,7 @@
-## Installing and configuring Git
+---
+title: "Installing and configuring Git"
+format: html
+---
 
 RStudio version control functionality is provided by another software called **git**
 
@@ -30,7 +33,7 @@ other (hitting ENTER after each command). On successful completion, you should s
 Make sure to replace `you@youremail.com` and `Your Name` by your email
 address and your name.
 
-```
+```bash
 git config --global user.email "you@youremail.com"
 git config --global user.name "Your Name"
 ```
@@ -38,4 +41,3 @@ git config --global user.name "Your Name"
 
 ***
 
-[Previous](./installing_software.md) | [Next](./github.md)

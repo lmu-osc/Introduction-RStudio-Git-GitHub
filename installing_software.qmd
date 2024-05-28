@@ -1,4 +1,8 @@
-## Installing R and RStudio
+---
+title: "Installing R and RStudio"
+format: html
+---
+
 
 Many users of R use it from within another free piece of software called **RStudio.**
 RStudio is a powerful and productive user interface for R. It’s free and open source, and works great on Windows, Mac, and Linux.
@@ -6,6 +10,7 @@ RStudio is a powerful and productive user interface for R. It’s free and open 
 **Install R**
 
 Install R first. Downloads are available at <a href="https://cran.rstudio.com/" target ="_blank">https://cran.rstudio.com/</a>  
+
   * Direct link for Windows <a href="https://cran.r-project.org/bin/windows/base/" target ="_blank">https://cran.r-project.org/bin/windows/base/</a>  
   * Direct link for MacOS X <a href="https://cran.r-project.org/bin/macosx/" target ="_blank">https://cran.r-project.org/bin/macosx/</a> 
   * Direct link for Linux <a href="https://cran.r-project.org/bin/linux/" target ="_blank">https://cran.r-project.org/bin/linux/</a> 
@@ -20,4 +25,3 @@ Next, install RStudio.
 
 ***
 
-[Previous](./README.md) | [Next](./installing_git.md)

@@ -1,4 +1,8 @@
-# Things we haven't told you
+---
+title: "Things we haven't told you"
+format: html
+---
+
 
 You've come a long way! You've installed and configured all the software you need and have learned the basics required to put your code under version control and make it openly available to the world.
 
@@ -25,5 +29,5 @@ Your code works on your machine but not on someone else's because they are using
 
 ***
 
-[Previous](./updates.md) | <a href="https://malikaihle.github.io/Introduction-RStudio-Git-GitHub" target ="_blank">Home page</a> | <a href="https://malikaihle.github.io/Collaborative-RStudio-GitHub/" target ="_blank">Go to second tutorial</a>
+
  

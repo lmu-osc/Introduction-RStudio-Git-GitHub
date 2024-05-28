@@ -1,4 +1,8 @@
-# Create an account on GitHub
+---
+title: "Create an account on GitHub"
+format: html
+---
+
 
 Although git can be used on its own, most people choose to use it in conjunction with an online repository service. The most popular of these, by far, is GitHub.
 
@@ -11,4 +15,3 @@ You do not need to select any additional products proposed upon creation of the 
 
 ***
 
-[Previous](./installing_software.md) | [Next](./SSH.md)

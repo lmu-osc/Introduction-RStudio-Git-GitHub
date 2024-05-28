@@ -1,4 +1,8 @@
-# Getting our project under version control
+---
+title: "Getting our project under version control"
+format: html
+---
+
 
 We now have the first version of our analysis so let's get it under version control. By default, the git version control pane is in the top right hand corner of RStudio. Find it and click on the **git** tab.
 
@@ -28,4 +32,3 @@ Click on **Close** and you are done.
 
 ***
 
-[Previous](./analysis_start.md) | [Next](./making_change.md)
