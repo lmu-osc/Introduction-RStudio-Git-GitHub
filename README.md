@@ -2,7 +2,7 @@
 
 ## About this work
 
-This work was originally created by [Mike Croucher](https://github.com/mikecroucher) from [RSE-Sheffield](https://github.com/RSE-Sheffield) under a [Creative Commons Attribution Share Alike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/legalcode).  It was subsequently adapted by [Malika Ihle](https://ox.ukrn.org/people/#MalikaIhle) from [Reproducible Research Oxford](https://ox.ukrn.org/). The overview image is from [Dumitru Uzun](https://duzun.me/tips/git). You are free to use this work in your own projects. 
+This work was originally created by [Mike Croucher](https://github.com/mikecroucher) from [RSE-Sheffield](https://github.com/RSE-Sheffield) under a [Creative Commons Attribution Share Alike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/legalcode).  It was subsequently adapted by [Malika Ihle](https://ox.ukrn.org/people/#MalikaIhle) from [Reproducible Research Oxford](https://ox.ukrn.org/). It is now maintained by [Malika Ihle](https://www.osc.uni-muenchen.de/about_us/coordinator/index.html) at the [LMU Open Science Center](https://www.osc.uni-muenchen.de/index.html). The overview image is from [Dumitru Uzun](https://duzun.me/tips/git). You are free to use this work in your own projects. 
 
 ## Before the session 
 Please watch this 10 min introductory [videorecording](https://osf.io/dcqt9/).
