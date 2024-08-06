@@ -9,6 +9,8 @@ website:
     border: false
   search:
     location: sidebar
+  repo-url: https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub
+  repo-actions: [edit, issue]
   page-navigation: true
   navbar:
     left:
