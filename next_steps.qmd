@@ -28,6 +28,10 @@ Your code works on your machine but not on someone else's because they are using
 * <a href="https://packagemanager.posit.co/client/#/" target ="_blank">https://packagemanager.posit.co/client/#//</a> - Posit Package Manager provides regular snapshots of CRAN, Bioconductor, and pypi back to 2017  
 
 ***
+::: {style="text-align: right"}
+[Go to the second tutorial!](https://lmu-osc.github.io/Collaborative-RStudio-GitHub/){.btn .btn-success .btn role="button"}
+:::
+
 
 
  
