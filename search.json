@@ -6,9 +6,21 @@
     "section": "",
     "text": "Although git can be used on its own, most people choose to use it in conjunction with an online repository service. The most popular of these, by far, is GitHub.\nIt has become so standard that some organisations will ask to see your GitHub profile as part of job applications!\n\nCreate a free account on GitHub.\n\nhttps://github.com/join\n\n\nYou do not need to select any additional products proposed upon creation of the account.",
     "crumbs": [
-      "Home",
+      "Introduction to version Control with git and GitHub within RStudio",
       "Tutorial",
       "Getting an account on GitHub"
+    ]
+  },
+  {
+    "objectID": "github_sync.html",
+    "href": "github_sync.html",
+    "title": "Connecting our local repository to GitHub",
+    "section": "",
+    "text": "Our project is fully version controlled so we have access to a detailed history of every change we’ve ever made to it. This is a great first step but all of this only exists on our own computers at the moment.\nIt’s time to upload our project to GitHub!\nPutting your code on GitHub confers a number of benefits:\n\nEverything is backed up for you.\nYour project is made available to others. This is a vital part of modern scientific dissemination.\nGitHub has a range of project management and collaboration tools that work on a per-project basis.\nYour GitHub profile can be used as part of your online-identity.\n\nCreating a new repository on GitHub\n\nLog into GitHub and go to your profile page. On the repositories tab, click New\n\n\nAt the Create a new repository screen, give your repo a name and click Create Repository. In this case only, when you didn’t start by creating a repo on GitHub but want to push from an exisiting local repository for the first time like we are doing now and like you would to upgrade your old projects, do NOT select ‘create a README file’ but directly ‘Create repository’.\n\nThe Quick Setup screen gives sets of git commands that can be used in various circumstances.\nFirst, make sure you select the SSH tab (the url shown in the blue box should start with git@github.com).\nWe are then interested in …or push an existing repository from the command line. Copy these commands to the clipboard using the copy button on GitHub.\n\nIn RStudio, navigate to the git tab and click on More -&gt; New terminal\n\n\nPaste the git commands into the Shell and press Enter to execute them. Given this is your first push, you may be asked again to authenticate your identity by entering the password of your SSH key\n\nand/or prompted with such sentence in the terminal:\nAre you sure you want to continue connecting (yes/no/[fingerprint])?\nto which you should answer yes\n\n\nWarning for Windows OS with RStudio &gt; 2022.12.0 If you get an error saying you do not have a SSH key in the appropriate location, this is due to a known bug in the RStudio / Git bash interaction which we expect to be eventually resolved with updates. A temporary solution is to open the Windows Power Shell instead of Git Bash as terminal within RStudio: for this, go to RStudio -&gt; Tools -&gt; Global Options -&gt; Terminal -&gt; New terminals open with -&gt; choose Windows Power Shell -&gt; Click Apply -&gt; close the panel -&gt; Complete the steps above (i.e. paste or type the commands presented by your new GitHub repo) -&gt; change back the default terminal within RStudio to Git Bash.\n\n\nFinally, confirm that the project has been uploaded to your GitHub profile (you may need to refresh your GitHub page).",
+    "crumbs": [
+      "Introduction to version Control with git and GitHub within RStudio",
+      "Tutorial",
+      "Connecting our local repository to GitHub"
     ]
   },
   {
@@ -18,21 +30,21 @@
     "section": "",
     "text": "Many users of R use it from within another free piece of software called RStudio. RStudio is a powerful and productive user interface for R. It’s free and open source, and works great on Windows, Mac, and Linux.\nInstall R\nInstall R first. Downloads are available at https://cran.rstudio.com/\n\nDirect link for Windows https://cran.r-project.org/bin/windows/base/\n\nDirect link for MacOS X https://cran.r-project.org/bin/macosx/\nDirect link for Linux https://cran.r-project.org/bin/linux/\n\nInstall RStudio\nNext, install RStudio.\n\nDownloads are available at https://www.rstudio.com/products/rstudio/download/",
     "crumbs": [
-      "Home",
+      "Introduction to version Control with git and GitHub within RStudio",
       "Tutorial",
       "Installing R and RStudio"
     ]
   },
   {
-    "objectID": "rstudio_project.html",
-    "href": "rstudio_project.html",
-    "title": "Creating an RStudio project",
+    "objectID": "commit.html",
+    "href": "commit.html",
+    "title": "Committing our change",
     "section": "",
-    "text": "A project is a folder that contains everything concerning your analysis and may include code, data and documentation. It is a complete research object that can be used to describe and reproduce your research.\nCreate a new project in RStudio as follows:\nFile -&gt; New Project -&gt; New Directory\n\nIn the Project Type screen, click on Empty Project or New project\n\nIn the Create New Project screen, give your project a name (e.g.’my_first_test_repo’) and ensure that create a git repository is checked. Click on Create Project.\n\nRStudio will create a new folder containing an empty project and set R’s working directory to within it.\nTwo files are created in the otherwise empty project:\n\n\n.gitignore - Specifies files that should be ignored by the version control system (e.g. sensible data files that should not be made public, or documentation that you don’t need version controlled).\nmy_first_test_repo.Rproj - Configuration information for the RStudio project\n\nThere is no need to worry about the contents of either of these for the purposes of this tutorial.",
+    "text": "All files need to be saved before being ‘committable’.\nNow, click on the git tab in RStudio. You’ll notice that there are two files listed – our script, which has been modified, and our script too, which was added. Click on the staged box to stage the change to the first script.\n\nNow click on Diff to give a summary of what’s changed. Lines that have been added are green. Lines that have been removed are red. From git’s point of view, a modification to a line is actually two operations: the removal of the original line followed by the creation of the new line.\n\nAdd a commit message and click on commit\n\nNow stage the second script, and commit it with a new message.",
     "crumbs": [
-      "Home",
+      "Introduction to version Control with git and GitHub within RStudio",
       "Tutorial",
-      "Creating an RStudio project"
+      "Committing our change"
     ]
   },
   {
@@ -42,7 +54,7 @@
     "section": "",
     "text": "When working with a GitHub repository, you’ll often need to identify yourself to GitHub using your username and password. There are several ways to secure this connection further. Establishing a secure connection is mandatory since August 2021.\nToday we will use SSH Keys to secure your identification to GitHub as this is a common way to secure connections, which you may encounter again in other contexts in the future.\nSSH keys come in pairs, a public key that gets shared with services like GitHub, and a private key that is stored only on your computer. If the keys match, you’re granted access.\nThe procedure below only need to be executed once per GitHub account and for each computer you will use to connect to GitHub.",
     "crumbs": [
-      "Home",
+      "Introduction to version Control with git and GitHub within RStudio",
       "Tutorial",
       "Securing your connection to GitHub"
     ]
@@ -54,7 +66,7 @@
     "section": "Checking for existing SSH key pair",
     "text": "Checking for existing SSH key pair\nThe first step in using SSH authorization with GitHub is to generate your own key pair. However, you might already have an SSH key pair on your machine. You can check to see if one exists by moving to your .ssh directory and listing the contents.\nOn windows, open Git Bash (start menu -&gt; Git Bash). On MacOS, open the Terminal app. On Linux, open your distribution’s (or any other) terminal emulator. Enter the following commands one after the other (hitting ENTER after each command).\nls ~/.ssh\nThe ls command lists the content of a directory, here ~/.ssh. Check the directory listing to see if you already have a public SSH key. By default, the filenames of the public keys are one of the following:\nid_rsa.pub\nid_ecdsa.pub\nid_ed25519.pub\nIf you do you, can skip the section that generate a SSH key pair, and go to the section ‘Adding a new SSH key to your GitHub account’.\nIf you don’t have an existing public and private key pair (which is to be expected!), or if you receive an error that ~/.ssh doesn’t exist, that this file location doesn’t exist, or that you can’t access this folder, go ahead and generate a new SSH key pair!",
     "crumbs": [
-      "Home",
+      "Introduction to version Control with git and GitHub within RStudio",
       "Tutorial",
       "Securing your connection to GitHub"
     ]
@@ -66,7 +78,7 @@
     "section": "Generating an SSH key pair",
     "text": "Generating an SSH key pair\nIn the command line, type the following by replacing your_email@email.com with your own email address. Pay attention to spaces and capital letter!\nssh-keygen -t ed25519 -C \"your_email@email.com\"\nThis creates a new SSH key pair, using the provided email as a label.\nWhen you’re prompted to “Enter a file in which to save the key,” press ENTER. This accepts the default file location.\nThis is the promt that will appear:\nGenerating public/private ed25519 key pair.  \nEnter file in which to save the key (/Users/username/.ssh/id_ed25519):  \nYou will then be asked to provide a passphrase. Protecting your keys with a password is optional but highly recommended. Note: when you type passwords in the command line, nothing is displayed, not even ***.\nThis is the promt that will appear:\nEnter passphrase (empty for no passphrase):  \nEnter same passphrase again:\nWhen the key generation is complete, you should see the following confirmation:\nYour identification has been saved in /Users/username/.ssh/id_ed25519.\nYour public key has been saved in /Users/username/.ssh/id_ed25519.pub.\nThe key fingerprint is:\nSHA256:6nr/zo0g7Bz7WMRwy34maBhQy1UZyX47gT+egRdlIhs your_email@email.com\nThe key's randomart image is:\n+--[ED25519 256]--+\n|    .o++         |\n|   o oF . o      |\n|  . o+ =.+.      |\n|   .  + += .     |\n|    .  +S++      |\n|   . ..oB=       |\n|    . ++*=.      |\n|     o.==* o     |\n|    .o.o+** .    |\n+----[SHA256]-----+",
     "crumbs": [
-      "Home",
+      "Introduction to version Control with git and GitHub within RStudio",
       "Tutorial",
       "Securing your connection to GitHub"
     ]
@@ -78,7 +90,7 @@
     "section": "Adding a new SSH key to your GitHub account",
     "text": "Adding a new SSH key to your GitHub account\nWe now need to tell GitHub about your public key. Display the contents of your new public key file with cat.\nBe careful: do not copy the content of your private key, but your public key. Your public key ends with .pub.\nPlease type the command below exactly as it is, in its entirety:\ncat ~/.ssh/id_ed25519.pub\nThe output should look something like this:\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFEKiimOpcayfHhlbjmnIBAUX74FY/o20k9yFA16XOLm your_email@email.com\nCopy the contents of the output to your clipboard.\nLogin to github.com and bring up your account settings by clicking on your profile photo (top right) and selecting Settings. Click on SSH and GPG keys (left sidebar), and then click on the green button ‘New SSH key’ or ‘Add SSH key’.\n\nIn the “Title” field, add a descriptive label for the new key, e.g. something that would identify the device you just connected. For example, if you’re using a personal laptop, you might call this key “Personal MacBook Air”. Finally, paste the contents of your clipboard into the Key text box and hit the green ‘Add key’ button to save. Enter your GitHub password if prompted.",
     "crumbs": [
-      "Home",
+      "Introduction to version Control with git and GitHub within RStudio",
       "Tutorial",
       "Securing your connection to GitHub"
     ]
@@ -90,57 +102,9 @@
     "section": "Adding your key to the ssh-agent",
     "text": "Adding your key to the ssh-agent\nTo manage your keys, it is best to use a piece of software called ssh-agent.\nDepending on your system, the following might not be necessary. On most GNU/Linux distributions, your key will be automatically added to the ssh-agent after the first time you enter it. If you keep getting asked for your key each time you want to clone or push to a GitHub repository, you can follow the following instructions.\nIn the command line, start the ssh-agent with this command:\neval \"$(ssh-agent -s)\"\nwhich should display an output similar to something like this:\nAgent pid 59566\nThen, add your key to the ssh-agent by typing the entirety of this command:\nssh-add ~/.ssh/id_ed25519\nThat’s it !\nGoing forward, you can use the SSH clone URL when copying a repo to your local machine (we will cover this in the second tutorial). You are completely done with the setting up part, which you will need to repeat only if you change computer.\nLet the fun begin!",
     "crumbs": [
-      "Home",
+      "Introduction to version Control with git and GitHub within RStudio",
       "Tutorial",
       "Securing your connection to GitHub"
-    ]
-  },
-  {
-    "objectID": "version_control.html",
-    "href": "version_control.html",
-    "title": "Getting our project under version control",
-    "section": "",
-    "text": "We now have the first version of our analysis so let’s get it under version control. By default, the git version control pane is in the top right hand corner of RStudio. Find it and click on the git tab.\n\nIf you hover the mouse pointer over the yellow ? marks in GitHub, you’ll see a tooltip telling us that the file is untracked. This means that git is not tracking versions of this file.\nTick staged for each file. In some future cases, you may want to stage only one or a few file to create a coherent commit (unit of change).\n\nAll of our files are now staged, ready for the first commit. Click on the commit button\n\nDetails of the commit will appear in the next panel. You need to specify a commit message – something descriptive about the changes you’ve made. Since this is our first commit, we’ll follow tradition and call it First Commit\nOnce you’ve typed a commit message, click on Commit and you’re done.\n\nThe following messages from git will show.\n\nClick on Close and you are done.",
-    "crumbs": [
-      "Home",
-      "Tutorial",
-      "Getting our project under version control"
-    ]
-  },
-  {
-    "objectID": "updates.html",
-    "href": "updates.html",
-    "title": "Subsequent updates",
-    "section": "",
-    "text": "Once a local repository has been associated with GitHub, it’s not necessary to use the command line for subsequent uploads. We’ll demonstrate this now by adding a README.md file to our project.\nOn GitHub, the README.md file is special since it is rendered by GitHub and is used by many people as an introduction to the project.\nIn RStudio, click on File-&gt;New File-&gt;Text File. Add the following text to the file and save it as Readme.md.\n# My Example Repo\n\nThis repo is used to demonstrate GitHub to users of R and R Studio.\nIn the git tab of RStudio, the Readme.md file should be the only file you see. Stage it as shown below and click commit.\n\nSupply a commit message and click commit.\n\nFinally, click push to upload to GitHub.\n\nYou can see that the standard workflow loop is very quick and simple\n\nMake your change\nStage your change\nCommit\nPush to GitHub",
-    "crumbs": [
-      "Home",
-      "Tutorial",
-      "Subsequent updates"
-    ]
-  },
-  {
-    "objectID": "github_sync.html",
-    "href": "github_sync.html",
-    "title": "Connecting our local repository to GitHub",
-    "section": "",
-    "text": "Our project is fully version controlled so we have access to a detailed history of every change we’ve ever made to it. This is a great first step but all of this only exists on our own computers at the moment.\nIt’s time to upload our project to GitHub!\nPutting your code on GitHub confers a number of benefits:\n\nEverything is backed up for you.\nYour project is made available to others. This is a vital part of modern scientific dissemination.\nGitHub has a range of project management and collaboration tools that work on a per-project basis.\nYour GitHub profile can be used as part of your online-identity.\n\nCreating a new repository on GitHub\n\nLog into GitHub and go to your profile page. On the repositories tab, click New\n\n\nAt the Create a new repository screen, give your repo a name and click Create Repository. In this case only, when you didn’t start by creating a repo on GitHub but want to push from an exisiting local repository for the first time like we are doing now and like you would to upgrade your old projects, do NOT select ‘create a README file’ but directly ‘Create repository’.\n\nThe Quick Setup screen gives sets of git commands that can be used in various circumstances.\nFirst, make sure you select the SSH tab (the url shown in the blue box should start with git@github.com).\nWe are then interested in …or push an existing repository from the command line. Copy these commands to the clipboard using the copy button on GitHub.\n\nIn RStudio, navigate to the git tab and click on More -&gt; New terminal\n\n\nPaste the git commands into the Shell and press Enter to execute them. Given this is your first push, you may be asked again to authenticate your identity by entering the password of your SSH key\n\nand/or prompted with such sentence in the terminal:\nAre you sure you want to continue connecting (yes/no/[fingerprint])?\nto which you should answer yes\n\n\nWarning for Windows OS with RStudio &gt; 2022.12.0 If you get an error saying you do not have a SSH key in the appropriate location, this is due to a known bug in the RStudio / Git bash interaction which we expect to be eventually resolved with updates. A temporary solution is to open the Windows Power Shell instead of Git Bash as terminal within RStudio: for this, go to RStudio -&gt; Tools -&gt; Global Options -&gt; Terminal -&gt; New terminals open with -&gt; choose Windows Power Shell -&gt; Click Apply -&gt; close the panel -&gt; Complete the steps above (i.e. paste or type the commands presented by your new GitHub repo) -&gt; change back the default terminal within RStudio to Git Bash.\n\n\nFinally, confirm that the project has been uploaded to your GitHub profile (you may need to refresh your GitHub page).",
-    "crumbs": [
-      "Home",
-      "Tutorial",
-      "Connecting our local repository to GitHub"
-    ]
-  },
-  {
-    "objectID": "commit.html",
-    "href": "commit.html",
-    "title": "Committing our change",
-    "section": "",
-    "text": "All files need to be saved before being ‘committable’.\nNow, click on the git tab in RStudio. You’ll notice that there are two files listed – our script, which has been modified, and our script too, which was added. Click on the staged box to stage the change to the first script.\n\nNow click on Diff to give a summary of what’s changed. Lines that have been added are green. Lines that have been removed are red. From git’s point of view, a modification to a line is actually two operations: the removal of the original line followed by the creation of the new line.\n\nAdd a commit message and click on commit\n\nNow stage the second script, and commit it with a new message.",
-    "crumbs": [
-      "Home",
-      "Tutorial",
-      "Committing our change"
     ]
   },
   {
@@ -150,7 +114,7 @@
     "section": "",
     "text": "In this Diff pop up window, which you found in the git tab of RStudio, you can also press the History button to review the history of your project or files.\n\nBy default, the history search feature will show all files added, changed, or deleted for each commit. This can be extremely useful for finding bugs or looking back to how your project looked a few months ago. However, it is often more practical to review the changes made to a single file over time; this enables, for example, clear tracking of the evolution of data cleaning and analysis steps in your project.\nTo the right of the History button, there should now be a drop-down box titled (all commits). Press this box to see the other options, which should be titled “Filter by File” and “Filter by Directory.” Select the “Filter by File” option.\n\nA file-section window should appear on your screen; select the file you would like to review, e.g. myscript.R.\nYou will then get only the specific commits in which the selected file was included (i.e. when it was added, deleted, or edited). Click on any of the commit messages to view that specific commit, and scroll further down the screen to view changes made to the file during that commit.\n\nIt’s not possible to revert back to a previous commit using the RStudio interface. For that, you need to learn some command-line git which is beyond the scope of this session.",
     "crumbs": [
-      "Home",
+      "Introduction to version Control with git and GitHub within RStudio",
       "Tutorial",
       "Viewing history"
     ]
@@ -162,21 +126,9 @@
     "section": "",
     "text": "RStudio version control functionality is provided by another software called git\nInstall git\nGit is one of the most popular version control systems in the world. It is free and open source.\n\nWindows & OS X: http://git-scm.com/downloads\n\nWindows: download the .exe file, run it and accept all the default settings (unless you know what you are doing) and keep clicking ‘next’\nOS X: at the link above, select the first option that suggests to install git through installing homebrew, by pasting a line of command provided in their instructions in your terminal, and accept the prompts appearing in your terminal.\n\nDebian/Ubuntu: sudo apt-get install git-core\nFedora/RedHat: sudo yum install git-core\n\nConfigure git\nAfter installing git, you need to tell it who you are.\nBy default, git is used through a command line interface. We’ll use git in this way now in order to perform its initial and minimal configuration. In the remaining of this tutorial, you’ll learn how to use git through Rstudio instead of a command line interface.\nOn windows, open Git Bash (start menu -&gt; Git Bash). On MacOS, open the Terminal app. On Linux, open your distribution’s (or any other) terminal emulator. Enter the following commands EXACTLY (spaces and quotation marks included) one after the other (hitting ENTER after each command). On successful completion, you should see no output from these commands.\nMake sure to replace you@youremail.com and Your Name by your email address and your name.\ngit config --global user.email \"you@youremail.com\"\ngit config --global user.name \"Your Name\"",
     "crumbs": [
-      "Home",
+      "Introduction to version Control with git and GitHub within RStudio",
       "Tutorial",
       "Installing and configuring Git"
-    ]
-  },
-  {
-    "objectID": "next_steps.html",
-    "href": "next_steps.html",
-    "title": "Things we haven’t told you",
-    "section": "",
-    "text": "You’ve come a long way! You’ve installed and configured all the software you need and have learned the basics required to put your code under version control and make it openly available to the world.\nAs you’ve seen, the standard git workflow is fairly straightforward and adds very little overhead to your workflow once you’re set up.\nGit and GitHub are extremely powerful systems and there is a lot more you can learn if you wish. Here are some pointers:-\n\nLearn command line git by following this tutorial from Software Carpentry - http://swcarpentry.github.io/git-novice/\nMake your analysis citable and more discoverable by using Zenodo to assign it a Digital Object Identifier - https://zenodo.org/features\n\nTesting and version control\nBy employing testing, you can ensure that your code behaves the way you expect.\n\nUnit testing in R, the bare minimum - http://www.johnmyleswhite.com/notebook/2010/08/17/unit-testing-in-r-the-bare-minimum/\nContinuous Integration. Every time you push a change to GitHub, your tests are automatically run. - https://docs.travis-ci.com/user/languages/r\n\nDealing with dependencies\nYour code works on your machine but not on someone else’s because they are using a different version of R and have different versions of packages installed. How might we fix this?\n\nhttps://rstudio.github.io/renv/index.html - renv enhances your project directory by storing your package dependencies inside it.\nhttps://packagemanager.posit.co/client/#// - Posit Package Manager provides regular snapshots of CRAN, Bioconductor, and pypi back to 2017\n\n\n\nGo to the second tutorial!",
-    "crumbs": [
-      "Home",
-      "Tutorial",
-      "Things we haven’t told you"
     ]
   },
   {
@@ -186,9 +138,45 @@
     "section": "",
     "text": "The next version of our project will do 3 changes.\n\nAdd the following code to the end of your R script.\n\n# some guesses for the parameters.\np1 = 1\np2 = 0.2\n\n# do the fit\nfit = nls(ydata ~ p1*cos(p2*xdata) + p2*sin(p1*xdata), data = mydata, start = list(p1=p1,p2=p2))\n\n#Plot the fitted line\nnew = data.frame(xdata = seq(min(mydata$xdata),max(mydata$xdata),len=200))\nlines(new$xdata,predict(fit,newdata=new))\n\nchange the command that plots our data in this file. Change the lines\n\nplot(mydata$xdata,mydata$ydata)\nto\nplot(mydata$xdata,mydata$ydata,col='red')\nWe do this so we can illustrate how git handles modifications of existing lines as well as simply adding extra lines of code.\nMake sure the code runs before proceeding further and save the script.\n\nFinally, we will create another R file (File -&gt; New File -&gt; R script).\n\nEnter the command:\n#Simulate some data\nplot(rnorm(100,0,1))\nAnd save the file as myscript_too",
     "crumbs": [
-      "Home",
+      "Introduction to version Control with git and GitHub within RStudio",
       "Tutorial",
       "Making some changes"
+    ]
+  },
+  {
+    "objectID": "analysis_start.html",
+    "href": "analysis_start.html",
+    "title": "Starting our analysis project",
+    "section": "",
+    "text": "The purpose of this tutorial is to teach you version control. In order to do this, however, we’ll need to make up a simple project that needs controlling!\nOur initial project will be extremely simple – a very small data file and a script that loads and plots it. Later, we’ll add code to fit a nonlinear curve to it.\nDownload this data to your project folder: Example data (right click to open in a new window and use your Web browser’s save as functionality (likely another right click on the page)). You may need to manually add the file extension “.csv”).\nCreate a new R script in RStudio. File -&gt; New File -&gt; R script\nEnter the following commands into your new R script\nmydata = read.csv(\"example_data.csv\")\nplot(mydata$xdata,mydata$ydata)\nSave the R script as myscript.R. When you run it, it should load and plot the data.\nYour directory should now contain 4 files:",
+    "crumbs": [
+      "Introduction to version Control with git and GitHub within RStudio",
+      "Tutorial",
+      "Starting our analysis project"
+    ]
+  },
+  {
+    "objectID": "next_steps.html",
+    "href": "next_steps.html",
+    "title": "Things we haven’t told you",
+    "section": "",
+    "text": "You’ve come a long way! You’ve installed and configured all the software you need and have learned the basics required to put your code under version control and make it openly available to the world.\nAs you’ve seen, the standard git workflow is fairly straightforward and adds very little overhead to your workflow once you’re set up.\nGit and GitHub are extremely powerful systems and there is a lot more you can learn if you wish. Here are some pointers:-\n\nLearn command line git by following this tutorial from Software Carpentry - http://swcarpentry.github.io/git-novice/\nMake your analysis citable and more discoverable by using Zenodo to assign it a Digital Object Identifier - https://zenodo.org/features\n\nTesting and version control\nBy employing testing, you can ensure that your code behaves the way you expect.\n\nUnit testing in R, the bare minimum - http://www.johnmyleswhite.com/notebook/2010/08/17/unit-testing-in-r-the-bare-minimum/\nContinuous Integration. Every time you push a change to GitHub, your tests are automatically run. - https://docs.travis-ci.com/user/languages/r\n\nDealing with dependencies\nYour code works on your machine but not on someone else’s because they are using a different version of R and have different versions of packages installed. How might we fix this?\n\nhttps://rstudio.github.io/renv/index.html - renv enhances your project directory by storing your package dependencies inside it.\nhttps://packagemanager.posit.co/client/#// - Posit Package Manager provides regular snapshots of CRAN, Bioconductor, and pypi back to 2017\n\n\n\nGo to the second tutorial!",
+    "crumbs": [
+      "Introduction to version Control with git and GitHub within RStudio",
+      "Tutorial",
+      "Things we haven’t told you"
+    ]
+  },
+  {
+    "objectID": "updates.html",
+    "href": "updates.html",
+    "title": "Subsequent updates",
+    "section": "",
+    "text": "Once a local repository has been associated with GitHub, it’s not necessary to use the command line for subsequent uploads. We’ll demonstrate this now by adding a README.md file to our project.\nOn GitHub, the README.md file is special since it is rendered by GitHub and is used by many people as an introduction to the project.\nIn RStudio, click on File-&gt;New File-&gt;Text File. Add the following text to the file and save it as Readme.md.\n# My Example Repo\n\nThis repo is used to demonstrate GitHub to users of R and R Studio.\nIn the git tab of RStudio, the Readme.md file should be the only file you see. Stage it as shown below and click commit.\n\nSupply a commit message and click commit.\n\nFinally, click push to upload to GitHub.\n\nYou can see that the standard workflow loop is very quick and simple\n\nMake your change\nStage your change\nCommit\nPush to GitHub",
+    "crumbs": [
+      "Introduction to version Control with git and GitHub within RStudio",
+      "Tutorial",
+      "Subsequent updates"
     ]
   },
   {
@@ -198,6 +186,7 @@
     "section": "",
     "text": "This work was originally created by Mike Croucher from RSE-Sheffield under a Creative Commons Attribution Share Alike 4.0 International. It was subsequently adapted by Malika Ihle from Reproducible Research Oxford. The overview image is from Dumitru Uzun. You are free to use this work in your own projects.",
     "crumbs": [
+      "Introduction to version Control with git and GitHub within RStudio",
       "Home"
     ]
   },
@@ -208,6 +197,7 @@
     "section": "",
     "text": "This work was originally created by Mike Croucher from RSE-Sheffield under a Creative Commons Attribution Share Alike 4.0 International. It was subsequently adapted by Malika Ihle from Reproducible Research Oxford. The overview image is from Dumitru Uzun. You are free to use this work in your own projects.",
     "crumbs": [
+      "Introduction to version Control with git and GitHub within RStudio",
       "Home"
     ]
   },
@@ -218,6 +208,7 @@
     "section": "Before the session",
     "text": "Before the session\nPlease watch this 10 min introductory videorecording.",
     "crumbs": [
+      "Introduction to version Control with git and GitHub within RStudio",
       "Home"
     ]
   },
@@ -228,6 +219,7 @@
     "section": "Overview of the exercice",
     "text": "Overview of the exercice\nIn this session, you are going to start using the version control system Git from within RStudio to keep your local workflow tidy while having access to all previous versions of your files. You will then backup your workflow online on a remote GitHub server, which will allow you to access your work from any computer, and sharing it with your collaborators or publically. Specifically, you will\n\ninstall and configure Git (as well as R and RStudio if needed), and create a GitHub account\n\ncreate a local RStudio project under version control\n\nmake changes and commit them to your local repository (i.e. save your changes locally in your version control system)\n\nconnect your local repository to your GitHub account by creating a remote GitHub repository and setting it as the ‘origin’ of your local repository from the command line (this is the procedure you will have to follow to ‘upgrade’ your former RStudio projects that were not under version control and backed-up on GitHub; but in the future, I recommend you first create a GitHub repository (your remote origin) and then clone it locally (i.e. copy it to your computer while maintaining a connection to your remote (GitHub) version). This procedure, easily done from RStudio, will be covered in the second workshop)\n\npush your local changes to your remote repository (i.e. synchronise your changes to your GitHub version)\n\nOnce this workflow is set up, you can easily work with several computers or with collaborators: if you have changes in your GitHub version (if you or a collaborator pushed changes from another computer or if you made changes online, directly on GitHub), you can pull them into your local version (i.e fetch changes and merge them locally, to keep your copy up-to-date).",
     "crumbs": [
+      "Introduction to version Control with git and GitHub within RStudio",
       "Home"
     ]
   },
@@ -238,19 +230,32 @@
     "section": "Step-by-step tutorial",
     "text": "Step-by-step tutorial\nThe material is self-paced and includes a worked-example. It is necessary that you work through the sections in order.\n\nInstalling R and RStudio\nInstalling and configuring Git - Set up your own machine\nGetting an account on GitHub - Sign up for GitHub\nSecuring your connection to GitHub - Create a secure SSH key to identify yourself on GitHub\nCreating an RStudio project - Creating an example, version controlled project\nStarting our analysis project - A simple script to get us started\nGetting our project under version control - First step into a larger world\nMaking some changes - Making our script more useful\nCommitting our change - How to commit a change\nViewing history - How to view the history of your project or of a single file\nConnecting our local repository to GitHub - Backup! Making our code available to the world.\nSubsequent updates - Now we are set up, the workflow is easy.\nThings we haven’t told you - Steps to further learning",
     "crumbs": [
+      "Introduction to version Control with git and GitHub within RStudio",
       "Home"
     ]
   },
   {
-    "objectID": "analysis_start.html",
-    "href": "analysis_start.html",
-    "title": "Starting our analysis project",
+    "objectID": "rstudio_project.html",
+    "href": "rstudio_project.html",
+    "title": "Creating an RStudio project",
     "section": "",
-    "text": "The purpose of this tutorial is to teach you version control. In order to do this, however, we’ll need to make up a simple project that needs controlling!\nOur initial project will be extremely simple – a very small data file and a script that loads and plots it. Later, we’ll add code to fit a nonlinear curve to it.\nDownload this data to your project folder: Example data (right click to open in a new window and use your Web browser’s save as functionality (likely another right click on the page)). You may need to manually add the file extension “.csv”).\nCreate a new R script in RStudio. File -&gt; New File -&gt; R script\nEnter the following commands into your new R script\nmydata = read.csv(\"example_data.csv\")\nplot(mydata$xdata,mydata$ydata)\nSave the R script as myscript.R. When you run it, it should load and plot the data.\nYour directory should now contain 4 files:",
+    "text": "A project is a folder that contains everything concerning your analysis and may include code, data and documentation. It is a complete research object that can be used to describe and reproduce your research.\nCreate a new project in RStudio as follows:\nFile -&gt; New Project -&gt; New Directory\n\nIn the Project Type screen, click on Empty Project or New project\n\nIn the Create New Project screen, give your project a name (e.g.’my_first_test_repo’) and ensure that create a git repository is checked. Click on Create Project.\n\nRStudio will create a new folder containing an empty project and set R’s working directory to within it.\nTwo files are created in the otherwise empty project:\n\n\n.gitignore - Specifies files that should be ignored by the version control system (e.g. sensible data files that should not be made public, or documentation that you don’t need version controlled).\nmy_first_test_repo.Rproj - Configuration information for the RStudio project\n\nThere is no need to worry about the contents of either of these for the purposes of this tutorial.",
     "crumbs": [
-      "Home",
+      "Introduction to version Control with git and GitHub within RStudio",
       "Tutorial",
-      "Starting our analysis project"
+      "Creating an RStudio project"
+    ]
+  },
+  {
+    "objectID": "version_control.html",
+    "href": "version_control.html",
+    "title": "Getting our project under version control",
+    "section": "",
+    "text": "We now have the first version of our analysis so let’s get it under version control. By default, the git version control pane is in the top right hand corner of RStudio. Find it and click on the git tab.\n\nIf you hover the mouse pointer over the yellow ? marks in GitHub, you’ll see a tooltip telling us that the file is untracked. This means that git is not tracking versions of this file.\nTick staged for each file. In some future cases, you may want to stage only one or a few file to create a coherent commit (unit of change).\n\nAll of our files are now staged, ready for the first commit. Click on the commit button\n\nDetails of the commit will appear in the next panel. You need to specify a commit message – something descriptive about the changes you’ve made. Since this is our first commit, we’ll follow tradition and call it First Commit\nOnce you’ve typed a commit message, click on Commit and you’re done.\n\nThe following messages from git will show.\n\nClick on Close and you are done.",
+    "crumbs": [
+      "Introduction to version Control with git and GitHub within RStudio",
+      "Tutorial",
+      "Getting our project under version control"
     ]
   }
 ]
