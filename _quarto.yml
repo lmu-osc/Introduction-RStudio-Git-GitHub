@@ -3,7 +3,7 @@ project:
 
 
 website:
-  title: "Introduction to version control with Git and GitHub within RStudio"
+  title: ""
   page-footer:
     center: "Copyright, 2024 Open Science Center at LMU Munich"
     border: false
@@ -13,7 +13,6 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Home
 
 
   sidebar:
