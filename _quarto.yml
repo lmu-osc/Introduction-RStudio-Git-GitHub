@@ -3,7 +3,7 @@ project:
 
 
 website:
-  title: "Introduction to git within Rstudio"
+  title: "Introduction to version control with Git and GitHub within RStudio"
   page-footer:
     center: "Copyright, 2024 Open Science Center at LMU Munich"
     border: false
