@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/github_sync.html</loc>
-    <lastmod>2024-09-03T15:01:42.306Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/updates.html</loc>
-    <lastmod>2024-09-03T15:01:42.310Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/making_change.html</loc>
-    <lastmod>2024-09-03T15:01:42.306Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/viewing_history.html</loc>
-    <lastmod>2024-09-03T15:01:42.310Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/next_steps.html</loc>
-    <lastmod>2024-09-03T15:01:42.306Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/installing_git.html</loc>
-    <lastmod>2024-09-03T15:01:42.306Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/SSH.html</loc>
-    <lastmod>2024-09-03T15:01:42.294Z</lastmod>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/github.html</loc>
+    <lastmod>2024-09-04T07:04:15.153Z</lastmod>
   </url>
   <url>
     <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/installing_software.html</loc>
-    <lastmod>2024-09-03T15:01:42.306Z</lastmod>
+    <lastmod>2024-09-04T07:04:15.153Z</lastmod>
   </url>
   <url>
     <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/rstudio_project.html</loc>
-    <lastmod>2024-09-03T15:01:42.306Z</lastmod>
+    <lastmod>2024-09-04T07:04:15.153Z</lastmod>
   </url>
   <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/github.html</loc>
-    <lastmod>2024-09-03T15:01:42.306Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/analysis_start.html</loc>
-    <lastmod>2024-09-03T15:01:42.294Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/commit.html</loc>
-    <lastmod>2024-09-03T15:01:42.306Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/index.html</loc>
-    <lastmod>2024-09-03T15:01:42.306Z</lastmod>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/SSH.html</loc>
+    <lastmod>2024-09-04T07:04:15.141Z</lastmod>
   </url>
   <url>
     <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/version_control.html</loc>
-    <lastmod>2024-09-03T15:01:42.310Z</lastmod>
+    <lastmod>2024-09-04T07:04:15.153Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/updates.html</loc>
+    <lastmod>2024-09-04T07:04:15.153Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/github_sync.html</loc>
+    <lastmod>2024-09-04T07:04:15.153Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/commit.html</loc>
+    <lastmod>2024-09-04T07:04:15.153Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/viewing_history.html</loc>
+    <lastmod>2024-09-04T07:04:15.153Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/installing_git.html</loc>
+    <lastmod>2024-09-04T07:04:15.153Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/next_steps.html</loc>
+    <lastmod>2024-09-04T07:04:15.153Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/making_change.html</loc>
+    <lastmod>2024-09-04T07:04:15.153Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/index.html</loc>
+    <lastmod>2024-09-04T07:04:15.153Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/analysis_start.html</loc>
+    <lastmod>2024-09-04T07:04:15.141Z</lastmod>
   </url>
 </urlset>
