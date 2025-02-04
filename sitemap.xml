@@ -1,59 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/github.html</loc>
-    <lastmod>2024-09-04T09:05:29.613Z</lastmod>
-  </url>
-  <url>
     <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/installing_software.html</loc>
-    <lastmod>2024-09-04T09:05:29.613Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/rstudio_project.html</loc>
-    <lastmod>2024-09-04T09:05:29.613Z</lastmod>
+    <lastmod>2025-02-04T11:13:43.089Z</lastmod>
   </url>
   <url>
     <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/SSH.html</loc>
-    <lastmod>2024-09-04T09:05:29.601Z</lastmod>
+    <lastmod>2025-02-04T11:13:43.080Z</lastmod>
   </url>
   <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/version_control.html</loc>
-    <lastmod>2024-09-04T09:05:29.613Z</lastmod>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/rstudio_project.html</loc>
+    <lastmod>2025-02-04T11:13:43.090Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/LICENSE-CODE.html</loc>
+    <lastmod>2025-02-04T11:13:43.079Z</lastmod>
   </url>
   <url>
     <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/updates.html</loc>
-    <lastmod>2024-09-04T09:05:29.613Z</lastmod>
+    <lastmod>2025-02-04T11:13:43.090Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/github.html</loc>
+    <lastmod>2025-02-04T11:13:43.089Z</lastmod>
   </url>
   <url>
     <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/github_sync.html</loc>
-    <lastmod>2024-09-04T09:05:29.613Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/commit.html</loc>
-    <lastmod>2024-09-04T09:05:29.613Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/viewing_history.html</loc>
-    <lastmod>2024-09-04T09:05:29.613Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/installing_git.html</loc>
-    <lastmod>2024-09-04T09:05:29.613Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/next_steps.html</loc>
-    <lastmod>2024-09-04T09:05:29.613Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/making_change.html</loc>
-    <lastmod>2024-09-04T09:05:29.613Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/index.html</loc>
-    <lastmod>2024-09-04T09:05:29.613Z</lastmod>
+    <lastmod>2025-02-04T11:13:43.089Z</lastmod>
   </url>
   <url>
     <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/analysis_start.html</loc>
-    <lastmod>2024-09-04T09:05:29.601Z</lastmod>
+    <lastmod>2025-02-04T11:13:43.080Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/commit.html</loc>
+    <lastmod>2025-02-04T11:13:43.089Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/making_change.html</loc>
+    <lastmod>2025-02-04T11:13:43.089Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/viewing_history.html</loc>
+    <lastmod>2025-02-04T11:13:43.090Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/installing_git.html</loc>
+    <lastmod>2025-02-04T11:13:43.089Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/index.html</loc>
+    <lastmod>2025-02-04T11:13:43.089Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/version_control.html</loc>
+    <lastmod>2025-02-04T11:13:43.090Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/next_steps.html</loc>
+    <lastmod>2025-02-04T11:13:43.090Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/LICENSE.html</loc>
+    <lastmod>2025-02-04T11:13:43.080Z</lastmod>
   </url>
 </urlset>
