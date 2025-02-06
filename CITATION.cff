@@ -7,6 +7,6 @@ authors:
 title: "Introduction to version Control with git and GitHub within RStudio"
 version: 1.0.0
 doi:
-date-released: 2016-07-01
+date-released: 2016-09-03
 repository-code: "https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub"
 url: "https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub"
