@@ -41,6 +41,7 @@ If you do have one, you can skip the section that generate a SSH key pair, and g
 In the command line, type the following by replacing your_email@email.com with your own email address. Pay attention to spaces and capital letter!
 
 ```bash
+# MAKE SURE TO REPLACE "your_email@email.com" WITH YOUR EMAIL ADDRESS
 ssh-keygen -t ed25519 -C "your_email@email.com"
 ```
 
@@ -91,12 +92,14 @@ We now need to tell GitHub about your public key. Display the contents of your n
 Please type the command below exactly as it is, in its entirety:
 
 ```bash
+# Run this code
 cat ~/.ssh/id_ed25519.pub
 ```
 
 The output should look something like this:
 
-```bash
+```
+# The output looks like this. The characters after ssh-ed25519 will be different for you, however.
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFEKiimOpcayfHhlbjmnIBAUX74FY/o20k9yFA16XOLm your_email@email.com
 ```
 
