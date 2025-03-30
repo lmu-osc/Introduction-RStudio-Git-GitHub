@@ -132,7 +132,8 @@ eval "$(ssh-agent -s)"
 ```
 
 which should display an output similar to something like this:
-```bash
+
+```
 Agent pid 59566
 ```
 
@@ -142,7 +143,26 @@ Then, add your key to the ssh-agent by typing the entirety of this command:
 ssh-add ~/.ssh/id_ed25519
 ```
 
-That's it !  
+## Testing Your Connection to GitHub
+
+(These instructions are a slightly abbreviated version of the page here: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)
+
+Finally, we can "ask" GitHub at the command line if our connection is acceptable with the following code:
+
+```bash
+ssh -T git@github.com
+# Attempts to ssh to GitHub
+```
+
+You will likely be asked about "fingerprinting" to which you can type `yes`, fingerprinting is okay, and press Enter. You should then receive a message like this:
+
+```
+> Hi USERNAME! You've successfully authenticated, but GitHub does not
+> provide shell access.
+```
+
+That's it!  
+
 Going forward, you can use the SSH clone URL when copying a repo to your local machine (we will cover this in the second tutorial). You are completely done with the setting up part, which you will need to repeat only if you change computer.  
 Let the fun begin!
 
