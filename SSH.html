@@ -264,7 +264,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#generating-an-ssh-key-pair" id="toc-generating-an-ssh-key-pair" class="nav-link" data-scroll-target="#generating-an-ssh-key-pair">Generating an SSH key pair</a></li>
   <li><a href="#adding-a-new-ssh-key-to-your-github-account" id="toc-adding-a-new-ssh-key-to-your-github-account" class="nav-link" data-scroll-target="#adding-a-new-ssh-key-to-your-github-account">Adding a new SSH key to your GitHub account</a></li>
   <li><a href="#adding-your-key-to-the-ssh-agent" id="toc-adding-your-key-to-the-ssh-agent" class="nav-link" data-scroll-target="#adding-your-key-to-the-ssh-agent">Adding your key to the ssh-agent</a></li>
-  <li><a href="#testing-your-connection-to-github" id="toc-testing-your-connection-to-github" class="nav-link" data-scroll-target="#testing-your-connection-to-github">Testing Your Connection to GitHub</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/edit/main/SSH.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -361,21 +360,11 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFEKiimOpcayfHhlbjmnIBAUX74FY/o20k9yFA16XOLm
 <p>In the command line, start the ssh-agent with this command:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">eval</span> <span class="st">"</span><span class="va">$(</span><span class="fu">ssh-agent</span> <span class="at">-s</span><span class="va">)</span><span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>which should display an output similar to something like this:</p>
-<pre><code>Agent pid 59566</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Agent</span> pid 59566</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Then, add your key to the ssh-agent by typing the entirety of this command:</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-add</span> ~/.ssh/id_ed25519</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="testing-your-connection-to-github" class="level2">
-<h2 class="anchored" data-anchor-id="testing-your-connection-to-github">Testing Your Connection to GitHub</h2>
-<p>(These instructions are a slightly abbreviated version of the page here: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)</p>
-<p>Finally, we can “ask” GitHub at the command line if our connection is acceptable with the following code:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-T</span> git@github.com</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Attempts to ssh to GitHub</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>You will likely be asked about “fingerprinting” to which you can type <code>yes</code>, fingerprinting is okay, and press Enter. You should then receive a message like this:</p>
-<pre><code>&gt; Hi USERNAME! You've successfully authenticated, but GitHub does not
-&gt; provide shell access.</code></pre>
-<p>That’s it!</p>
-<p>Going forward, you can use the SSH clone URL when copying a repo to your local machine (we will cover this in the second tutorial). You are completely done with the setting up part, which you will need to repeat only if you change computer.<br>
+<p>That’s it !<br>
+Going forward, you can use the SSH clone URL when copying a repo to your local machine (we will cover this in the second tutorial). You are completely done with the setting up part, which you will need to repeat only if you change computer.<br>
 Let the fun begin!</p>
 <hr>
 

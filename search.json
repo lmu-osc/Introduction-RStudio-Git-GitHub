@@ -248,19 +248,7 @@
     "href": "SSH.html#adding-your-key-to-the-ssh-agent",
     "title": "Secure the connection between your computer and GitHub",
     "section": "Adding your key to the ssh-agent",
-    "text": "Adding your key to the ssh-agent\nTo manage your keys, it is best to use a piece of software called ssh-agent.\nDepending on your system, the following might not be necessary. On most GNU/Linux distributions, your key will be automatically added to the ssh-agent after the first time you enter it. If you keep getting asked for your key each time you want to clone or push to a GitHub repository, you can follow the following instructions.\nIn the command line, start the ssh-agent with this command:\neval \"$(ssh-agent -s)\"\nwhich should display an output similar to something like this:\nAgent pid 59566\nThen, add your key to the ssh-agent by typing the entirety of this command:\nssh-add ~/.ssh/id_ed25519",
-    "crumbs": [
-      "Introduction to version Control with git and GitHub within RStudio",
-      "Tutorial",
-      "Securing your connection to GitHub"
-    ]
-  },
-  {
-    "objectID": "SSH.html#testing-your-connection-to-github",
-    "href": "SSH.html#testing-your-connection-to-github",
-    "title": "Secure the connection between your computer and GitHub",
-    "section": "Testing Your Connection to GitHub",
-    "text": "Testing Your Connection to GitHub\n(These instructions are a slightly abbreviated version of the page here: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)\nFinally, we can “ask” GitHub at the command line if our connection is acceptable with the following code:\nssh -T git@github.com\n# Attempts to ssh to GitHub\nYou will likely be asked about “fingerprinting” to which you can type yes, fingerprinting is okay, and press Enter. You should then receive a message like this:\n&gt; Hi USERNAME! You've successfully authenticated, but GitHub does not\n&gt; provide shell access.\nThat’s it!\nGoing forward, you can use the SSH clone URL when copying a repo to your local machine (we will cover this in the second tutorial). You are completely done with the setting up part, which you will need to repeat only if you change computer.\nLet the fun begin!",
+    "text": "Adding your key to the ssh-agent\nTo manage your keys, it is best to use a piece of software called ssh-agent.\nDepending on your system, the following might not be necessary. On most GNU/Linux distributions, your key will be automatically added to the ssh-agent after the first time you enter it. If you keep getting asked for your key each time you want to clone or push to a GitHub repository, you can follow the following instructions.\nIn the command line, start the ssh-agent with this command:\neval \"$(ssh-agent -s)\"\nwhich should display an output similar to something like this:\nAgent pid 59566\nThen, add your key to the ssh-agent by typing the entirety of this command:\nssh-add ~/.ssh/id_ed25519\nThat’s it !\nGoing forward, you can use the SSH clone URL when copying a repo to your local machine (we will cover this in the second tutorial). You are completely done with the setting up part, which you will need to repeat only if you change computer.\nLet the fun begin!",
     "crumbs": [
       "Introduction to version Control with git and GitHub within RStudio",
       "Tutorial",
