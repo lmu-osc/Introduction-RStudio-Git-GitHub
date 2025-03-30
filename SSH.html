@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.40">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -72,10 +72,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b15f22bfaa6e43dd107a1d50f79079a3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-71cbf4a176f013b5d9f6ecf9342e3c37.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -264,6 +264,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#generating-an-ssh-key-pair" id="toc-generating-an-ssh-key-pair" class="nav-link" data-scroll-target="#generating-an-ssh-key-pair">Generating an SSH key pair</a></li>
   <li><a href="#adding-a-new-ssh-key-to-your-github-account" id="toc-adding-a-new-ssh-key-to-your-github-account" class="nav-link" data-scroll-target="#adding-a-new-ssh-key-to-your-github-account">Adding a new SSH key to your GitHub account</a></li>
   <li><a href="#adding-your-key-to-the-ssh-agent" id="toc-adding-your-key-to-the-ssh-agent" class="nav-link" data-scroll-target="#adding-your-key-to-the-ssh-agent">Adding your key to the ssh-agent</a></li>
+  <li><a href="#testing-your-connection-to-github" id="toc-testing-your-connection-to-github" class="nav-link" data-scroll-target="#testing-your-connection-to-github">Testing Your Connection to GitHub</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/edit/main/SSH.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -308,7 +309,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="generating-an-ssh-key-pair" class="level2">
 <h2 class="anchored" data-anchor-id="generating-an-ssh-key-pair">Generating an SSH key pair</h2>
 <p>In the command line, type the following by replacing your_email@email.com with your own email address. Pay attention to spaces and capital letter!</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> ed25519 <span class="at">-C</span> <span class="st">"your_email@email.com"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># MAKE SURE TO REPLACE "your_email@email.com" WITH YOUR EMAIL ADDRESS</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> ed25519 <span class="at">-C</span> <span class="st">"your_email@email.com"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This creates a new SSH key pair, using the provided email as a label.</p>
 <p>When you’re prompted to “Enter a file in which to save the key,” press ENTER. This accepts the default file location.<br>
 This is the promt that will appear:</p>
@@ -341,9 +343,11 @@ This is the promt that will appear:</p>
 <p>We now need to tell GitHub about your public key. Display the contents of your new public key file with <code>cat</code>.<br>
 <strong>Be careful</strong>: do not copy the content of your <em>private</em> key, but your <em>public</em> key. Your public key ends with <code>.pub</code>.<br>
 Please type the command below exactly as it is, in its entirety:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> ~/.ssh/id_ed25519.pub</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Run this code</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> ~/.ssh/id_ed25519.pub</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The output should look something like this:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ssh-ed25519</span> AAAAC3NzaC1lZDI1NTE5AAAAIFEKiimOpcayfHhlbjmnIBAUX74FY/o20k9yFA16XOLm your_email@email.com</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code># The output looks like this. The characters after ssh-ed25519 will be different for you, however.
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFEKiimOpcayfHhlbjmnIBAUX74FY/o20k9yFA16XOLm your_email@email.com</code></pre>
 <p>Copy the contents of the output to your clipboard.</p>
 <p>Login to github.com and bring up your account settings by clicking on your profile photo (top right) and selecting <strong>Settings</strong>. Click on <strong>SSH and GPG keys</strong> (left sidebar), and then click on the green button ‘New SSH key’ or ‘<strong>Add SSH key</strong>’.</p>
 <p><img src="./assets/ssh-key.png" class="img-fluid"></p>
@@ -357,11 +361,21 @@ Please type the command below exactly as it is, in its entirety:</p>
 <p>In the command line, start the ssh-agent with this command:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">eval</span> <span class="st">"</span><span class="va">$(</span><span class="fu">ssh-agent</span> <span class="at">-s</span><span class="va">)</span><span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>which should display an output similar to something like this:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Agent</span> pid 59566</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>Agent pid 59566</code></pre>
 <p>Then, add your key to the ssh-agent by typing the entirety of this command:</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-add</span> ~/.ssh/id_ed25519</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>That’s it !<br>
-Going forward, you can use the SSH clone URL when copying a repo to your local machine (we will cover this in the second tutorial). You are completely done with the setting up part, which you will need to repeat only if you change computer.<br>
+</section>
+<section id="testing-your-connection-to-github" class="level2">
+<h2 class="anchored" data-anchor-id="testing-your-connection-to-github">Testing Your Connection to GitHub</h2>
+<p>(These instructions are a slightly abbreviated version of the page here: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)</p>
+<p>Finally, we can “ask” GitHub at the command line if our connection is acceptable with the following code:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-T</span> git@github.com</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Attempts to ssh to GitHub</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You will likely be asked about “fingerprinting” to which you can type <code>yes</code>, fingerprinting is okay, and press Enter. You should then receive a message like this:</p>
+<pre><code>&gt; Hi USERNAME! You've successfully authenticated, but GitHub does not
+&gt; provide shell access.</code></pre>
+<p>That’s it!</p>
+<p>Going forward, you can use the SSH clone URL when copying a repo to your local machine (we will cover this in the second tutorial). You are completely done with the setting up part, which you will need to repeat only if you change computer.<br>
 Let the fun begin!</p>
 <hr>
 
