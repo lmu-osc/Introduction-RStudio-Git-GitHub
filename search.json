@@ -1,62 +1,26 @@
 [
   {
-    "objectID": "viewing_history.html",
-    "href": "viewing_history.html",
-    "title": "Viewing history",
+    "objectID": "installing_software.html",
+    "href": "installing_software.html",
+    "title": "Installing R and RStudio",
     "section": "",
-    "text": "In this Diff pop up window, which you found in the git tab of RStudio, you can also press the History button to review the history of your project or files.\n\nBy default, the history search feature will show all files added, changed, or deleted for each commit. This can be extremely useful for finding bugs or looking back to how your project looked a few months ago. However, it is often more practical to review the changes made to a single file over time; this enables, for example, clear tracking of the evolution of data cleaning and analysis steps in your project.\nTo the right of the History button, there should now be a drop-down box titled (all commits). Press this box to see the other options, which should be titled “Filter by File” and “Filter by Directory.” Select the “Filter by File” option.\n\nA file-section window should appear on your screen; select the file you would like to review, e.g. myscript.R.\nYou will then get only the specific commits in which the selected file was included (i.e. when it was added, deleted, or edited). Click on any of the commit messages to view that specific commit, and scroll further down the screen to view changes made to the file during that commit.\n\nIt’s not possible to revert back to a previous commit using the RStudio interface. For that, you need to learn some command-line git which is beyond the scope of this session.",
+    "text": "Many users of R use it from within another free piece of software called RStudio. RStudio is a powerful and productive user interface for R. It’s free and open source, and works great on Windows, Mac, and Linux.\nInstall R\nInstall R first. Downloads are available at https://cran.rstudio.com/\n\nDirect link for Windows https://cran.r-project.org/bin/windows/base/\n\nDirect link for MacOS X https://cran.r-project.org/bin/macosx/\nDirect link for Linux https://cran.r-project.org/bin/linux/\n\nInstall RStudio\nNext, install RStudio.\n\nDownloads are available at https://www.rstudio.com/products/rstudio/download/",
     "crumbs": [
       "Introduction to version Control with git and GitHub within RStudio",
       "Tutorial",
-      "Viewing history"
+      "Installing R and RStudio"
     ]
   },
   {
-    "objectID": "making_change.html",
-    "href": "making_change.html",
-    "title": "Making some changes",
+    "objectID": "commit.html",
+    "href": "commit.html",
+    "title": "Committing our change",
     "section": "",
-    "text": "The next version of our project will do 3 changes.\n\nAdd the following code to the end of your R script.\n\n# some guesses for the parameters.\np1 = 1\np2 = 0.2\n\n# do the fit\nfit = nls(ydata ~ p1*cos(p2*xdata) + p2*sin(p1*xdata), data = mydata, start = list(p1=p1,p2=p2))\n\n#Plot the fitted line\nnew = data.frame(xdata = seq(min(mydata$xdata),max(mydata$xdata),len=200))\nlines(new$xdata,predict(fit,newdata=new))\n\nchange the command that plots our data in this file. Change the lines\n\nplot(mydata$xdata,mydata$ydata)\nto\nplot(mydata$xdata,mydata$ydata,col='red')\nWe do this so we can illustrate how git handles modifications of existing lines as well as simply adding extra lines of code.\nMake sure the code runs before proceeding further and save the script.\n\nFinally, we will create another R file (File -&gt; New File -&gt; R script).\n\nEnter the command:\n#Simulate some data\nplot(rnorm(100,0,1))\nAnd save the file as myscript_too",
+    "text": "All files need to be saved before being ‘committable’.\nNow, click on the git tab in RStudio. You’ll notice that there are two files listed – our script, which has been modified, and our script too, which was added. Click on the staged box to stage the change to the first script.\n\nNow click on Diff to give a summary of what’s changed. Lines that have been added are green. Lines that have been removed are red. From git’s point of view, a modification to a line is actually two operations: the removal of the original line followed by the creation of the new line.\n\nAdd a commit message and click on commit\n\nNow stage the second script, and commit it with a new message.",
     "crumbs": [
       "Introduction to version Control with git and GitHub within RStudio",
       "Tutorial",
-      "Making some changes"
-    ]
-  },
-  {
-    "objectID": "analysis_start.html",
-    "href": "analysis_start.html",
-    "title": "Starting our analysis project",
-    "section": "",
-    "text": "The purpose of this tutorial is to teach you version control. In order to do this, however, we’ll need to make up a simple project that needs controlling!\nOur initial project will be extremely simple – a very small data file and a script that loads and plots it. Later, we’ll add code to fit a nonlinear curve to it.\nDownload this data to your project folder: Example data (right click to open in a new window and use your Web browser’s save as functionality (likely another right click on the page)). You may need to manually add the file extension “.csv”).\nCreate a new R script in RStudio. File -&gt; New File -&gt; R script\nEnter the following commands into your new R script\nmydata = read.csv(\"example_data.csv\")\nplot(mydata$xdata,mydata$ydata)\nSave the R script as myscript.R. When you run it, it should load and plot the data.\nYour directory should now contain 4 files:",
-    "crumbs": [
-      "Introduction to version Control with git and GitHub within RStudio",
-      "Tutorial",
-      "Starting our analysis project"
-    ]
-  },
-  {
-    "objectID": "rstudio_project.html",
-    "href": "rstudio_project.html",
-    "title": "Creating an RStudio project",
-    "section": "",
-    "text": "A project is a folder that contains everything concerning your analysis and may include code, data and documentation. It is a complete research object that can be used to describe and reproduce your research.\nCreate a new project in RStudio as follows:\nFile -&gt; New Project -&gt; New Directory\n\nIn the Project Type screen, click on Empty Project or New project\n\nIn the Create New Project screen, give your project a name (e.g.’my_first_test_repo’) and ensure that create a git repository is checked. Click on Create Project.\n\nRStudio will create a new folder containing an empty project and set R’s working directory to within it.\nTwo files are created in the otherwise empty project:\n\n\n.gitignore - Specifies files that should be ignored by the version control system (e.g. sensible data files that should not be made public, or documentation that you don’t need version controlled).\nmy_first_test_repo.Rproj - Configuration information for the RStudio project\n\nThere is no need to worry about the contents of either of these for the purposes of this tutorial.",
-    "crumbs": [
-      "Introduction to version Control with git and GitHub within RStudio",
-      "Tutorial",
-      "Creating an RStudio project"
-    ]
-  },
-  {
-    "objectID": "next_steps.html",
-    "href": "next_steps.html",
-    "title": "Things we haven’t told you",
-    "section": "",
-    "text": "You’ve come a long way! You’ve installed and configured all the software you need and have learned the basics required to put your code under version control and make it openly available to the world.\nAs you’ve seen, the standard git workflow is fairly straightforward and adds very little overhead to your workflow once you’re set up.\nGit and GitHub are extremely powerful systems and there is a lot more you can learn if you wish. Here are some pointers:-\n\nLearn command line git by following this tutorial from Software Carpentry - http://swcarpentry.github.io/git-novice/\nMake your analysis citable and more discoverable by using Zenodo to assign it a Digital Object Identifier - https://zenodo.org/features\n\nTesting and version control\nBy employing testing, you can ensure that your code behaves the way you expect.\n\nUnit testing in R, the bare minimum - http://www.johnmyleswhite.com/notebook/2010/08/17/unit-testing-in-r-the-bare-minimum/\nContinuous Integration. Every time you push a change to GitHub, your tests are automatically run. - https://docs.travis-ci.com/user/languages/r\n\nDealing with dependencies\nYour code works on your machine but not on someone else’s because they are using a different version of R and have different versions of packages installed. How might we fix this?\n\nhttps://lmu-osc.github.io/introduction-to-renv/ - renv enhances your project directory by storing your package dependencies inside it.\n\n\n\nGo to the second tutorial!",
-    "crumbs": [
-      "Introduction to version Control with git and GitHub within RStudio",
-      "Tutorial",
-      "Things we haven’t told you"
+      "Committing our change"
     ]
   },
   {
@@ -72,30 +36,6 @@
     "title": "Creative Commons Attribution-ShareAlike 4.0 International",
     "section": "",
     "text": "By exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-ShareAlike 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\n\n\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nBY-SA Compatible License means a license listed at creativecommons.org/compatiblelicenses, approved by Creative Commons as essentially the equivalent of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicense Elements means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution and ShareAlike.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\n\n\n\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\nA. reproduce and Share the Licensed Material, in whole or in part; and\nB. produce, reproduce, and Share Adapted Material.\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.\nDownstream recipients.\nA. Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\nB. Additional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter’s License You apply.\nC. No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\n\n\n\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\nA. retain the following if it is supplied by the Licensor with the Licensed Material:\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\nB. indicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nC. indicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\n\nShareAlike.\n\nIn addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.\n\nThe Adapter’s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-SA Compatible License.\nYou must include the text of, or the URI or hyperlink to, the Adapter’s License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.\nYou may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter’s License You apply.\n\n\n\n\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\n\n\n\n\nUnless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.\nTo the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\n\n\n\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\n\n\n\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.\n\n\n\n\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” The text of the Creative Commons public licenses is dedicated to the public domain under the CC0 Public Domain Dedication. Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org."
-  },
-  {
-    "objectID": "commit.html",
-    "href": "commit.html",
-    "title": "Committing our change",
-    "section": "",
-    "text": "All files need to be saved before being ‘committable’.\nNow, click on the git tab in RStudio. You’ll notice that there are two files listed – our script, which has been modified, and our script too, which was added. Click on the staged box to stage the change to the first script.\n\nNow click on Diff to give a summary of what’s changed. Lines that have been added are green. Lines that have been removed are red. From git’s point of view, a modification to a line is actually two operations: the removal of the original line followed by the creation of the new line.\n\nAdd a commit message and click on commit\n\nNow stage the second script, and commit it with a new message.",
-    "crumbs": [
-      "Introduction to version Control with git and GitHub within RStudio",
-      "Tutorial",
-      "Committing our change"
-    ]
-  },
-  {
-    "objectID": "github.html",
-    "href": "github.html",
-    "title": "Create an account on GitHub",
-    "section": "",
-    "text": "Although git can be used on its own, most people choose to use it in conjunction with an online repository service. The most popular of these, by far, is GitHub.\nIt has become so standard that some organisations will ask to see your GitHub profile as part of job applications!\n\nCreate a free account on GitHub.\n\nhttps://github.com/join\n\n\nYou do not need to select any additional products proposed upon creation of the account.",
-    "crumbs": [
-      "Introduction to version Control with git and GitHub within RStudio",
-      "Tutorial",
-      "Getting an account on GitHub"
-    ]
   },
   {
     "objectID": "LICENSE-CODE.html",
@@ -160,27 +100,27 @@
     ]
   },
   {
-    "objectID": "installing_software.html",
-    "href": "installing_software.html",
-    "title": "Installing R and RStudio",
+    "objectID": "next_steps.html",
+    "href": "next_steps.html",
+    "title": "Things we haven’t told you",
     "section": "",
-    "text": "Many users of R use it from within another free piece of software called RStudio. RStudio is a powerful and productive user interface for R. It’s free and open source, and works great on Windows, Mac, and Linux.\nInstall R\nInstall R first. Downloads are available at https://cran.rstudio.com/\n\nDirect link for Windows https://cran.r-project.org/bin/windows/base/\n\nDirect link for MacOS X https://cran.r-project.org/bin/macosx/\nDirect link for Linux https://cran.r-project.org/bin/linux/\n\nInstall RStudio\nNext, install RStudio.\n\nDownloads are available at https://www.rstudio.com/products/rstudio/download/",
+    "text": "You’ve come a long way! You’ve installed and configured all the software you need and have learned the basics required to put your code under version control and make it openly available to the world.\nAs you’ve seen, the standard git workflow is fairly straightforward and adds very little overhead to your workflow once you’re set up.\nGit and GitHub are extremely powerful systems and there is a lot more you can learn if you wish. Here are some pointers:-\n\nLearn command line git by following this tutorial from Software Carpentry - http://swcarpentry.github.io/git-novice/\nMake your analysis citable and more discoverable by using Zenodo to assign it a Digital Object Identifier - https://zenodo.org/features\n\nTesting and version control\nBy employing testing, you can ensure that your code behaves the way you expect.\n\nUnit testing in R, the bare minimum - http://www.johnmyleswhite.com/notebook/2010/08/17/unit-testing-in-r-the-bare-minimum/\nContinuous Integration. Every time you push a change to GitHub, your tests are automatically run. - https://docs.travis-ci.com/user/languages/r\n\nDealing with dependencies\nYour code works on your machine but not on someone else’s because they are using a different version of R and have different versions of packages installed. How might we fix this?\n\nhttps://lmu-osc.github.io/introduction-to-renv/ - renv enhances your project directory by storing your package dependencies inside it.\n\n\n\nGo to the second tutorial!",
     "crumbs": [
       "Introduction to version Control with git and GitHub within RStudio",
       "Tutorial",
-      "Installing R and RStudio"
+      "Things we haven’t told you"
     ]
   },
   {
-    "objectID": "installing_git.html",
-    "href": "installing_git.html",
-    "title": "Installing and configuring Git",
+    "objectID": "rstudio_project.html",
+    "href": "rstudio_project.html",
+    "title": "Creating an RStudio project",
     "section": "",
-    "text": "RStudio version control functionality is provided by another software called git\nInstall git\nGit is one of the most popular version control systems in the world. It is free and open source.\n\nWindows & OS X: http://git-scm.com/downloads\n\nWindows: download the .exe file, run it and accept all the default settings (unless you know what you are doing) and keep clicking ‘next’\nOS X: at the link above, select the first option that suggests to install git through installing homebrew, by pasting a line of command provided in their instructions in your terminal, and accept the prompts appearing in your terminal.\n\nDebian/Ubuntu: sudo apt-get install git-core\nFedora/RedHat: sudo yum install git-core\n\nConfigure git\nAfter installing git, you need to tell it who you are.\nBy default, git is used through a command line interface. We’ll use git in this way now in order to perform its initial and minimal configuration. In the remaining of this tutorial, you’ll learn how to use git through Rstudio instead of a command line interface.\nOn windows, open Git Bash (start menu -&gt; Git Bash). On MacOS, open the Terminal app. On Linux, open your distribution’s (or any other) terminal emulator. Enter the following commands EXACTLY (spaces and quotation marks included) one after the other (hitting ENTER after each command). On successful completion, you should see no output from these commands.\nMake sure to replace you@youremail.com and Your Name by your email address and your name.\ngit config --global user.email \"you@youremail.com\"\ngit config --global user.name \"Your Name\"",
+    "text": "A project is a folder that contains everything concerning your analysis and may include code, data and documentation. It is a complete research object that can be used to describe and reproduce your research.\nCreate a new project in RStudio as follows:\nFile -&gt; New Project -&gt; New Directory\n\nIn the Project Type screen, click on Empty Project or New project\n\nIn the Create New Project screen, give your project a name (e.g.’my_first_test_repo’) and ensure that create a git repository is checked. Click on Create Project.\n\nRStudio will create a new folder containing an empty project and set R’s working directory to within it.\nTwo files are created in the otherwise empty project:\n\n\n.gitignore - Specifies files that should be ignored by the version control system (e.g. sensible data files that should not be made public, or documentation that you don’t need version controlled).\nmy_first_test_repo.Rproj - Configuration information for the RStudio project\n\nThere is no need to worry about the contents of either of these for the purposes of this tutorial.",
     "crumbs": [
       "Introduction to version Control with git and GitHub within RStudio",
       "Tutorial",
-      "Installing and configuring Git"
+      "Creating an RStudio project"
     ]
   },
   {
@@ -248,11 +188,35 @@
     "href": "SSH.html#adding-your-key-to-the-ssh-agent",
     "title": "Secure the connection between your computer and GitHub",
     "section": "Adding your key to the ssh-agent",
-    "text": "Adding your key to the ssh-agent\nTo manage your keys, it is best to use a piece of software called ssh-agent.\nDepending on your system, the following might not be necessary. On most GNU/Linux distributions, your key will be automatically added to the ssh-agent after the first time you enter it. If you keep getting asked for your key each time you want to clone or push to a GitHub repository, you can follow the following instructions.\nIn the command line, start the ssh-agent with this command:\neval \"$(ssh-agent -s)\"\nwhich should display an output similar to something like this:\nAgent pid 59566\nThen, add your key to the ssh-agent by typing the entirety of this command:\nssh-add ~/.ssh/id_ed25519\nThat’s it !\nGoing forward, you can use the SSH clone URL when copying a repo to your local machine (we will cover this in the second tutorial). You are completely done with the setting up part, which you will need to repeat only if you change computer.\nLet the fun begin!",
+    "text": "Adding your key to the ssh-agent\nTo manage your keys, it is best to use a piece of software called ssh-agent.\nDepending on your system, the following might not be necessary. On most GNU/Linux distributions, your key will be automatically added to the ssh-agent after the first time you enter it. If you keep getting asked for your key each time you want to clone or push to a GitHub repository, you can follow the following instructions.\nIn the command line, start the ssh-agent with this command:\neval \"$(ssh-agent -s)\"\nwhich should display an output similar to something like this:\nAgent pid 59566\nThen, add your key to the ssh-agent by typing the entirety of this command:\nssh-add ~/.ssh/id_ed25519",
     "crumbs": [
       "Introduction to version Control with git and GitHub within RStudio",
       "Tutorial",
       "Securing your connection to GitHub"
+    ]
+  },
+  {
+    "objectID": "SSH.html#testing-your-connection-to-github",
+    "href": "SSH.html#testing-your-connection-to-github",
+    "title": "Secure the connection between your computer and GitHub",
+    "section": "Testing Your Connection to GitHub",
+    "text": "Testing Your Connection to GitHub\n(These instructions are a slightly abbreviated version of the page here: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)\nFinally, we can “ask” GitHub at the command line if our connection is acceptable with the following code:\nssh -T git@github.com\n# Attempts to ssh to GitHub\nYou will likely be asked about “fingerprinting” to which you can type yes, fingerprinting is okay, and press Enter. You should then receive a message like this:\n&gt; Hi USERNAME! You've successfully authenticated, but GitHub does not\n&gt; provide shell access.\nThat’s it!\nGoing forward, you can use the SSH clone URL when copying a repo to your local machine (we will cover this in the second tutorial). You are completely done with the setting up part, which you will need to repeat only if you change computer.\nLet the fun begin!",
+    "crumbs": [
+      "Introduction to version Control with git and GitHub within RStudio",
+      "Tutorial",
+      "Securing your connection to GitHub"
+    ]
+  },
+  {
+    "objectID": "making_change.html",
+    "href": "making_change.html",
+    "title": "Making some changes",
+    "section": "",
+    "text": "The next version of our project will do 3 changes.\n\nAdd the following code to the end of your R script.\n\n# some guesses for the parameters.\np1 = 1\np2 = 0.2\n\n# do the fit\nfit = nls(ydata ~ p1*cos(p2*xdata) + p2*sin(p1*xdata), data = mydata, start = list(p1=p1,p2=p2))\n\n#Plot the fitted line\nnew = data.frame(xdata = seq(min(mydata$xdata),max(mydata$xdata),len=200))\nlines(new$xdata,predict(fit,newdata=new))\n\nchange the command that plots our data in this file. Change the lines\n\nplot(mydata$xdata,mydata$ydata)\nto\nplot(mydata$xdata,mydata$ydata,col='red')\nWe do this so we can illustrate how git handles modifications of existing lines as well as simply adding extra lines of code.\nMake sure the code runs before proceeding further and save the script.\n\nFinally, we will create another R file (File -&gt; New File -&gt; R script).\n\nEnter the command:\n#Simulate some data\nplot(rnorm(100,0,1))\nAnd save the file as myscript_too",
+    "crumbs": [
+      "Introduction to version Control with git and GitHub within RStudio",
+      "Tutorial",
+      "Making some changes"
     ]
   },
   {
@@ -268,6 +232,42 @@
     ]
   },
   {
+    "objectID": "github.html",
+    "href": "github.html",
+    "title": "Create an account on GitHub",
+    "section": "",
+    "text": "Although git can be used on its own, most people choose to use it in conjunction with an online repository service. The most popular of these, by far, is GitHub.\nIt has become so standard that some organisations will ask to see your GitHub profile as part of job applications!\n\nCreate a free account on GitHub.\n\nhttps://github.com/join\n\n\nYou do not need to select any additional products proposed upon creation of the account.",
+    "crumbs": [
+      "Introduction to version Control with git and GitHub within RStudio",
+      "Tutorial",
+      "Getting an account on GitHub"
+    ]
+  },
+  {
+    "objectID": "installing_git.html",
+    "href": "installing_git.html",
+    "title": "Installing and configuring Git",
+    "section": "",
+    "text": "RStudio version control functionality is provided by another software called git\nInstall git\nGit is one of the most popular version control systems in the world. It is free and open source.\n\nWindows & OS X: http://git-scm.com/downloads\n\nWindows: download the .exe file, run it and accept all the default settings (unless you know what you are doing) and keep clicking ‘next’\nOS X: at the link above, select the first option that suggests to install git through installing homebrew, by pasting a line of command provided in their instructions in your terminal, and accept the prompts appearing in your terminal.\n\nDebian/Ubuntu: sudo apt-get install git-core\nFedora/RedHat: sudo yum install git-core\n\nConfigure git\nAfter installing git, you need to tell it who you are.\nBy default, git is used through a command line interface. We’ll use git in this way now in order to perform its initial and minimal configuration. In the remaining of this tutorial, you’ll learn how to use git through Rstudio instead of a command line interface.\nOn windows, open Git Bash (start menu -&gt; Git Bash). On MacOS, open the Terminal app. On Linux, open your distribution’s (or any other) terminal emulator. Enter the following commands EXACTLY (spaces and quotation marks included) one after the other (hitting ENTER after each command). On successful completion, you should see no output from these commands.\nMake sure to replace you@youremail.com and Your Name by your email address and your name.\ngit config --global user.email \"you@youremail.com\"\ngit config --global user.name \"Your Name\"",
+    "crumbs": [
+      "Introduction to version Control with git and GitHub within RStudio",
+      "Tutorial",
+      "Installing and configuring Git"
+    ]
+  },
+  {
+    "objectID": "analysis_start.html",
+    "href": "analysis_start.html",
+    "title": "Starting our analysis project",
+    "section": "",
+    "text": "The purpose of this tutorial is to teach you version control. In order to do this, however, we’ll need to make up a simple project that needs controlling!\nOur initial project will be extremely simple – a very small data file and a script that loads and plots it. Later, we’ll add code to fit a nonlinear curve to it.\nDownload this data to your project folder: Example data (right click to open in a new window and use your Web browser’s save as functionality (likely another right click on the page)). You may need to manually add the file extension “.csv”).\nCreate a new R script in RStudio. File -&gt; New File -&gt; R script\nEnter the following commands into your new R script\nmydata = read.csv(\"example_data.csv\")\nplot(mydata$xdata,mydata$ydata)\nSave the R script as myscript.R. When you run it, it should load and plot the data.\nYour directory should now contain 4 files:",
+    "crumbs": [
+      "Introduction to version Control with git and GitHub within RStudio",
+      "Tutorial",
+      "Starting our analysis project"
+    ]
+  },
+  {
     "objectID": "version_control.html",
     "href": "version_control.html",
     "title": "Getting our project under version control",
@@ -277,6 +277,18 @@
       "Introduction to version Control with git and GitHub within RStudio",
       "Tutorial",
       "Getting our project under version control"
+    ]
+  },
+  {
+    "objectID": "viewing_history.html",
+    "href": "viewing_history.html",
+    "title": "Viewing history",
+    "section": "",
+    "text": "In this Diff pop up window, which you found in the git tab of RStudio, you can also press the History button to review the history of your project or files.\n\nBy default, the history search feature will show all files added, changed, or deleted for each commit. This can be extremely useful for finding bugs or looking back to how your project looked a few months ago. However, it is often more practical to review the changes made to a single file over time; this enables, for example, clear tracking of the evolution of data cleaning and analysis steps in your project.\nTo the right of the History button, there should now be a drop-down box titled (all commits). Press this box to see the other options, which should be titled “Filter by File” and “Filter by Directory.” Select the “Filter by File” option.\n\nA file-section window should appear on your screen; select the file you would like to review, e.g. myscript.R.\nYou will then get only the specific commits in which the selected file was included (i.e. when it was added, deleted, or edited). Click on any of the commit messages to view that specific commit, and scroll further down the screen to view changes made to the file during that commit.\n\nIt’s not possible to revert back to a previous commit using the RStudio interface. For that, you need to learn some command-line git which is beyond the scope of this session.",
+    "crumbs": [
+      "Introduction to version Control with git and GitHub within RStudio",
+      "Tutorial",
+      "Viewing history"
     ]
   }
 ]
