@@ -2,11 +2,42 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 authors:
 - family-names: "Croucher"
-  given-names: "Mike""
-  affiliation: "Community Developer Advocate, MathWorks"
+  given-names: "Mike"
+  affiliation: 
+  - name: "Community Developer Advocate, MathWorks"
+- family-names: "Ihle"
+  given-names: "Malika"
+  orcid: "https://orcid.org/0000-0002-3242-5981"
+  affiliation:
+  - name: "LMU Open Science Center"
+    ror: "https://ror.org/029e6qe04"
+- family-names: "Callahan"
+  given-names: "Pat"
+  orcid: "https://orcid.org/0000-0003-1769-7580"
+  affiliation:
+    - name: "LMU Open Science Center"
+      ror: "https://ror.org/029e6qe04"
+
 title: "Introduction to version Control with git and GitHub within RStudio"
-version: 1.0.0
-doi:
-date-released: 2016-09-03
+version: 0.1.0
+doi: "DOI_HERE_AFTER_GENERATED"
+date-released: 2022-10-27
 repository-code: "https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub"
-url: "https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub"
+url: "https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub"
+preferred-citation:
+  authors:
+    - family-names: "Ihle"
+      given-names: "Malika"
+      orcid: "https://orcid.org/0000-0002-3242-5981"
+    - family-names: "Callahan"
+      given-names: "Pat"
+      orcid: "https://orcid.org/0000-0003-1769-7580"
+  title: "Introduction to version Control with git and GitHub within RStudio"
+  year: 2022
+  doi: "DOI_HERE_AFTER_GENERATED"
+  publisher:
+    name: "LMU Open Science Center"
+    ror: "https://ror.org/029e6qe04"
+  repository-code: "https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub"
+  url: "https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub"
+  type: "book"
