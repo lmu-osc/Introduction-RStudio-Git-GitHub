@@ -40,4 +40,4 @@ preferred-citation:
     ror: "https://ror.org/029e6qe04"
   repository-code: "https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub"
   url: "https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub"
-  type: "website"
+  type: "book"
