@@ -1,6 +1,5 @@
 ---
 title: "Subsequent updates"
-format: html
 ---
 
 
@@ -18,15 +17,15 @@ This repo is used to demonstrate GitHub to users of R and R Studio.
 
 In the **git** tab of RStudio, the **Readme.md** file should be the only file you see. Stage it as shown below and click **commit**.
 
-![](./assets/staged_readme.png)
+![](./assets/staged-readme.png)
 
 Supply a commit message and click commit.
 
-![](./assets/readme_commit.png)
+![](./assets/readme-commit.png)
 
 Finally, click **push** to upload to GitHub.
 
-![](./assets/git_push.png)
+![](./assets/git-push.png)
 
 You can see that the standard workflow loop is very quick and simple
 

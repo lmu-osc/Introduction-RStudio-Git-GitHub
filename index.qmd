@@ -1,6 +1,5 @@
 ---
 title: "Introduction to version Control with git and GitHub within RStudio"
-format: html
 ---
 
 ## About this work
@@ -22,22 +21,45 @@ In this session, you are going to start using the version control system Git fro
 Once this workflow is set up, you can easily work with several computers or with collaborators: if you have changes in your GitHub version (if you or a collaborator pushed changes from another computer or if you made changes online, directly on GitHub), you can **pull** them into your local version (i.e fetch changes and merge them locally, to keep your copy up-to-date).
 
 <br/>
-<img src="assets/GitHub-remote.png" width="750">  
+<img src="assets/github-remote.png" width="750">  
 <br/>
 
 ## Step-by-step tutorial
 The material is self-paced and includes a worked-example. It is necessary that you work through the sections in order.  
 
-* [Installing R and RStudio](./installing_software.qmd)
-* [Installing and configuring Git](./installing_git.qmd) - Set up your own machine
+* [Installing R and RStudio](./installing-software.qmd)
+* [Installing and configuring Git](./installing-git.qmd) - Set up your own machine
 * [Getting an account on GitHub](./github.qmd) - Sign up for GitHub
-* [Securing your connection to GitHub](./SSH.qmd) - Create a secure SSH key to identify yourself on GitHub
-* [Creating an RStudio project](./rstudio_project.qmd) - Creating an example, version controlled project
-* [Starting our analysis project](./analysis_start.qmd) - A simple script to get us started
-* [Getting our project under version control](./version_control.qmd) - First step into a larger world
-* [Making some changes](./making_change.qmd) - Making our script more useful
+* [Securing your connection to GitHub](./ssh.qmd) - Create a secure ssh key to identify yourself on GitHub
+* [Creating an RStudio project](./rstudio-project.qmd) - Creating an example, version controlled project
+* [Starting our analysis project](./analysis-start.qmd) - A simple script to get us started
+* [Getting our project under version control](./version-control.qmd) - First step into a larger world
+* [Making some changes](./making-change.qmd) - Making our script more useful
 * [Committing our change](./commit.qmd) - How to commit a change
-* [Viewing history](./viewing_history.qmd) - How to view the history of your project or of a single file
-* [Connecting our local repository to GitHub](./github_sync.qmd) - Backup! Making our code available to the world.
+* [Viewing history](./viewing-history.qmd) - How to view the history of your project or of a single file
+* [Connecting our local repository to GitHub](./github-sync.qmd) - Backup! Making our code available to the world.
 * [Subsequent updates](./updates.qmd) - Now we are set up, the workflow is easy.
-* [Things we haven't told you](./next_steps.qmd) - Steps to further learning
+* [Things we haven't told you](./next-steps.qmd) - Steps to further learning
+
+:::: {.columns}
+
+::: {.column width="47.5%"}
+
+::: {.callout-tip title="Support the LMU Open Science Center!"}
+**Like this tutorial? Be sure to give [the repository]({{< meta repo-url >}}) a star and [follow us on GitHub](https://github.com/lmu-osc)!**
+:::
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="47.5%"}
+
+::: {.callout-tip title="Questions about this tutorial?"}
+**If you have questions for the author of this tutorial, please take a look at the [About](about.qmd) page.**
+:::
+
+:::
+
+::::

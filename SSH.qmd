@@ -1,6 +1,5 @@
 ---
 title: "Secure the connection between your computer and GitHub"
-format: html
 ---
 
 When working with a GitHub repository, you'll often need to identify yourself to GitHub using your username and password. There are several ways to secure this connection further. Establishing a secure connection is mandatory since August 2021. 
@@ -137,7 +136,7 @@ which should display an output similar to something like this:
 Agent pid 59566
 ```
 
-Then, add your key to the ssh-agent by typing the entirety of this command:
+Then, add your key to the SSH-agent by typing the entirety of this command:
 
 ```bash
 ssh-add ~/.ssh/id_ed25519
@@ -151,7 +150,7 @@ Finally, we can "ask" GitHub at the command line if our connection is acceptable
 
 ```bash
 ssh -T git@github.com
-# Attempts to ssh to GitHub
+# Attempts to SSH to GitHub
 ```
 
 You will likely be asked about "fingerprinting" to which you can type `yes`, fingerprinting is okay, and press Enter. You should then receive a message like this:
