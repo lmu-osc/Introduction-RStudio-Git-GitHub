@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Committing our change – Introduction to Version Control with Git and GitHub within RStudio</title>
+<title>Things we haven’t told you – Introduction to Version Control with Git and GitHub within RStudio</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -68,8 +68,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./viewing-history.html" rel="next">
-<link href="./making-change.html" rel="prev">
+<link href="./updates.html" rel="prev">
 <link href="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -366,7 +365,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./installing-software.html">Tutorial</a></li><li class="breadcrumb-item"><a href="./commit.html">Committing our change</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./installing-software.html">Tutorial</a></li><li class="breadcrumb-item"><a href="./next-steps.html">Things we haven’t told you</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -457,7 +456,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./commit.html" class="sidebar-item-text sidebar-link active">
+  <a href="./commit.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Committing our change</span></a>
   </div>
 </li>
@@ -481,7 +480,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./next-steps.html" class="sidebar-item-text sidebar-link">
+  <a href="./next-steps.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Things we haven’t told you</span></a>
   </div>
 </li>
@@ -499,9 +498,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./installing-software.html">Tutorial</a></li><li class="breadcrumb-item"><a href="./commit.html">Committing our change</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./installing-software.html">Tutorial</a></li><li class="breadcrumb-item"><a href="./next-steps.html">Things we haven’t told you</a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Committing our change</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Things we haven’t told you</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -518,16 +517,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><strong>All files need to be saved before being ‘committable’</strong>.</p>
-<p>Now, click on the <strong>git</strong> tab in RStudio. You’ll notice that there are two files listed – our script, which has been modified, and our script too, which was added. Click on the staged box to stage the change to the first script.</p>
-<p><img src="./assets/git-changed.png" class="img-fluid"></p>
-<p>Now click on <strong>Diff</strong> to give a summary of what’s changed. Lines that have been added are green. Lines that have been removed are red. From git’s point of view, a modification to a line is actually two operations: the removal of the original line followed by the creation of the new line.</p>
-<p><img src="./assets/git-diff.png" class="img-fluid"></p>
-<p>Add a commit message and click on commit</p>
-<p><img src="./assets/git-commit-message2.png" class="img-fluid"></p>
-<p>Now stage the second script, and commit it with a new message.</p>
-<p><img src="./assets/git-commit-message3.png" class="img-fluid"></p>
+<p>You’ve come a long way! You’ve installed and configured all the software you need and have learned the basics required to put your code under version control and make it openly available to the world.</p>
+<p>As you’ve seen, the standard git workflow is fairly straightforward and adds very little overhead to your workflow once you’re set up.</p>
+<p>Git and GitHub are extremely powerful systems and there is a lot more you can learn if you wish. Here are some pointers:-</p>
+<ul>
+<li>Learn command line git by following this tutorial from Software Carpentry - <a href="http://swcarpentry.github.io/git-novice/" target="_blank">http://swcarpentry.github.io/git-novice/</a></li>
+<li>Make your analysis citable and more discoverable by using Zenodo to assign it a Digital Object Identifier - <a href="https://zenodo.org/features" target="_blank">https://zenodo.org/features</a></li>
+</ul>
+<p><strong>Testing and version control</strong></p>
+<p>By employing testing, you can ensure that your code behaves the way you expect.</p>
+<ul>
+<li>Unit testing in R, the bare minimum - <a href="http://www.johnmyleswhite.com/notebook/2010/08/17/unit-testing-in-r-the-bare-minimum/" target="_blank">http://www.johnmyleswhite.com/notebook/2010/08/17/unit-testing-in-r-the-bare-minimum/</a></li>
+<li>Continuous Integration. Every time you push a change to GitHub, your tests are automatically run. - <a href="https://docs.travis-ci.com/user/languages/r" target="_blank">https://docs.travis-ci.com/user/languages/r</a></li>
+</ul>
+<p><strong>Dealing with dependencies</strong></p>
+<p>Your code works on your machine but not on someone else’s because they are using a different version of R and have different versions of packages installed. How might we fix this?</p>
+<ul>
+<li><a href="https://lmu-osc.github.io/introduction-to-renv/" target="_blank">https://lmu-osc.github.io/introduction-to-renv/</a> - renv enhances your project directory by storing your package dependencies inside it.</li>
+</ul>
 <hr>
+<div style="text-align: right">
+<p><a href="https://lmu-osc.github.io/Collaborative-RStudio-GitHub/" class="btn btn-success" role="button">Go to the second tutorial!</a></p>
+</div>
 
 
 <!-- -->
@@ -1007,41 +1018,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./making-change.html" class="pagination-link" aria-label="Making some changes">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Making some changes</span>
+      <a href="./updates.html" class="pagination-link" aria-label="Subsequent updates">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Subsequent updates</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./viewing-history.html" class="pagination-link" aria-label="Viewing history">
-        <span class="nav-page-text">Viewing history</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Committing our change"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Things we haven't told you"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">aliases:</span><span class="co"> [next_steps.html]</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>**All files need to be saved before being 'committable'**. </span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Now, click on the **git** tab in RStudio. You'll notice that there are two files listed -- our script, which has been modified, and our script too, which was added. Click on the staged box to stage the change to the first script.</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="al">![](./assets/git-changed.png)</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Now click on  **Diff** to give a summary of what's changed. Lines that have been added are green. Lines that have been removed are red. From git's point of view, a modification to a line is actually two operations: the removal of the original line followed by the creation of the new line.</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="al">![](./assets/git-diff.png)</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>You've come a long way! You've installed and configured all the software you need and have learned the basics required to put your code under version control and make it openly available to the world.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>As you've seen, the standard git workflow is fairly straightforward and adds very little overhead to your workflow once you're set up. </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Git and GitHub are extremely powerful systems and there is a lot more you can learn if you wish. Here are some pointers:-</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Learn command line git by following this tutorial from Software Carpentry - <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"http://swcarpentry.github.io/git-novice/"</span><span class="ot"> target </span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>http://swcarpentry.github.io/git-novice/<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Make your analysis citable and more discoverable by using Zenodo to assign it a Digital Object Identifier - <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://zenodo.org/features"</span><span class="ot"> target </span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>https://zenodo.org/features<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Add a commit message and click on commit</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>**Testing and version control**</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="al">![](./assets/git-commit-message2.png)</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>By employing testing, you can ensure that your code behaves the way you expect.</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>Now stage the second script, and commit it with a new message.</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="al">![](./assets/git-commit-message3.png)</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Unit testing in R, the bare minimum - <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"http://www.johnmyleswhite.com/notebook/2010/08/17/unit-testing-in-r-the-bare-minimum/"</span><span class="ot"> target </span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>http://www.johnmyleswhite.com/notebook/2010/08/17/unit-testing-in-r-the-bare-minimum/<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Continuous Integration. Every time you push a change to GitHub, your tests are automatically run. - <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://docs.travis-ci.com/user/languages/r"</span><span class="ot"> target </span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>https://docs.travis-ci.com/user/languages/r<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>**Dealing with dependencies**</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>***</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>Your code works on your machine but not on someone else's because they are using a different version of R and have different versions of packages installed. How might we fix this?</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://lmu-osc.github.io/introduction-to-renv/"</span><span class="ot"> target </span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>https://lmu-osc.github.io/introduction-to-renv/<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span> - renv enhances your project directory by storing your package dependencies inside it.</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>***</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>::: {style="text-align: right"}</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Go to the second tutorial!</span><span class="co">](https://lmu-osc.github.io/Collaborative-RStudio-GitHub/)</span>{.btn .btn-success .btn role="button"}</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
@@ -1051,7 +1070,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </div>   
     <div class="nav-footer-center">
 <p>© 2026 Mike Croucher and Malika Ihle. Published by LMU Open Science Center. Licensed under CC BY-SA 4.0.</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/edit/main/commit.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/blob/main/commit.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/edit/main/next-steps.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/blob/main/next-steps.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

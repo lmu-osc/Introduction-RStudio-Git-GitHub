@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction to version Control with git and GitHub within RStudio</title>
+<title>Introduction to version Control with git and GitHub within RStudio – Introduction to Version Control with Git and GitHub within RStudio</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -33,18 +68,22 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./installing_software.html" rel="next">
-<link href="./assets/LMU-OSC_favicon.jpg" rel="icon" type="image/jpeg">
+<link href="./installing-software.html" rel="next">
+<link href="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e7c471939560e2f6eb964f999844d0dd.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-07c2cd2d1550bacde3abce9b2c0779ae.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e7c471939560e2f6eb964f999844d0dd.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-56c53b4b1c1db90cfe3ebcc9f68c4558.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a3751a3125fc2dff9b7dd5a4c8daf297.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-cde4eecc826593478d8600c572719d8c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-a3751a3125fc2dff9b7dd5a4c8daf297.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -71,32 +110,213 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<!-- See the OSC internal instructions on how to generate and include the code necessary for the Matomo Analytics tracking. -->
+
 <!-- Matomo -->
 <script>
-  var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="https://www.analytics.osc.lmu.de/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '5']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
+  if (location.hostname !== "localhost" && location.hostname !== "127.0.0.1") {
+    var _paq = (window._paq = window._paq || []);
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function () {
+      var u = "https://www.analytics.osc.lmu.de/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", "5"]);
+      var d = document,
+        g = d.createElement("script"),
+        s = d.getElementsByTagName("script")[0];
+      g.async = true;
+      g.src = u + "matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  }
 </script>
 <!-- End Matomo Code -->
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/assets/bootstrap-grid.min.css">
+<link rel="stylesheet" href="footer/footer-style.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" alt="LMU Open Science Center open book icon" class="navbar-logo light-content">
+    <img src="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" alt="LMU Open Science Center open book icon" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Introduction to Version Control with Git and GitHub within RStudio</span>
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -104,11 +324,39 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Introduction to version Control with git and GitHub within RStudio</span></a>
+<span class="menu-text">Home</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools tools-wide">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/issues">
+            Report a Bug
+            </a>
+          </li>
+      </ul>
+    </div>
+    <a href="https://www.osc.lmu.de/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-heart"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -117,7 +365,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Overview</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -130,6 +378,12 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-logo.svg" alt="LMU Open Science Center logo" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-logo-dark.svg" alt="LMU Open Science Center logo" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -140,7 +394,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Home</span></a>
+ <span class="menu-text">Overview</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -154,13 +408,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./installing_software.html" class="sidebar-item-text sidebar-link">
+  <a href="./installing-software.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Installing R and RStudio</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./installing_git.html" class="sidebar-item-text sidebar-link">
+  <a href="./installing-git.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Installing and configuring Git</span></a>
   </div>
 </li>
@@ -172,31 +426,31 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./SSH.html" class="sidebar-item-text sidebar-link">
+  <a href="./ssh.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Securing your connection to GitHub</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./rstudio_project.html" class="sidebar-item-text sidebar-link">
+  <a href="./rstudio-project.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Creating an RStudio project</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./analysis_start.html" class="sidebar-item-text sidebar-link">
+  <a href="./analysis-start.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Starting our analysis project</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./version_control.html" class="sidebar-item-text sidebar-link">
+  <a href="./version-control.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Getting our project under version control</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./making_change.html" class="sidebar-item-text sidebar-link">
+  <a href="./making-change.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Making some changes</span></a>
   </div>
 </li>
@@ -208,13 +462,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./viewing_history.html" class="sidebar-item-text sidebar-link">
+  <a href="./viewing-history.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Viewing history</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./github_sync.html" class="sidebar-item-text sidebar-link">
+  <a href="./github-sync.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Connecting our local repository to GitHub</span></a>
   </div>
 </li>
@@ -226,7 +480,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./next_steps.html" class="sidebar-item-text sidebar-link">
+  <a href="./next-steps.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Things we haven’t told you</span></a>
   </div>
 </li>
@@ -237,11 +491,8 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><img src="./assets/LMU-OSC_logo.jpg" class="img-fluid" width="175"></p>
-</div></div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
    
   <ul>
   <li><a href="#about-this-work" id="toc-about-this-work" class="nav-link active" data-scroll-target="#about-this-work">About this work</a></li>
@@ -249,14 +500,15 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#overview-of-the-exercice" id="toc-overview-of-the-exercice" class="nav-link" data-scroll-target="#overview-of-the-exercice">Overview of the exercice</a></li>
   <li><a href="#step-by-step-tutorial" id="toc-step-by-step-tutorial" class="nav-link" data-scroll-target="#step-by-step-tutorial">Step-by-step tutorial</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction to version Control with git and GitHub within RStudio</h1>
+<div class="quarto-title-block"><div><h1 class="title">Introduction to version Control with git and GitHub within RStudio</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -296,34 +548,82 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>push</strong> your local changes to your remote repository (i.e.&nbsp;synchronise your changes to your GitHub version)</li>
 </ul>
 <p>Once this workflow is set up, you can easily work with several computers or with collaborators: if you have changes in your GitHub version (if you or a collaborator pushed changes from another computer or if you made changes online, directly on GitHub), you can <strong>pull</strong> them into your local version (i.e fetch changes and merge them locally, to keep your copy up-to-date).</p>
-<p><br> <img src="assets/GitHub-remote.png" width="750"><br>
+<p><br> <img src="assets/github-remote.png" width="750"><br>
 <br></p>
 </section>
 <section id="step-by-step-tutorial" class="level2">
 <h2 class="anchored" data-anchor-id="step-by-step-tutorial">Step-by-step tutorial</h2>
 <p>The material is self-paced and includes a worked-example. It is necessary that you work through the sections in order.</p>
 <ul>
-<li><a href="./installing_software.html">Installing R and RStudio</a></li>
-<li><a href="./installing_git.html">Installing and configuring Git</a> - Set up your own machine</li>
+<li><a href="./installing-software.html">Installing R and RStudio</a></li>
+<li><a href="./installing-git.html">Installing and configuring Git</a> - Set up your own machine</li>
 <li><a href="./github.html">Getting an account on GitHub</a> - Sign up for GitHub</li>
-<li><a href="./SSH.html">Securing your connection to GitHub</a> - Create a secure SSH key to identify yourself on GitHub</li>
-<li><a href="./rstudio_project.html">Creating an RStudio project</a> - Creating an example, version controlled project</li>
-<li><a href="./analysis_start.html">Starting our analysis project</a> - A simple script to get us started</li>
-<li><a href="./version_control.html">Getting our project under version control</a> - First step into a larger world</li>
-<li><a href="./making_change.html">Making some changes</a> - Making our script more useful</li>
+<li><a href="./ssh.qmd">Securing your connection to GitHub</a> - Create a secure ssh key to identify yourself on GitHub</li>
+<li><a href="./rstudio-project.html">Creating an RStudio project</a> - Creating an example, version controlled project</li>
+<li><a href="./analysis-start.html">Starting our analysis project</a> - A simple script to get us started</li>
+<li><a href="./version-control.html">Getting our project under version control</a> - First step into a larger world</li>
+<li><a href="./making-change.html">Making some changes</a> - Making our script more useful</li>
 <li><a href="./commit.html">Committing our change</a> - How to commit a change</li>
-<li><a href="./viewing_history.html">Viewing history</a> - How to view the history of your project or of a single file</li>
-<li><a href="./github_sync.html">Connecting our local repository to GitHub</a> - Backup! Making our code available to the world.</li>
+<li><a href="./viewing-history.html">Viewing history</a> - How to view the history of your project or of a single file</li>
+<li><a href="./github-sync.html">Connecting our local repository to GitHub</a> - Backup! Making our code available to the world.</li>
 <li><a href="./updates.html">Subsequent updates</a> - Now we are set up, the workflow is easy.</li>
-<li><a href="./next_steps.html">Things we haven’t told you</a> - Steps to further learning</li>
+<li><a href="./next-steps.html">Things we haven’t told you</a> - Steps to further learning</li>
 </ul>
+<div class="columns">
+<div class="column" style="width:47.5%;">
+<div class="callout callout-style-default callout-tip callout-titled" title="Support the LMU Open Science Center!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Support the LMU Open Science Center!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Like this tutorial? Be sure to give <a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub">the repository</a> a star and <a href="https://github.com/lmu-osc">follow us on GitHub</a>!</strong></p>
+</div>
+</div>
+</div><div class="column" style="width:5%;">
 
+</div><div class="column" style="width:47.5%;">
+<div class="callout callout-style-default callout-tip callout-titled" title="Questions about this tutorial?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Questions about this tutorial?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>If you have questions for the author of this tutorial, please take a look at the <a href="./about.html">About</a> page.</strong></p>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- -->
 
 </section>
 
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -393,6 +693,57 @@ ul.task-list li input[type="checkbox"] {
       });
       clipboardModal.on('success', onCopySuccess);
     }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
         var filterRegex = new RegExp("https:\/\/lmu-osc\.github\.io\/Introduction-RStudio-Git-GitHub\/");
@@ -409,6 +760,13 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -726,11 +1084,77 @@ ul.task-list li input[type="checkbox"] {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./installing_software.html" class="pagination-link" aria-label="Installing R and RStudio">
+      <a href="./installing-software.html" class="pagination-link" aria-label="Installing R and RStudio">
         <span class="nav-page-text">Installing R and RStudio</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
-</nav>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Introduction to version Control with git and GitHub within RStudio"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## About this work</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>This work was originally created by <span class="co">[</span><span class="ot">Mike Croucher</span><span class="co">](https://github.com/mikecroucher)</span> from <span class="co">[</span><span class="ot">RSE-Sheffield</span><span class="co">](https://github.com/RSE-Sheffield)</span> under a <span class="co">[</span><span class="ot">Creative Commons Attribution Share Alike 4.0 International</span><span class="co">](https://creativecommons.org/licenses/by-sa/4.0/legalcode)</span>.  It was subsequently adapted by <span class="co">[</span><span class="ot">Malika Ihle</span><span class="co">](https://www.osc.uni-muenchen.de/about_us/coordinator/index.html)</span> during her time at <span class="co">[</span><span class="ot">Reproducible Research Oxford</span><span class="co">](https://ox.ukrn.org/)</span> and alter the the <span class="co">[</span><span class="ot">LMU Open Science Center</span><span class="co">](https://www.osc.uni-muenchen.de/index.html)</span>. The overview image is from <span class="co">[</span><span class="ot">Dumitru Uzun</span><span class="co">](https://duzun.me/tips/git)</span>. You are free to use this work in your own projects. </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Before the session </span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Please watch this 10 min introductory <span class="co">[</span><span class="ot">videorecording</span><span class="co">](https://osf.io/dcqt9/)</span>.</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview of the exercice  </span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>In this session, you are going to start using the version control system Git from within RStudio to keep your local workflow tidy while having access to all previous versions of your files. You will then backup your workflow online on a remote GitHub server, which will allow you to access your work from any computer, and sharing it with your collaborators or publically. Specifically, you will</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>install and configure Git (as well as R and RStudio if needed), and create a GitHub account  </span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>create a local RStudio project under version control  </span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>make changes and **commit** them to your local repository (i.e. save your changes locally in your version control system)  </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>connect your local repository to your GitHub account by creating a remote GitHub repository and setting it as the 'origin' of your local repository from the command line. This is the procedure you will have to follow to 'upgrade' your former RStudio projects that were not under version control and backed-up on GitHub; but in the future, I recommend you first create a GitHub repository (your remote origin) and then **clone** it locally (i.e. copy it to your computer while maintaining a connection to your remote (GitHub) version). This procedure, easily done from RStudio, will be covered in the <span class="co">[</span><span class="ot">second workshop</span><span class="co">](https://lmu-osc.github.io/Collaborative-RStudio-GitHub/)</span>  </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**push** your local changes to your remote repository (i.e. synchronise your changes to your GitHub version)  </span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>Once this workflow is set up, you can easily work with several computers or with collaborators: if you have changes in your GitHub version (if you or a collaborator pushed changes from another computer or if you made changes online, directly on GitHub), you can **pull** them into your local version (i.e fetch changes and merge them locally, to keep your copy up-to-date).</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">/&gt;</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"assets/github-remote.png"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"750"</span><span class="dt">&gt;</span>  </span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">/&gt;</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step-by-step tutorial</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>The material is self-paced and includes a worked-example. It is necessary that you work through the sections in order.  </span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Installing R and RStudio</span><span class="co">](./installing-software.qmd)</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Installing and configuring Git</span><span class="co">](./installing-git.qmd)</span> - Set up your own machine</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Getting an account on GitHub</span><span class="co">](./github.qmd)</span> - Sign up for GitHub</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Securing your connection to GitHub</span><span class="co">](./ssh.qmd)</span> - Create a secure ssh key to identify yourself on GitHub</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Creating an RStudio project</span><span class="co">](./rstudio-project.qmd)</span> - Creating an example, version controlled project</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Starting our analysis project</span><span class="co">](./analysis-start.qmd)</span> - A simple script to get us started</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Getting our project under version control</span><span class="co">](./version-control.qmd)</span> - First step into a larger world</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Making some changes</span><span class="co">](./making-change.qmd)</span> - Making our script more useful</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Committing our change</span><span class="co">](./commit.qmd)</span> - How to commit a change</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Viewing history</span><span class="co">](./viewing-history.qmd)</span> - How to view the history of your project or of a single file</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Connecting our local repository to GitHub</span><span class="co">](./github-sync.qmd)</span> - Backup! Making our code available to the world.</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Subsequent updates</span><span class="co">](./updates.qmd)</span> - Now we are set up, the workflow is easy.</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Things we haven't told you</span><span class="co">](./next-steps.qmd)</span> - Steps to further learning</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>:::: {.columns}</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>::: {.column width="47.5%"}</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip title="Support the LMU Open Science Center!"}</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>**Like this tutorial? Be sure to give [the repository]({{&lt; meta repo-url &gt;}}) a star and [follow us on GitHub](https://github.com/lmu-osc)!**</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>::: {.column width="5%"}</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>::: {.column width="47.5%"}</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip title="Questions about this tutorial?"}</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>**If you have questions for the author of this tutorial, please take a look at the [About](about.qmd) page.**</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>::::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -738,15 +1162,104 @@ ul.task-list li input[type="checkbox"] {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>Copyright, 2024 Open Science Center at LMU Munich</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<p>© 2026 Mike Croucher and Malika Ihle. Published by LMU Open Science Center. Licensed under CC BY-SA 4.0.</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
+  </div>
+</footer>
+<footer class="osc-footer-card text-white py-5">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-12 col-md-6 col-lg-3 ">
+        <h4 class="fw-bold fs-5 fs-lg-4 text-white">
+          Ludwig-Maximilians-Universität<br>
+          LMU Open Science Center
+        </h4>
+        <p class="mb-0 mt-1 fw-normal fs-5">
+          Leopoldstr. 13<br>
+          80802 München
+        </p>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <h4 class="fw-semibold fs-5 text-white">Contact</h4>
+        <ul class="list-unstyled mt-2 mb-0">
+          <li>
+            <a href="mailto:felix.schoenbrodt@psy.lmu.de" class="text-white text-decoration-underline">
+              <i class="bi bi-envelope me-1"></i>
+              Prof. Dr. Felix Schönbrodt (Managing Director)
+            </a>
+          </li>
+          <li>
+            <a href="mailto:malika.ihle@lmu.de" class="text-white text-decoration-underline">
+              <i class="bi bi-envelope me-1"></i>
+              Dr. Malika Ihle (Coordinator) 
+            </a>
+          </li>
+          <li>
+            <a href="mailto:osc@lmu.de" class="text-white text-decoration-underline">
+              <i class="bi bi-envelope me-1"></i>
+              OSC team
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <h4 class="fw-semibold fs-5 text-white">Join Us</h4>
+        <ul class="list-unstyled mt-2 mb-0">
+          <li>
+            <a href="https://lists.lrz.de/mailman/listinfo/lmu-osc" target="_blank" class="text-white text-decoration-underline" aria-label="Subscribe to our announcement list (opens in new window)">
+              Subscribe to our announcement list
+            </a>
+          </li>
+          <li>
+            <a href="https://www.osc.lmu.de/about/join-us.html" target="_blank" class="text-white text-decoration-underline" aria-label="Become a member (opens in new window)">
+              Become a member
+            </a>
+          </li>
+          <li>
+            <a href="https://matrix.to/#/#lmu-open-science-center:matrix.lmu.de" target="_blank" class="text-white text-decoration-underline" aria-label="Chat with us on Matrix (opens in new window)">
+              Chat with us on Matrix
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3 d-flex align-items-start gap-3 osc-footer-socials">
+        <a href="https://github.com/lmu-osc" target="_blank" class="text-white fs-3" aria-label="LMU Open Science Center on GitHub (opens in new window)">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/lmu-open-science-center/" target="_blank" class="text-white fs-3" aria-label="LMU Open Science Center on LinkedIn (opens in new window)">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://bsky.app/profile/lmu-osc.bsky.social" target="_blank" class="text-white fs-3" aria-label="LMU Open Science Center on Bluesky (opens in new window)">
+          <i class="bi bi-bluesky"></i>
+        </a>
+        <a href="https://scicomm.xyz/@lmu_osc" target="_blank" class="text-white fs-3" aria-label="LMU Open Science Center on Mastodon (opens in new window)">
+          <i class="bi bi-mastodon"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <hr class="my-4 border-light">
+
+    <div class="d-flex flex-wrap gap-3 small">
+      <a href="./footer/imprint.html" class="text-white text-decoration-underline">Imprint</a>
+      <span aria-hidden="true">|</span>
+      <a href="./footer/privacy.html" class="text-white text-decoration-underline">Privacy Policy</a>
+      <span aria-hidden="true">|</span>
+      <a href="./footer/accessibilty.html" class="text-white text-decoration-underline">Accessibility</a>
+    </div>
+
   </div>
 </footer>
 
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-07-21">
 
-<title>Committing our change – Introduction to Version Control with Git and GitHub within RStudio</title>
+<title>About – Introduction to Version Control with Git and GitHub within RStudio</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -58,7 +59,26 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -68,8 +88,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./viewing-history.html" rel="next">
-<link href="./making-change.html" rel="prev">
 <link href="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -366,7 +384,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./installing-software.html">Tutorial</a></li><li class="breadcrumb-item"><a href="./commit.html">Committing our change</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">About</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -457,7 +475,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./commit.html" class="sidebar-item-text sidebar-link active">
+  <a href="./commit.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Committing our change</span></a>
   </div>
 </li>
@@ -492,16 +510,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+   
+  <ul>
+  <li><a href="#contributors" id="toc-contributors" class="nav-link active" data-scroll-target="#contributors">Contributors</a></li>
+  <li><a href="#licenses" id="toc-licenses" class="nav-link" data-scroll-target="#licenses">Licenses</a></li>
+  <li><a href="#tutorial-template-quarto-extension" id="toc-tutorial-template-quarto-extension" class="nav-link" data-scroll-target="#tutorial-template-quarto-extension">Tutorial Template Quarto Extension</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/edit/main/about.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/blob/main/about.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./installing-software.html">Tutorial</a></li><li class="breadcrumb-item"><a href="./commit.html">Committing our change</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Committing our change</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">About</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -509,6 +534,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 21, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -518,22 +549,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><strong>All files need to be saved before being ‘committable’</strong>.</p>
-<p>Now, click on the <strong>git</strong> tab in RStudio. You’ll notice that there are two files listed – our script, which has been modified, and our script too, which was added. Click on the staged box to stage the change to the first script.</p>
-<p><img src="./assets/git-changed.png" class="img-fluid"></p>
-<p>Now click on <strong>Diff</strong> to give a summary of what’s changed. Lines that have been added are green. Lines that have been removed are red. From git’s point of view, a modification to a line is actually two operations: the removal of the original line followed by the creation of the new line.</p>
-<p><img src="./assets/git-diff.png" class="img-fluid"></p>
-<p>Add a commit message and click on commit</p>
-<p><img src="./assets/git-commit-message2.png" class="img-fluid"></p>
-<p>Now stage the second script, and commit it with a new message.</p>
-<p><img src="./assets/git-commit-message3.png" class="img-fluid"></p>
-<hr>
+<section id="contributors" class="level2">
+<h2 class="anchored" data-anchor-id="contributors">Contributors</h2>
+<p>This tutorial was originally created by Mike Croucher and later adapted by Malika Ihle for the LMU Open Science Center.</p>
+</section>
+<section id="licenses" class="level2">
+<h2 class="anchored" data-anchor-id="licenses">Licenses</h2>
+<p>The overall project is available under the <a href="https://creativecommons.org/licenses/by-sa/4.0/"><strong>CC BY-SA 4.0</strong></a> license found at <a href="./LICENSE.html">LICENSE</a>; all code without any narrative text is also (at your option) available under the <a href="https://creativecommons.org/publicdomain/zero/1.0/"><strong>CC0 1.0 Universal</strong></a> license found at <a href="./LICENSE-CODE.html">LICENSE-CODE</a>.</p>
+</section>
+<section id="tutorial-template-quarto-extension" class="level2">
+<h2 class="anchored" data-anchor-id="tutorial-template-quarto-extension">Tutorial Template Quarto Extension</h2>
+<p>This tutorial uses the <a href="https://github.com/lmu-osc/tutorial-template"><code>lmu-osc/tutorial-template</code></a> Quarto extension <span class="citation" data-cites="callahan2026">(<a href="#ref-callahan2026" role="doc-biblioref">Callahan 2026</a>)</span>.</p>
 
 
 <!-- -->
 
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-callahan2026" class="csl-entry" role="listitem">
+Callahan, Patrick. 2026. <em>LMU Open Science Center Tutorial Template: A Quarto Extension</em>. <a href="https://doi.org/10.5281/zenodo.21263721">https://doi.org/10.5281/zenodo.21263721</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1004,44 +1042,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       }
     }
   });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./making-change.html" class="pagination-link" aria-label="Making some changes">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Making some changes</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./viewing-history.html" class="pagination-link" aria-label="Viewing history">
-        <span class="nav-page-text">Viewing history</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Committing our change"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "About"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2026-07-21</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>**All files need to be saved before being 'committable'**. </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Contributors</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Now, click on the **git** tab in RStudio. You'll notice that there are two files listed -- our script, which has been modified, and our script too, which was added. Click on the staged box to stage the change to the first script.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>This tutorial was originally created by Mike Croucher and later adapted by Malika Ihle for the LMU Open Science Center.</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="al">![](./assets/git-changed.png)</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## Licenses</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Now click on  **Diff** to give a summary of what's changed. Lines that have been added are green. Lines that have been removed are red. From git's point of view, a modification to a line is actually two operations: the removal of the original line followed by the creation of the new line.</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>The overall project is available under the <span class="co">[</span><span class="ot">**CC BY-SA 4.0**</span><span class="co">](https://creativecommons.org/licenses/by-sa/4.0/)</span> license found at <span class="co">[</span><span class="ot">LICENSE</span><span class="co">](LICENSE.md)</span>; all code without any narrative text is also (at your option) available under the <span class="co">[</span><span class="ot">**CC0 1.0 Universal**</span><span class="co">](https://creativecommons.org/publicdomain/zero/1.0/)</span> license found at <span class="co">[</span><span class="ot">LICENSE-CODE</span><span class="co">](LICENSE-CODE.md)</span>.</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="al">![](./assets/git-diff.png)</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## Tutorial Template Quarto Extension</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Add a commit message and click on commit</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="al">![](./assets/git-commit-message2.png)</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>Now stage the second script, and commit it with a new message.</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="al">![](./assets/git-commit-message3.png)</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>***</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>This tutorial uses the <span class="co">[</span><span class="ot">`lmu-osc/tutorial-template`</span><span class="co">](https://github.com/lmu-osc/tutorial-template)</span> Quarto extension <span class="co">[</span><span class="ot">@callahan2026</span><span class="co">]</span>.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
@@ -1051,7 +1068,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </div>   
     <div class="nav-footer-center">
 <p>© 2026 Mike Croucher and Malika Ihle. Published by LMU Open Science Center. Licensed under CC BY-SA 4.0.</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/edit/main/commit.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/blob/main/commit.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/edit/main/about.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/blob/main/about.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Committing our change – Introduction to Version Control with Git and GitHub within RStudio</title>
+<title>Connecting our local repository to GitHub – Introduction to Version Control with Git and GitHub within RStudio</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -68,8 +68,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./viewing-history.html" rel="next">
-<link href="./making-change.html" rel="prev">
+<link href="./updates.html" rel="next">
+<link href="./viewing-history.html" rel="prev">
 <link href="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -366,7 +366,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./installing-software.html">Tutorial</a></li><li class="breadcrumb-item"><a href="./commit.html">Committing our change</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./installing-software.html">Tutorial</a></li><li class="breadcrumb-item"><a href="./github-sync.html">Connecting our local repository to GitHub</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -457,7 +457,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./commit.html" class="sidebar-item-text sidebar-link active">
+  <a href="./commit.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Committing our change</span></a>
   </div>
 </li>
@@ -469,7 +469,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./github-sync.html" class="sidebar-item-text sidebar-link">
+  <a href="./github-sync.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Connecting our local repository to GitHub</span></a>
   </div>
 </li>
@@ -499,9 +499,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./installing-software.html">Tutorial</a></li><li class="breadcrumb-item"><a href="./commit.html">Committing our change</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./installing-software.html">Tutorial</a></li><li class="breadcrumb-item"><a href="./github-sync.html">Connecting our local repository to GitHub</a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Committing our change</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Connecting our local repository to GitHub</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -518,15 +518,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><strong>All files need to be saved before being ‘committable’</strong>.</p>
-<p>Now, click on the <strong>git</strong> tab in RStudio. You’ll notice that there are two files listed – our script, which has been modified, and our script too, which was added. Click on the staged box to stage the change to the first script.</p>
-<p><img src="./assets/git-changed.png" class="img-fluid"></p>
-<p>Now click on <strong>Diff</strong> to give a summary of what’s changed. Lines that have been added are green. Lines that have been removed are red. From git’s point of view, a modification to a line is actually two operations: the removal of the original line followed by the creation of the new line.</p>
-<p><img src="./assets/git-diff.png" class="img-fluid"></p>
-<p>Add a commit message and click on commit</p>
-<p><img src="./assets/git-commit-message2.png" class="img-fluid"></p>
-<p>Now stage the second script, and commit it with a new message.</p>
-<p><img src="./assets/git-commit-message3.png" class="img-fluid"></p>
+<p>Our project is fully version controlled so we have access to a detailed history of every change we’ve ever made to it. This is a great first step but all of this only exists on our own computers at the moment.</p>
+<p>It’s time to upload our project to GitHub!</p>
+<p>Putting your code on GitHub confers a number of benefits:</p>
+<ul>
+<li>Everything is backed up for you.</li>
+<li>Your project is made available to others. This is a vital part of modern scientific dissemination.</li>
+<li>GitHub has a range of project management and collaboration tools that work on a per-project basis.</li>
+<li>Your GitHub profile can be used as part of your online-identity.</li>
+</ul>
+<p><strong>Creating a new repository on GitHub</strong></p>
+<ul>
+<li>Log into GitHub and go to your profile page. On the <strong>repositories</strong> tab, click <strong>New</strong></li>
+</ul>
+<p><img src="assets/new-repo.png" width="600"></p>
+<p>At the <strong>Create a new repository</strong> screen, give your repo a name and click <strong>Create Repository</strong>. In this case only, when you didn’t start by creating a repo on GitHub but want to push from an exisiting local repository for the first time like we are doing now and like you would to upgrade your old projects, do NOT select ‘create a README file’ but directly ‘Create repository’.</p>
+<p><img src="./assets/new-repo-name.png" class="img-fluid"></p>
+<p>The <strong>Quick Setup</strong> screen gives sets of git commands that can be used in various circumstances.<br>
+First, make sure you select the ssh tab (the url shown in the blue box should start with git@github.com).</p>
+<p>We are then interested in <strong>…or push an existing repository from the command line</strong>. Copy these commands to the clipboard using the copy button on GitHub.</p>
+<p><img src="./assets/github-git-commands.png" class="img-fluid"></p>
+<p>In RStudio, navigate to the <strong>git</strong> tab and click on <strong>More -&gt; New terminal</strong></p>
+<p><img src="./assets/git-more-shell.png" class="img-fluid"></p>
+<p><br></p>
+<p>Paste the git commands into the Shell and press Enter to execute them. Given this is your first push, you may be asked again to authenticate your identity by entering the password of your ssh key</p>
+<p><img src="./assets/first-push-confirm-identity.png" class="img-fluid"></p>
+<p>and/or prompted with such sentence in the terminal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Are</span> you sure you want to continue connecting <span class="er">(</span><span class="ex">yes/no/[fingerprint]</span><span class="kw">)</span><span class="ex">?</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>to which you should answer <code>yes</code></p>
+<p><br></p>
+<blockquote class="blockquote">
+<p><strong>Warning for Windows OS with RStudio &gt; 2022.12.0</strong> If you get an error saying you do not have a ssh key in the appropriate location, this is due to a <a href="https://community.rstudio.com/t/git-bash-uses-different-home-directory-in-rstudio-2022-12-0-on-windows/155508">known bug in the RStudio / Git bash interaction</a> which we expect to be eventually resolved with updates. A temporary solution is to open the Windows Power Shell instead of Git Bash as terminal within RStudio: for this, go to RStudio -&gt; Tools -&gt; Global Options -&gt; Terminal -&gt; New terminals open with -&gt; choose Windows Power Shell -&gt; Click Apply -&gt; close the panel -&gt; Complete the steps above (i.e.&nbsp;paste or type the commands presented by your new GitHub repo) -&gt; change back the default terminal within RStudio to Git Bash.</p>
+</blockquote>
+<p><br></p>
+<p>Finally, confirm that the project has been uploaded to your GitHub profile (you may need to refresh your GitHub page).</p>
 <hr>
 
 
@@ -1007,41 +1032,81 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./making-change.html" class="pagination-link" aria-label="Making some changes">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Making some changes</span>
+      <a href="./viewing-history.html" class="pagination-link" aria-label="Viewing history">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Viewing history</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./viewing-history.html" class="pagination-link" aria-label="Viewing history">
-        <span class="nav-page-text">Viewing history</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./updates.html" class="pagination-link" aria-label="Subsequent updates">
+        <span class="nav-page-text">Subsequent updates</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Committing our change"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>**All files need to be saved before being 'committable'**. </span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Now, click on the **git** tab in RStudio. You'll notice that there are two files listed -- our script, which has been modified, and our script too, which was added. Click on the staged box to stage the change to the first script.</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="al">![](./assets/git-changed.png)</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Now click on  **Diff** to give a summary of what's changed. Lines that have been added are green. Lines that have been removed are red. From git's point of view, a modification to a line is actually two operations: the removal of the original line followed by the creation of the new line.</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="al">![](./assets/git-diff.png)</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Add a commit message and click on commit</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="al">![](./assets/git-commit-message2.png)</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>Now stage the second script, and commit it with a new message.</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="al">![](./assets/git-commit-message3.png)</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>***</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> " Connecting our local repository to GitHub"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">aliases:</span><span class="co"> [github_sync.html]</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>Our project is fully version controlled so we have access to a detailed history of every change we've ever made to it. This is a great first step but all of this only exists on our own computers at the moment.</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>It's time to upload our project to GitHub!</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>Putting your code on GitHub confers a number of benefits:</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Everything is backed up for you.</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Your project is made available to others. This is a vital part of modern scientific dissemination.</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>GitHub has a range of project management and collaboration tools that work on a per-project basis.</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Your GitHub profile can be used as part of your online-identity.</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>**Creating a new repository on GitHub**</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Log into GitHub and go to your profile page. On the **repositories** tab, click **New**</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"assets/new-repo.png"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"600"</span><span class="dt">&gt;</span> </span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>At the **Create a new repository** screen, give your repo a name and click **Create Repository**.</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>In this case only, when you didn't start by creating a repo on GitHub but want to push from an exisiting local repository for the first time like we are doing now and like you would to upgrade your old projects, do NOT select 'create a README file' but directly 'Create repository'.</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="al">![](./assets/new-repo-name.png)</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>The **Quick Setup** screen gives sets of git commands that can be used in various circumstances.  </span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>First, make sure you select the ssh tab (the url shown in the blue box should start with git@github.com).  </span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>We are then interested in **…or push an existing repository from the command line**. Copy these commands to the clipboard using the copy button on GitHub. </span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="al">![](./assets/github-git-commands.png)</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>In RStudio, navigate to the **git** tab and click on **More -&gt; New terminal**</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="al">![](./assets/git-more-shell.png)</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">/&gt;</span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>Paste the git commands into the Shell and press Enter to execute them.</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>Given this is your first push, you may be asked again to authenticate your identity by entering the password of your ssh key</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="al">![](./assets/first-push-confirm-identity.png)</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>and/or prompted with such sentence in the terminal:</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="ex">Are</span> you sure you want to continue connecting <span class="er">(</span><span class="ex">yes/no/[fingerprint]</span><span class="kw">)</span><span class="ex">?</span></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>to which you should answer <span class="in">`yes`</span>  </span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">/&gt;</span></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Warning for Windows OS with RStudio &gt; 2022.12.0**</span></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; If you get an error saying you do not have a ssh key in the appropriate location, this is due to a </span><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://community.rstudio.com/t/git-bash-uses-different-home-directory-in-rstudio-2022-12-0-on-windows/155508"</span><span class="dt">&gt;</span><span class="at">known bug in the RStudio / Git bash interaction</span><span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span><span class="at"> which we expect to be eventually resolved with updates. A temporary solution is to open the Windows Power Shell instead of Git Bash as terminal within RStudio: for this, go to RStudio -&gt; Tools -&gt; Global Options -&gt; Terminal -&gt; New terminals open with -&gt; choose Windows Power Shell -&gt; Click Apply -&gt; close the panel -&gt; Complete the steps above (i.e. paste or type the commands presented by your new GitHub repo) -&gt; change back the default terminal within RStudio to Git Bash.</span></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">/&gt;</span></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>Finally, confirm that the project has been uploaded to your GitHub profile (you may need to refresh your GitHub page).</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>***</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
@@ -1051,7 +1116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </div>   
     <div class="nav-footer-center">
 <p>© 2026 Mike Croucher and Malika Ihle. Published by LMU Open Science Center. Licensed under CC BY-SA 4.0.</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/edit/main/commit.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/blob/main/commit.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/edit/main/github-sync.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/blob/main/github-sync.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
