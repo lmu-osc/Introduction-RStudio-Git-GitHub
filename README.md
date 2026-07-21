@@ -18,7 +18,7 @@ In this session, you are going to start using the version control system Git fro
 Once this workflow is set up, you can easily work with several computers or with collaborators: if you have changes in your GitHub version (if you or a collaborator pushed changes from another computer or if you made changes online, directly on GitHub), you can **pull** them into your local version (i.e fetch changes and merge them locally, to keep your copy up-to-date).
 
 <br/>
-<img src="assets/github-remote.png" width="750">  
+<img src="/assets/github-remote.png" width="750">  
 <br/>
 
 ## Step-by-step tutorial

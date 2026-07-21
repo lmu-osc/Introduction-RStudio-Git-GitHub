@@ -33,31 +33,31 @@ website:
         href: index.qmd
       - section: "Tutorial"
         contents:
-          - href: installing-software.qmd
+          - href: installing-software/index.qmd
             text: "Installing R and RStudio"
-          - href: installing-git.qmd
+          - href: installing-git/index.qmd
             text: "Installing and configuring Git"
-          - href: github.qmd
+          - href: github/index.qmd
             text: "Getting an account on GitHub"
-          - href: ssh.qmd
+          - href: SSH/index.qmd
             text: "Securing your connection to GitHub"
-          - href: rstudio-project.qmd
+          - href: rstudio-project/index.qmd
             text: "Creating an RStudio project"
-          - href: analysis-start.qmd
+          - href: analysis-start/index.qmd
             text: "Starting our analysis project"
-          - href: version-control.qmd
+          - href: version-control/index.qmd
             text: "Getting our project under version control"
-          - href: making-change.qmd
+          - href: making-change/index.qmd
             text: "Making some changes"
-          - href: commit.qmd
+          - href: commit/index.qmd
             text: "Committing our change"
-          - href: viewing-history.qmd
+          - href: viewing-history/index.qmd
             text: "Viewing history"
-          - href: github-sync.qmd
+          - href: github-sync/index.qmd
             text: "Connecting our local repository to GitHub"
-          - href: updates.qmd
+          - href: updates/index.qmd
             text: "Subsequent updates"
-          - href: next-steps.qmd
+          - href: next-steps/index.qmd
             text: "Things we haven’t told you"
 
 include-in-header:

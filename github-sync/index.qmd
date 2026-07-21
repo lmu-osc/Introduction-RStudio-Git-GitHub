@@ -18,12 +18,12 @@ Putting your code on GitHub confers a number of benefits:
 
 * Log into GitHub and go to your profile page. On the **repositories** tab, click **New**
 
-<img src="assets/new-repo.png" width="600"> 
+<img src="/assets/new-repo.png" width="600"> 
 
 At the **Create a new repository** screen, give your repo a name and click **Create Repository**.
 In this case only, when you didn't start by creating a repo on GitHub but want to push from an exisiting local repository for the first time like we are doing now and like you would to upgrade your old projects, do NOT select 'create a README file' but directly 'Create repository'.
 
-![](./assets/new-repo-name.png)
+![](/assets/new-repo-name.png)
 
 The **Quick Setup** screen gives sets of git commands that can be used in various circumstances.  
 First, make sure you select the ssh tab (the url shown in the blue box should start with git@github.com).  
@@ -32,18 +32,18 @@ First, make sure you select the ssh tab (the url shown in the blue box should st
 
 We are then interested in **…or push an existing repository from the command line**. Copy these commands to the clipboard using the copy button on GitHub. 
 
-![](./assets/github-git-commands.png)
+![](/assets/github-git-commands.png)
 
 In RStudio, navigate to the **git** tab and click on **More -> New terminal**
 
-![](./assets/git-more-shell.png)
+![](/assets/git-more-shell.png)
 
 <br/>
 
 Paste the git commands into the Shell and press Enter to execute them.
 Given this is your first push, you may be asked again to authenticate your identity by entering the password of your ssh key
 
-![](./assets/first-push-confirm-identity.png)
+![](/assets/first-push-confirm-identity.png)
 
 
 and/or prompted with such sentence in the terminal:

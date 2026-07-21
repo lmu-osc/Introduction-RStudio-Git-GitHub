@@ -106,11 +106,11 @@ Copy the contents of the output to your clipboard.
 
 Login to github.com and bring up your account settings by clicking on your profile photo (top right) and selecting **Settings**. Click on **SSH and GPG keys** (left sidebar), and then click on the green button 'New SSH key' or '**Add SSH key**'.
 
-![](./assets/ssh-key.png)
+![](/assets/ssh-key.png)
 
 In the "Title" field, add a descriptive label for the new key, e.g. something that would identify the device you just connected. For example, if you're using a personal laptop, you might call this key "Personal MacBook Air". Finally, paste the contents of your clipboard into the Key text box and hit the green 'Add key' button to save. Enter your GitHub password if prompted.
 
-![](./assets/add-ssh-key.png)
+![](/assets/add-ssh-key.png)
 
 
 

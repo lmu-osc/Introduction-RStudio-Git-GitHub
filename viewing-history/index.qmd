@@ -7,7 +7,7 @@ aliases: [viewing_history.html]
 In this **Diff** pop up window, which you found in the **git** tab of RStudio, you can also press the **History** button to review the history of your project or files.
 
 
-![](./assets/git-history-tab.png)
+![](/assets/git-history-tab.png)
 
 
 By default, the history search feature will show all files added, changed, or deleted for each commit. This can be extremely useful for finding bugs or looking back to how your project looked a few months ago. However, it is often more practical to review the changes made to a single file over time; this enables, for example, clear tracking of the evolution of data cleaning and analysis steps in your project.
@@ -16,7 +16,7 @@ By default, the history search feature will show all files added, changed, or de
 To the right of the **History** button, there should now be a drop-down box titled `(all commits)`. Press this box to see the other options, which should be titled "Filter by File" and "Filter by Directory." Select the **"Filter by File"** option.
 
 
-![](./assets/git-history-tab-filter.png)
+![](/assets/git-history-tab-filter.png)
 
 
 A file-section window should appear on your screen; select the file you would like to review, e.g. `myscript.R`. 
@@ -24,7 +24,7 @@ A file-section window should appear on your screen; select the file you would li
 You will then get only the specific commits in which the selected file was included (i.e. when it was added, deleted, or edited). Click on any of the commit messages to view that specific commit, and scroll further down the screen to view changes made to the file during that commit.
 
 
-![](./assets/git-history-tab-filter-example.png)
+![](/assets/git-history-tab-filter-example.png)
 
 
 It's not possible to revert back to a previous commit using the RStudio interface. For that, you need to learn some command-line git which is beyond the scope of this session. 
