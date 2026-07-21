@@ -1,83 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/installing-software.html</loc>
-    <lastmod>2026-07-21T16:00:19.046Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/github-sync.html</loc>
-    <lastmod>2026-07-21T16:00:19.046Z</lastmod>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/updates/index.html</loc>
+    <lastmod>2026-07-21T16:12:41.456Z</lastmod>
   </url>
   <url>
     <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/LICENSE.html</loc>
-    <lastmod>2026-07-21T16:00:19.035Z</lastmod>
+    <lastmod>2026-07-21T16:12:41.447Z</lastmod>
   </url>
   <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/index.html</loc>
-    <lastmod>2026-07-21T16:00:19.046Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/installing-git.html</loc>
-    <lastmod>2026-07-21T16:00:19.046Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/about.html</loc>
-    <lastmod>2026-07-21T16:00:19.037Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/analysis-start.html</loc>
-    <lastmod>2026-07-21T16:00:19.037Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/footer/privacy.html</loc>
-    <lastmod>2026-07-21T16:00:19.046Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/footer/accessibilty.html</loc>
-    <lastmod>2026-07-21T16:00:19.045Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/rstudio-project.html</loc>
-    <lastmod>2026-07-21T16:00:19.046Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/SSH.html</loc>
-    <lastmod>2026-07-21T16:00:19.035Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/version-control.html</loc>
-    <lastmod>2026-07-21T16:00:19.046Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/footer/imprint.html</loc>
-    <lastmod>2026-07-21T16:00:19.046Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/viewing-history.html</loc>
-    <lastmod>2026-07-21T16:00:19.046Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/making-change.html</loc>
-    <lastmod>2026-07-21T16:00:19.046Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/updates.html</loc>
-    <lastmod>2026-07-21T16:00:19.046Z</lastmod>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/rstudio-project/index.html</loc>
+    <lastmod>2026-07-21T16:12:41.456Z</lastmod>
   </url>
   <url>
     <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/LICENSE-CODE.html</loc>
-    <lastmod>2026-07-21T16:00:19.035Z</lastmod>
+    <lastmod>2026-07-21T16:12:41.447Z</lastmod>
   </url>
   <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/github.html</loc>
-    <lastmod>2026-07-21T16:00:19.046Z</lastmod>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/viewing-history/index.html</loc>
+    <lastmod>2026-07-21T16:12:41.457Z</lastmod>
   </url>
   <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/next-steps.html</loc>
-    <lastmod>2026-07-21T16:00:19.046Z</lastmod>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/analysis-start/index.html</loc>
+    <lastmod>2026-07-21T16:12:41.448Z</lastmod>
   </url>
   <url>
-    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/commit.html</loc>
-    <lastmod>2026-07-21T16:00:19.045Z</lastmod>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/footer/privacy.html</loc>
+    <lastmod>2026-07-21T16:12:41.456Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/footer/accessibilty.html</loc>
+    <lastmod>2026-07-21T16:12:41.455Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/github/index.html</loc>
+    <lastmod>2026-07-21T16:12:41.456Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/installing-software/index.html</loc>
+    <lastmod>2026-07-21T16:12:41.456Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/installing-git/index.html</loc>
+    <lastmod>2026-07-21T16:12:41.456Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/github-sync/index.html</loc>
+    <lastmod>2026-07-21T16:12:41.456Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/making-change/index.html</loc>
+    <lastmod>2026-07-21T16:12:41.456Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/footer/imprint.html</loc>
+    <lastmod>2026-07-21T16:12:41.456Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/commit/index.html</loc>
+    <lastmod>2026-07-21T16:12:41.455Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/about.html</loc>
+    <lastmod>2026-07-21T16:12:41.448Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/next-steps/index.html</loc>
+    <lastmod>2026-07-21T16:12:41.456Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/index.html</loc>
+    <lastmod>2026-07-21T16:12:41.456Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/version-control/index.html</loc>
+    <lastmod>2026-07-21T16:12:41.456Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/SSH/index.html</loc>
+    <lastmod>2026-07-21T16:12:41.447Z</lastmod>
   </url>
 </urlset>
