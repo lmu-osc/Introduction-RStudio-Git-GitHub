@@ -1,69 +1,76 @@
 project:
-  type: website
+  type: tutorial-template
 
+repo-url: https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub
 
 website:
-  title: ""
+  title: "Introduction to Version Control with Git and GitHub within RStudio"
   page-footer:
-    center: "Copyright, 2024 Open Science Center at LMU Munich"
     border: false
-  search:
-    location: sidebar
+    center: "© 2026 Mike Croucher and Malika Ihle. Published by LMU Open Science Center. Licensed under CC BY-SA 4.0."
   repo-url: https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub
-  repo-actions: [edit, issue]
-  page-navigation: true
-  favicon: assets/LMU-OSC_favicon.jpg
-  margin-header: |
-    ![](/assets/LMU-OSC_logo.jpg){width="175"}
+
   navbar:
+    right:
+      - about.qmd
     left:
       - href: index.qmd
-
+        text: Home
+    tools:
+      - icon: github
+        menu:
+          - text: Source Code
+            href: https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub
+          - text: Report a Bug
+            href: https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub/issues
+      - icon: house-heart
+        url: https://www.osc.lmu.de/
 
   sidebar:
     style: docked
     contents:
-      - text: "Home"
+      - text: "Overview"
         href: index.qmd
       - section: "Tutorial"
         contents:
-          - href: installing_software.qmd
+          - href: installing-software.qmd
             text: "Installing R and RStudio"
-          - href: installing_git.qmd
+          - href: installing-git.qmd
             text: "Installing and configuring Git"
           - href: github.qmd
             text: "Getting an account on GitHub"
-          - href: SSH.qmd
+          - href: ssh.qmd
             text: "Securing your connection to GitHub"
-          - href: rstudio_project.qmd
+          - href: rstudio-project.qmd
             text: "Creating an RStudio project"
-          - href: analysis_start.qmd
+          - href: analysis-start.qmd
             text: "Starting our analysis project"
-          - href: version_control.qmd
+          - href: version-control.qmd
             text: "Getting our project under version control"
-          - href: making_change.qmd
+          - href: making-change.qmd
             text: "Making some changes"
           - href: commit.qmd
             text: "Committing our change"
-          - href: viewing_history.qmd
+          - href: viewing-history.qmd
             text: "Viewing history"
-          - href: github_sync.qmd
+          - href: github-sync.qmd
             text: "Connecting our local repository to GitHub"
           - href: updates.qmd
             text: "Subsequent updates"
-          - href: next_steps.qmd
+          - href: next-steps.qmd
             text: "Things we haven’t told you"
 
+include-in-header:
+  - file: matomo-analytics.html
+
+include-after-body:
+  - file: footer/footer.html
 
 format:
-  html:
-    theme:
-      - cosmo
-      - custom.scss
-    css: styles.css
-    toc: true
-    include-in-header:
-      - file: matomo_analytics.html
+  tutorial-template-html+tutorial:
+    css:
+      - footer/footer-style.css
 
+editor: source
 
-
+bibliography: references.bib

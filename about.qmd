@@ -1,0 +1,16 @@
+---
+title: "About"
+date: 2026-07-21
+---
+
+## Contributors
+
+This tutorial was originally created by Mike Croucher and later adapted by Malika Ihle for the LMU Open Science Center.
+
+## Licenses
+
+The overall project is available under the [**CC BY-SA 4.0**](https://creativecommons.org/licenses/by-sa/4.0/) license found at [LICENSE](LICENSE.md); all code without any narrative text is also (at your option) available under the [**CC0 1.0 Universal**](https://creativecommons.org/publicdomain/zero/1.0/) license found at [LICENSE-CODE](LICENSE-CODE.md).
+
+## Tutorial Template Quarto Extension
+
+This tutorial uses the [`lmu-osc/tutorial-template`](https://github.com/lmu-osc/tutorial-template) Quarto extension [@callahan2026].

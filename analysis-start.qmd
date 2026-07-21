@@ -1,6 +1,6 @@
 ---
 title: "Starting our analysis project"
-format: html
+aliases: [analysis_start.html]
 ---
 
 
@@ -23,7 +23,7 @@ Save the R script as `myscript.R`. When you run it, it should load and plot the 
 
 Your directory should now contain 4 files:
 
-![](./assets/file_list.png)  
+![](./assets/file-list.png)  
 
 ***
 

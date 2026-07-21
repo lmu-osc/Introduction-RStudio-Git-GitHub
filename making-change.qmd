@@ -1,6 +1,6 @@
 ---
 title: "Making some changes"
-format: html
+aliases: [making_change.html]
 ---
 
 The next version of our project will do 3 changes. 

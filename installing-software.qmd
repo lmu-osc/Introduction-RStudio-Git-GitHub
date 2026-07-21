@@ -1,6 +1,6 @@
 ---
 title: "Installing R and RStudio"
-format: html
+aliases: [installing_software.html]
 ---
 
 
