@@ -9,7 +9,8 @@ author:
     affiliation: LMU Open Science Center
     orcid: "https://orcid.org/0000-0002-3242-5981"
 citation:
-  url: https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/about.html
+  title: "Introduction to Version Control with Git and GitHub within RStudio"
+  url: https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub
 ---
 
 ## Contributors
