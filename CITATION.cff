@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Croucher"
+    given-names: "Mike"
+    affiliation: "Community Developer Advocate, MathWorks"
+  - family-names: "Ihle"
+    given-names: "Malika"
+    orcid: "https://orcid.org/0000-0002-3242-5981"
+    affiliation: "LMU Open Science Center"
+
+title: "Introduction to version Control with git and GitHub within RStudio"
+version: 1.0.0
+# doi: "DOI_HERE_AFTER_GENERATED"
+date-released: 2016-09-03
+repository-code: "https://github.com/lmu-osc/Introduction-RStudio-Git-GitHub"
+url: "https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub"

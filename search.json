@@ -187,7 +187,14 @@
     "href": "about.html#tutorial-template-quarto-extension",
     "title": "About",
     "section": "Tutorial Template Quarto Extension",
-    "text": "Tutorial Template Quarto Extension\nThis tutorial uses the lmu-osc/tutorial-template Quarto extension (Callahan 2026)."
+    "text": "Tutorial Template Quarto Extension\nThis tutorial uses the lmu-osc/tutorial-template Quarto extension (Callahan 2026).\n\nReferences\n\n\nCallahan, Patrick. 2026. LMU Open Science Center Tutorial Template: A Quarto Extension. https://doi.org/10.5281/zenodo.21263721."
+  },
+  {
+    "objectID": "about.html#how-to-cite",
+    "href": "about.html#how-to-cite",
+    "title": "About",
+    "section": "How to Cite",
+    "text": "How to Cite\nTo cite this tutorial, please refer to the project’s CITATION.cff file or use the BibTeX citation provided in the appendix below."
   },
   {
     "objectID": "next-steps/index.html",
