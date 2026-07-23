@@ -26,11 +26,9 @@ The overall project is available under the [**CC BY-SA 4.0**](https://creativeco
 This tutorial uses the [`lmu-osc/tutorial-template`](https://github.com/lmu-osc/tutorial-template) Quarto extension [@callahan2026].
 
 
-### References
-
 ::: {#refs}
 :::
 
 ## How to Cite
 
-To cite this tutorial, please refer to the project's [CITATION.cff](CITATION.cff) file or use the BibTeX citation provided in the appendix below.
+**To cite this tutorial, please refer to the project's [CITATION.cff](CITATION.cff) file or use the BibTeX citation provided in the appendix below.**
