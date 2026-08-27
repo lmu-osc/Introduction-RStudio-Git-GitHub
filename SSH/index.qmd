@@ -45,7 +45,9 @@ In the command line, type the following by replacing your_email@email.com with y
 ssh-keygen -t ed25519 -C "your_email@email.com" -f ~/.ssh/github
 ```
 
-This creates a new SSH key pair using the Ed25519 algorithm, which is a modern and secure choice. The `-C` flag adds a label to the key with your email address, and the `-f` flag specifies the file name for the key pair.
+This creates a new SSH key pair using the Ed25519 algorithm, which is a modern and secure choice. The `-C` flag adds a label to the key with your email address, and the `-f` flag specifies the file name for the key pair.[^keygen_filename]
+
+[^keygen_filename]: The `-f` flag is optional. If you omit it, the key pair will be created in the default location, which is `~/.ssh/id_ed25519` for the private key and `~/.ssh/id_ed25519.pub` for the public key. However, we recommend using a descriptive name for your key pair, especially if you plan to use multiple keys for different purposes.
 
 When you're prompted to "Enter a file in which to save the key," press ENTER. This accepts the default file location.  
 This is the promt that will appear:
