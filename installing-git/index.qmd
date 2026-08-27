@@ -6,7 +6,7 @@ aliases: [installing_git.html]
 RStudio version control functionality is provided by another software called **git**
 
 
-**Install git**
+## Install git
 
 Git is one of the most popular version control systems in the world. It is free and open source.
 
@@ -16,7 +16,7 @@ Git is one of the most popular version control systems in the world. It is free 
 * Debian/Ubuntu: `sudo apt-get install git-core`
 * Fedora/RedHat: `sudo yum install git-core`
 
-**Configure git**
+## Configure git
 
 After installing git, you need to tell it who you are.
 
