@@ -14,7 +14,7 @@ Putting your code on GitHub confers a number of benefits:
 * GitHub has a range of project management and collaboration tools that work on a per-project basis.
 * Your GitHub profile can be used as part of your online-identity.
 
-**Creating a new repository on GitHub**
+## Creating a new repository on GitHub
 
 * Log into GitHub and go to your profile page. On the **repositories** tab, click **New**
 
