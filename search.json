@@ -152,7 +152,31 @@
     "href": "installing-git/index.html",
     "title": "Installing and configuring Git",
     "section": "",
-    "text": "RStudio version control functionality is provided by another software called git\nInstall git\nGit is one of the most popular version control systems in the world. It is free and open source.\n\nWindows & OS X: http://git-scm.com/downloads\n\nWindows: download the .exe file, run it and accept all the default settings (unless you know what you are doing) and keep clicking ‘next’\nOS X: at the link above, select the first option that suggests to install git through installing homebrew, by pasting a line of command provided in their instructions in your terminal, and accept the prompts appearing in your terminal.\n\nDebian/Ubuntu: sudo apt-get install git-core\nFedora/RedHat: sudo yum install git-core\n\nConfigure git\nAfter installing git, you need to tell it who you are.\nBy default, git is used through a command line interface. We’ll use git in this way now in order to perform its initial and minimal configuration. In the remaining of this tutorial, you’ll learn how to use git through Rstudio instead of a command line interface.\nOn windows, open Git Bash (start menu -&gt; Git Bash). On MacOS, open the Terminal app. On Linux, open your distribution’s (or any other) terminal emulator. Enter the following commands EXACTLY (spaces and quotation marks included) one after the other (hitting ENTER after each command). On successful completion, you should see no output from these commands.\nMake sure to replace you@youremail.com and Your Name by your email address and your name.\ngit config --global user.email \"you@youremail.com\"\ngit config --global user.name \"Your Name\"\n\n\n\n\n\n\n Back to top",
+    "text": "RStudio version control functionality is provided by another software called git",
+    "crumbs": [
+      "Home",
+      "Tutorial",
+      "Installing and configuring Git"
+    ]
+  },
+  {
+    "objectID": "installing-git/index.html#install-git",
+    "href": "installing-git/index.html#install-git",
+    "title": "Installing and configuring Git",
+    "section": "Install git",
+    "text": "Install git\nGit is one of the most popular version control systems in the world. It is free and open source.\n\nWindows & OS X: http://git-scm.com/downloads\n\nWindows: download the .exe file, run it and accept all the default settings (unless you know what you are doing) and keep clicking ‘next’\nOS X: at the link above, select the first option that suggests to install git through installing homebrew, by pasting a line of command provided in their instructions in your terminal, and accept the prompts appearing in your terminal.\n\nDebian/Ubuntu: sudo apt-get install git-core\nFedora/RedHat: sudo yum install git-core",
+    "crumbs": [
+      "Home",
+      "Tutorial",
+      "Installing and configuring Git"
+    ]
+  },
+  {
+    "objectID": "installing-git/index.html#configure-git",
+    "href": "installing-git/index.html#configure-git",
+    "title": "Installing and configuring Git",
+    "section": "Configure git",
+    "text": "Configure git\nAfter installing git, you need to tell it who you are.\nBy default, git is used through a command line interface. We’ll use git in this way now in order to perform its initial and minimal configuration. In the remaining of this tutorial, you’ll learn how to use git through Rstudio instead of a command line interface.\nOn windows, open Git Bash (start menu -&gt; Git Bash). On MacOS, open the Terminal app. On Linux, open your distribution’s (or any other) terminal emulator. Enter the following commands EXACTLY (spaces and quotation marks included) one after the other (hitting ENTER after each command). On successful completion, you should see no output from these commands.\nMake sure to replace you@youremail.com and Your Name by your email address and your name.\ngit config --global user.email \"you@youremail.com\"\ngit config --global user.name \"Your Name\"",
     "crumbs": [
       "Home",
       "Tutorial",
@@ -164,7 +188,31 @@
     "href": "installing-software/index.html",
     "title": "Installing R and RStudio",
     "section": "",
-    "text": "Many users of R use it from within another free piece of software called RStudio. RStudio is a powerful and productive user interface for R. It’s free and open source, and works great on Windows, Mac, and Linux.\nInstall R\nInstall R first. Downloads are available at https://cran.rstudio.com/\n\nDirect link for Windows https://cran.r-project.org/bin/windows/base/\n\nDirect link for MacOS X https://cran.r-project.org/bin/macosx/\nDirect link for Linux https://cran.r-project.org/bin/linux/\n\nInstall RStudio\nNext, install RStudio.\n\nDownloads are available at https://www.rstudio.com/products/rstudio/download/\n\n\n\n\n\n\n\n Back to top",
+    "text": "Many users of R use it from within another free piece of software called RStudio. RStudio is a powerful and productive user interface for R. It’s free and open source, and works great on Windows, Mac, and Linux.",
+    "crumbs": [
+      "Home",
+      "Tutorial",
+      "Installing R and RStudio"
+    ]
+  },
+  {
+    "objectID": "installing-software/index.html#install-r",
+    "href": "installing-software/index.html#install-r",
+    "title": "Installing R and RStudio",
+    "section": "Install R",
+    "text": "Install R\nInstall R first. Downloads are available at https://cran.rstudio.com/\n\nDirect link for Windows https://cran.r-project.org/bin/windows/base/\n\nDirect link for MacOS X https://cran.r-project.org/bin/macosx/\nDirect link for Linux https://cran.r-project.org/bin/linux/",
+    "crumbs": [
+      "Home",
+      "Tutorial",
+      "Installing R and RStudio"
+    ]
+  },
+  {
+    "objectID": "installing-software/index.html#install-rstudio",
+    "href": "installing-software/index.html#install-rstudio",
+    "title": "Installing R and RStudio",
+    "section": "Install RStudio",
+    "text": "Install RStudio\nNext, install RStudio.\n\nDownloads are available at https://www.rstudio.com/products/rstudio/download/",
     "crumbs": [
       "Home",
       "Tutorial",
@@ -176,7 +224,19 @@
     "href": "github-sync/index.html",
     "title": "Connecting our local repository to GitHub",
     "section": "",
-    "text": "Our project is fully version controlled so we have access to a detailed history of every change we’ve ever made to it. This is a great first step but all of this only exists on our own computers at the moment.\nIt’s time to upload our project to GitHub!\nPutting your code on GitHub confers a number of benefits:\n\nEverything is backed up for you.\nYour project is made available to others. This is a vital part of modern scientific dissemination.\nGitHub has a range of project management and collaboration tools that work on a per-project basis.\nYour GitHub profile can be used as part of your online-identity.\n\nCreating a new repository on GitHub\n\nLog into GitHub and go to your profile page. On the repositories tab, click New\n\n\nAt the Create a new repository screen, give your repo a name and click Create Repository. In this case only, when you didn’t start by creating a repo on GitHub but want to push from an exisiting local repository for the first time like we are doing now and like you would to upgrade your old projects, do NOT select ‘create a README file’ but directly ‘Create repository’.\n\nThe Quick Setup screen gives sets of git commands that can be used in various circumstances.\nFirst, make sure you select the ssh tab (the url shown in the blue box should start with git@github.com).\nWe are then interested in …or push an existing repository from the command line. Copy these commands to the clipboard using the copy button on GitHub.\n\nIn RStudio, navigate to the git tab and click on More -&gt; New terminal\n\n\nPaste the git commands into the Shell and press Enter to execute them. Given this is your first push, you may be asked again to authenticate your identity by entering the password of your ssh key\n\nand/or prompted with such sentence in the terminal:\nAre you sure you want to continue connecting (yes/no/[fingerprint])?\nto which you should answer yes\n\n\nWarning for Windows OS with RStudio &gt; 2022.12.0 If you get an error saying you do not have a ssh key in the appropriate location, this is due to a known bug in the RStudio / Git bash interaction which we expect to be eventually resolved with updates. A temporary solution is to open the Windows Power Shell instead of Git Bash as terminal within RStudio: for this, go to RStudio -&gt; Tools -&gt; Global Options -&gt; Terminal -&gt; New terminals open with -&gt; choose Windows Power Shell -&gt; Click Apply -&gt; close the panel -&gt; Complete the steps above (i.e. paste or type the commands presented by your new GitHub repo) -&gt; change back the default terminal within RStudio to Git Bash.\n\n\nFinally, confirm that the project has been uploaded to your GitHub profile (you may need to refresh your GitHub page).\n\n\n\n\n\n\n Back to top",
+    "text": "Our project is fully version controlled so we have access to a detailed history of every change we’ve ever made to it. This is a great first step but all of this only exists on our own computers at the moment.\nIt’s time to upload our project to GitHub!\nPutting your code on GitHub confers a number of benefits:",
+    "crumbs": [
+      "Home",
+      "Tutorial",
+      "Connecting our local repository to GitHub"
+    ]
+  },
+  {
+    "objectID": "github-sync/index.html#creating-a-new-repository-on-github",
+    "href": "github-sync/index.html#creating-a-new-repository-on-github",
+    "title": "Connecting our local repository to GitHub",
+    "section": "Creating a new repository on GitHub",
+    "text": "Creating a new repository on GitHub\n\nLog into GitHub and go to your profile page. On the repositories tab, click New\n\n\nAt the Create a new repository screen, give your repo a name and click Create Repository. In this case only, when you didn’t start by creating a repo on GitHub but want to push from an exisiting local repository for the first time like we are doing now and like you would to upgrade your old projects, do NOT select ‘create a README file’ but directly ‘Create repository’.\n\nThe Quick Setup screen gives sets of git commands that can be used in various circumstances.\nFirst, make sure you select the ssh tab (the url shown in the blue box should start with git@github.com).\nWe are then interested in …or push an existing repository from the command line. Copy these commands to the clipboard using the copy button on GitHub.\n\nIn RStudio, navigate to the git tab and click on More -&gt; New terminal\n\n\nPaste the git commands into the Shell and press Enter to execute them. Given this is your first push, you may be asked again to authenticate your identity by entering the password of your ssh key\n\nand/or prompted with such sentence in the terminal:\nAre you sure you want to continue connecting (yes/no/[fingerprint])?\nto which you should answer yes\n\n\nWarning for Windows OS with RStudio &gt; 2022.12.0 If you get an error saying you do not have a ssh key in the appropriate location, this is due to a known bug in the RStudio / Git bash interaction which we expect to be eventually resolved with updates. A temporary solution is to open the Windows Power Shell instead of Git Bash as terminal within RStudio: for this, go to RStudio -&gt; Tools -&gt; Global Options -&gt; Terminal -&gt; New terminals open with -&gt; choose Windows Power Shell -&gt; Click Apply -&gt; close the panel -&gt; Complete the steps above (i.e. paste or type the commands presented by your new GitHub repo) -&gt; change back the default terminal within RStudio to Git Bash.\n\n\nFinally, confirm that the project has been uploaded to your GitHub profile (you may need to refresh your GitHub page).",
     "crumbs": [
       "Home",
       "Tutorial",
@@ -316,7 +376,31 @@
     "href": "next-steps/index.html",
     "title": "Things we haven’t told you",
     "section": "",
-    "text": "You’ve come a long way! You’ve installed and configured all the software you need and have learned the basics required to put your code under version control and make it openly available to the world.\nAs you’ve seen, the standard git workflow is fairly straightforward and adds very little overhead to your workflow once you’re set up.\nGit and GitHub are extremely powerful systems and there is a lot more you can learn if you wish. Here are some pointers:-\n\nLearn command line git by following this tutorial from Software Carpentry - http://swcarpentry.github.io/git-novice/\nMake your analysis citable and more discoverable by using Zenodo to assign it a Digital Object Identifier - https://zenodo.org/features\n\nTesting and version control\nBy employing testing, you can ensure that your code behaves the way you expect.\n\nUnit testing in R, the bare minimum - http://www.johnmyleswhite.com/notebook/2010/08/17/unit-testing-in-r-the-bare-minimum/\nContinuous Integration. Every time you push a change to GitHub, your tests are automatically run. - https://docs.travis-ci.com/user/languages/r\n\nDealing with dependencies\nYour code works on your machine but not on someone else’s because they are using a different version of R and have different versions of packages installed. How might we fix this?\n\nhttps://lmu-osc.github.io/introduction-to-renv/ - renv enhances your project directory by storing your package dependencies inside it.\n\n\n\nGo to the second tutorial!\n\n\n\n\n\n\n Back to top",
+    "text": "You’ve come a long way! You’ve installed and configured all the software you need and have learned the basics required to put your code under version control and make it openly available to the world.\nAs you’ve seen, the standard git workflow is fairly straightforward and adds very little overhead to your workflow once you’re set up.\nGit and GitHub are extremely powerful systems and there is a lot more you can learn if you wish. Here are some pointers:-",
+    "crumbs": [
+      "Home",
+      "Tutorial",
+      "Things we haven’t told you"
+    ]
+  },
+  {
+    "objectID": "next-steps/index.html#testing-and-version-control",
+    "href": "next-steps/index.html#testing-and-version-control",
+    "title": "Things we haven’t told you",
+    "section": "Testing and version control",
+    "text": "Testing and version control\nBy employing testing, you can ensure that your code behaves the way you expect.\n\nUnit testing in R, the bare minimum - http://www.johnmyleswhite.com/notebook/2010/08/17/unit-testing-in-r-the-bare-minimum/\nContinuous Integration. Every time you push a change to GitHub, your tests are automatically run. - https://docs.travis-ci.com/user/languages/r",
+    "crumbs": [
+      "Home",
+      "Tutorial",
+      "Things we haven’t told you"
+    ]
+  },
+  {
+    "objectID": "next-steps/index.html#dealing-with-dependencies",
+    "href": "next-steps/index.html#dealing-with-dependencies",
+    "title": "Things we haven’t told you",
+    "section": "Dealing with dependencies",
+    "text": "Dealing with dependencies\nYour code works on your machine but not on someone else’s because they are using a different version of R and have different versions of packages installed. How might we fix this?\n\nhttps://lmu-osc.github.io/introduction-to-renv/ - renv enhances your project directory by storing your package dependencies inside it.\n\n\n\nGo to the second tutorial!",
     "crumbs": [
       "Home",
       "Tutorial",
