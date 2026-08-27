@@ -49,6 +49,16 @@ The material is self-paced and includes a worked-example. It is necessary that y
 * [Subsequent updates](./updates/index.qmd) - Now we are set up, the workflow is easy.
 * [Things we haven't told you](./next-steps/index.qmd) - Steps to further learning
 
+
+::: {.callout-important title="Warning About Cloud Syncing Services Interacting with Git"}
+
+Please make sure that you do not use cloud syncing services (e.g. Dropbox, OneDrive, Google Drive) to store your RStudio project. That is, you should create your RStudio project in a folder that is locally on your computer and not in a cloud syncing folder.
+
+These services can interfere with Git and cause problems with your version control. 
+
+:::
+
+
 :::: {.columns}
 
 ::: {.column width="47.5%"}
