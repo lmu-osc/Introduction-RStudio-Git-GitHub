@@ -11,6 +11,7 @@ SSH keys come in pairs, a public key that gets shared with services like GitHub,
 The procedure below only need to be executed once per GitHub account and for each computer you will use to connect to GitHub.
 
 ## Checking for existing SSH key pair
+
 The first step in using SSH authorization with GitHub is to generate your own key pair. 
 However, you might already have an SSH key pair on your machine. You can check to see if one exists by moving to your `.ssh` directory and listing the contents.
 
@@ -33,7 +34,7 @@ id_ed25519.pub
 
 If you do have one, you can skip the section that generate a SSH key pair, and go to the section 'Adding a new SSH key to your GitHub account'. 
 
-**If you don't have an existing public and private key pair (which is to be expected!), or if you receive an error that ~/.ssh doesn't exist, that this file location doesn't exist, or that you can't access this folder, go ahead and generate a new SSH key pair!**
+**If you don't have an existing public and private key pair (which is to be expected!), or if you receive an error that `~/.ssh` doesn't exist, that this file location doesn't exist, or that you can't access this folder, go ahead and generate a new SSH key pair!**
 
 ## Generating an SSH key pair
 
@@ -41,10 +42,10 @@ In the command line, type the following by replacing your_email@email.com with y
 
 ```bash
 # MAKE SURE TO REPLACE "your_email@email.com" WITH YOUR EMAIL ADDRESS
-ssh-keygen -t ed25519 -C "your_email@email.com"
+ssh-keygen -t ed25519 -C "your_email@email.com" -f ~/.ssh/github
 ```
 
-This creates a new SSH key pair, using the provided email as a label.
+This creates a new SSH key pair using the Ed25519 algorithm, which is a modern and secure choice. The `-C` flag adds a label to the key with your email address, and the `-f` flag specifies the file name for the key pair.
 
 When you're prompted to "Enter a file in which to save the key," press ENTER. This accepts the default file location.  
 This is the promt that will appear:
@@ -54,13 +55,19 @@ Generating public/private ed25519 key pair.
 Enter file in which to save the key (/Users/username/.ssh/id_ed25519):  
 ```
 
-You will then be asked to provide a passphrase. Protecting your keys with a password is optional but highly recommended. Note: when you type passwords in the command line, nothing is displayed, not even \***.  
-This is the promt that will appear:
+You will then be asked to provide a passphrase. This is the prompt that will appear: 
 
 ```bash
 Enter passphrase (empty for no passphrase):  
 Enter same passphrase again:
 ```
+
+Protecting your keys with a password is optional, and recommendations are mixed on whether or not to do this. ***We do not recommend using a passphrase***, in which case you can just hit ENTER twice to skip this step.[^passphrase]
+
+
+[^passphrase]: If you do choose to use a passphrase, make sure to remember it, as you will need it **each time** you use the key. **When you type passwords in the command line, nothing is displayed, not even the stars/asterisks, i.e. \*\*\***.
+
+
 
 When the key generation is complete, you should see the following confirmation:
 
