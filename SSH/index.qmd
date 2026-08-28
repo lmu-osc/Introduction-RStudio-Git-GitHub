@@ -31,15 +31,16 @@ This creates a new SSH key pair using the Ed25519 algorithm, which is a modern a
 
 [^keygen_filename]: The `-f` flag is optional. If you omit it, the key pair will be created in the default location, which is `~/.ssh/id_ed25519` for the private key and `~/.ssh/id_ed25519.pub` for the public key. However, we recommend using a descriptive name for your key pair, especially if you plan to use multiple keys for different purposes.
 
-When you're prompted to "Enter a file in which to save the key," press ENTER. This accepts the default file location.  
-This is the promt that will appear:
+**If you do not include a specific filename to save the key to, i.e. if you do not include the `-f ~/.ssh/github` code**, you will be prompted to "Enter a file in which to save the key." You can simply press ENTER to accept the default file location. 
+
+This is the prompt that will appear:
 
 ```bash
 Generating public/private ed25519 key pair.  
 Enter file in which to save the key (/Users/username/.ssh/github):  
 ```
 
-You will then be asked to provide a passphrase. This is the prompt that will appear: 
+Regardless of the file you save to, you will then be asked to provide a passphrase. This is the prompt that will appear: 
 
 ```bash
 Enter passphrase (empty for no passphrase):  
