@@ -20,7 +20,7 @@ ls ~/.ssh
 
 The `ls` command lists the contents of a directory. It's fine if `.ssh` is empty or doesn't exist yet; you're about to add your first key to it.
 
-In the command line, type the following by replacing your_email@email.com with your own email address. Pay attention to spaces and capital letters!
+In the command line, type the following by replacing `your_email@email.com` with your own email address. Pay attention to spaces and capital letters!
 
 ```bash
 # MAKE SURE TO REPLACE "your_email@email.com" WITH YOUR EMAIL ADDRESS
