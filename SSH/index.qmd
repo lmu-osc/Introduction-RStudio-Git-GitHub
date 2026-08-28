@@ -87,15 +87,13 @@ Within this config file, we will need to add some lines specifying the host (Git
 
 ```bash
 # Add the following lines to the SSH config file
-echo -e "Host github.com\n\tHostName github.com\n\tUser git\n\tIdentityFile ~/.ssh/github" >> ~/.ssh/config
+echo -e "Host github.com\n\tIdentityFile ~/.ssh/github" >> ~/.ssh/config
 ```
 
 Formatted, the text in the config file should look like this:
 
 ```
 Host github.com
-    HostName github.com
-    User git
     IdentityFile ~/.ssh/github
 ```
 
