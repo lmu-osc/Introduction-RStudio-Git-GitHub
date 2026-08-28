@@ -75,6 +75,19 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
+Check the contents of the `.ssh/` folder again:
+
+```bash
+ls ~/.ssh
+```
+
+You should now see at least these two files:
+
+```
+github
+github.pub
+```
+
 ## Creating the SSH Config File
 
 We now need to create a configuration file for SSH. This file simply tells the SSH software which key to use when connecting to GitHub. In the command line, type the following command:
