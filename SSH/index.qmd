@@ -53,7 +53,7 @@ Protecting your keys with a password is optional, and recommendations are mixed 
 
 
 
-When the key generation is complete, you should see the following confirmation:
+When the key generation is complete, you should see a confirmation that looks like this (the exact characters may be different for you):
 
 ```bash
 Your identification has been saved in /Users/username/.ssh/github.
