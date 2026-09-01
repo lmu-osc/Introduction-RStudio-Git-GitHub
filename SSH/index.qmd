@@ -2,13 +2,11 @@
 title: "Secure the connection between your computer and GitHub"
 ---
 
-When working with a GitHub repository, you'll often need to identify yourself to GitHub using your username and password. There are several ways to secure this connection further. Establishing a secure connection is mandatory since August 2021. 
-
-Today we will use **SSH Keys** to secure your identification to GitHub as this is a common way to secure connections, which you may encounter again in other contexts in the future. 
+When working with a GitHub repository, you'll often need to identify yourself to GitHub using your username and password. However, since August 2021, higher security standards for this connection have become mandatory. Therefore, today we will use **SSH keys** to secure your identification to GitHub, as this is a common way to secure connections, which you may encounter again in other contexts in the future. 
 
 SSH keys come in pairs, a public key that gets shared with services like GitHub, and a private key that is stored only on your computer. If the keys match, you're granted access.
 
-The procedure below only need to be executed once per GitHub account and for each computer you will use to connect to GitHub.
+The procedure below only needs to be executed once per GitHub account and for each computer you will use to connect to GitHub.
 
 ## Generating an SSH key pair
 
@@ -18,36 +16,36 @@ SSH stores its keys in a hidden folder called `.ssh` inside your home directory.
 ls ~/.ssh
 ```
 
-The `ls` command lists the contents of a directory. It's fine if `.ssh` is empty or doesn't exist yet; you're about to add your first key to it.
+The `ls` command lists the contents of a directory. It's fine if `.ssh` is empty or doesn't exist yet--in that case, `ls` will either show nothing or present a message like `No such file or directory`. That's expected: you're about to create the folder by adding your first key to it.
 
-In the command line, type the following by replacing `your_email@email.com` with your own email address. Pay attention to spaces and capital letters!
+In the command line of your terminal, type the following, replacing `your_email@email.com` with your own email address. Pay attention to spaces and capital letters!
 
 ```bash
 # MAKE SURE TO REPLACE "your_email@email.com" WITH YOUR EMAIL ADDRESS
 ssh-keygen -t ed25519 -C "your_email@email.com" -f ~/.ssh/github
 ```
 
-This creates a new SSH key pair using the Ed25519 algorithm, which is a modern and secure choice. The `-C` flag adds a label to the key with your email address, and the `-f` flag specifies the file name for the key pair.[^keygen_filename]
+This creates a new SSH key pair using the ed25519 algorithm, which is a modern and secure choice. The `-C` flag adds a label to the key with your email address, and the `-f` flag specifies the file name for the key pair.[^keygen_filename]
 
 [^keygen_filename]: The `-f` flag is optional. If you omit it, the key pair will be created in the default location, which is `~/.ssh/id_ed25519` for the private key and `~/.ssh/id_ed25519.pub` for the public key. However, we recommend using a descriptive name for your key pair, especially if you plan to use multiple keys for different purposes.
 
-**If you do not include a specific filename to save the key to, i.e. if you do not include the `-f ~/.ssh/github` code**, you will be prompted to "Enter a file in which to save the key." You can simply press ENTER to accept the default file location. 
+<!-- **If you do not include a specific filename to save the key to, i.e. if you do not include the `-f ~/.ssh/github` code**, you will be prompted to "Enter a file in which to save the key." You can simply press ENTER to accept the default file location. 
 
 This is the prompt that will appear:
 
 ```bash
 Generating public/private ed25519 key pair.  
 Enter file in which to save the key (/Users/username/.ssh/github):  
-```
+``` -->
 
-Regardless of the file you save to, you will then be asked to provide a passphrase. This is the prompt that will appear: 
+You will then be asked to provide a passphrase. This is the prompt that will appear: 
 
 ```bash
 Enter passphrase (empty for no passphrase):  
 Enter same passphrase again:
 ```
 
-Protecting your keys with a password is optional, and recommendations are mixed on whether or not to do this. ***We do not recommend using a passphrase***, in which case you can just hit ENTER twice to skip this step.[^passphrase]
+Protecting your keys with a password is optional, and recommendations are mixed on whether or not to do this. For the sake of convenience in this tutorial, ***we do not recommend using a passphrase***, in which case you can just hit ENTER twice to skip this step.[^passphrase]
 
 
 [^passphrase]: If you do choose to use a passphrase, make sure to remember it, as you will need it **each time** you use the key. **When you type passwords in the command line, nothing is displayed, not even the stars/asterisks, i.e. \*\*\***.
@@ -83,25 +81,27 @@ ls ~/.ssh
 
 You should now see at least these two files:
 
-```
+```bash
 github
 github.pub
 ```
 
-## Creating the SSH Config File
+## Creating the SSH config file
 
-We now need to create a configuration file for SSH. This file simply tells the SSH software which key to use when connecting to GitHub. In the command line, type the following command:
+Because you saved your key with a custom name (`github`), SSH won't automatically know which key to use when connecting to GitHub. To fix this, we need to create a configuration file. This file tells the SSH software which key to use when connecting to GitHub. In the command line of your terminal, type the following command:
 
 ```bash
 # Create the SSH config file
 touch ~/.ssh/config
 ```
 
-Within this config file, we will need to add some lines specifying the host (GitHub), the hostname, the user, and the identity file (your private key). To do this, simply run the following command to insert the lines into the config file:
+Within this config file, we will need to add some lines specifying the host (GitHub) and the identity file (your private key). To do this, run the following command to insert the lines into the config file:
 
 ```bash
 # Add the following lines to the SSH config file
 echo -e "Host github.com\n\tIdentityFile ~/.ssh/github" >> ~/.ssh/config
+# Check the contents of the config file with cat
+cat ~/.ssh/config
 ```
 
 Formatted, the text in the config file should look like this:
@@ -111,19 +111,17 @@ Host github.com
     IdentityFile ~/.ssh/github
 ```
 
-You can simply paste the above lines into the config file using a text editor, or you can use the `echo` command as shown above. 
-
 
 ## Adding a new SSH key to your GitHub account
 
-We now need to tell GitHub about your public key. Display the contents of your new public key file with `cat`.  
-**Be careful**: do not copy the content of your *private* key, but your *public* key. Your public key ends with `.pub`.  
-Please type the command below exactly as it is, in its entirety:
+We now need to tell GitHub about your public key. Display the contents of your new public key file with `cat`. Please type the command below exactly as it is, in its entirety:
 
 ```bash
 # Run this code
 cat ~/.ssh/github.pub
 ```
+
+**Be careful**: do not copy the content of your *private* key, but your *public* key. Your public key ends with `.pub`.
 
 The output should look something like this:
 
@@ -144,7 +142,7 @@ In the "Title" field, add a descriptive label for the new key, e.g. something th
 
 
 
-## Adding your key to the ssh-agent
+<!-- ## Adding your key to the ssh-agent
 
 To manage your keys, it is best to use a piece of software called `ssh-agent`.
 
@@ -170,9 +168,9 @@ Then, add your key to the SSH-agent by typing the entirety of this command:
 
 ```bash
 ssh-add ~/.ssh/github
-```
+``` -->
 
-## Testing Your Connection to GitHub
+## Testing your connection to GitHub
 
 (These instructions are a slightly abbreviated version of the page here: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)
 
@@ -192,7 +190,7 @@ You will likely be asked about "fingerprinting" to which you can type `yes`, fin
 
 That's it!  
 
-Going forward, you can use the SSH clone URL when copying a repo to your local machine (we will cover this in the second tutorial). You are completely done with the setting up part, which you will need to repeat only if you change computer.  
+Going forward, you can use the SSH URL when cloning a repo to your local machine (we will cover this terminology and steps in the second tutorial). You are completely done with the setting up part, which you will need to repeat only if you change computer.  
 Let the fun begin!
 
 ***
