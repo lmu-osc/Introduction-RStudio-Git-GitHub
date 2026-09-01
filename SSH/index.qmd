@@ -95,7 +95,7 @@ Because you saved your key with a custom name (`github`), SSH won't automaticall
 touch ~/.ssh/config
 ```
 
-Within this config file, we will need to add some lines specifying the host (GitHub) and the identity file (your private key). To do this, simply run the following command to insert the lines into the config file:
+Within this config file, we will need to add some lines specifying the host (GitHub) and the identity file (your private key). To do this, run the following command to insert the lines into the config file:
 
 ```bash
 # Add the following lines to the SSH config file
